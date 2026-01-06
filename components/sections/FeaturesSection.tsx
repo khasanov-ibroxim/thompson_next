@@ -1,3 +1,5 @@
+"use client"
+import { motion } from "framer-motion";
 import { Shield, Palette, Sun, Car, PiggyBank, Lock } from "lucide-react";
 
 const features = [
@@ -40,8 +42,15 @@ const FeaturesSection = () => {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[150px]" />
       <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-[120px]" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div
+
+          className="container mx-auto px-4 lg:px-8 relative z-10">
+        <motion.div
+            viewport={{ once: true, amount: 0.5 }}
+            initial={{ y: "100%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary text-sm font-semibold uppercase tracking-widest">Afzalliklar</span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gradient">
             Nima uchun Thompson?
@@ -49,7 +58,7 @@ const FeaturesSection = () => {
           <p className="text-lg text-muted-foreground">
             Avtomobilingizni professional himoya plyonkalari bilan himoya qiling
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => (

@@ -1,11 +1,14 @@
+"use client"
 import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
+
 import heroImage from "@/assets/images/hero-car.jpg";
 import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden py-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 lg:pt-40 pb-10">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <Image
@@ -23,25 +26,47 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-2 mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <div className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-border/50 backdrop-blur-sm">
+          <div className="flex items-center gap-2 mb-0 " >
+            <motion.div
+                viewport={{ once: true, amount: 0.5 }}
+                initial={{ y: "100%", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-border/50 backdrop-blur-sm"
+            >
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm text-muted-foreground">Premium himoya yechimlari</span>
-            </div>
+            </motion.div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+
+          <motion.h1
+              viewport={{ once: true, amount: 0.5 }}
+              initial={{ y: "100%", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 " >
             <span className="text-gradient">Thompson</span>
             <br />
-            <span className="text-gradient-red">Protection</span>
-          </h1>
+            <span className="text-gradient-red">Window film</span>
+          </motion.h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <motion.p
+              viewport={{ once: true}}
+              initial={{ x: "-100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-10 leading-relaxed " >
             Himoya plyonkalari avtomobilingizni tashqi ta`sirlardan,
             chang, ifloslanish, tosh va boshqa narsalardan himoya qiladi.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <motion.div
+              viewport={{ once: true, amount: 0.5 }}
+              initial={{ y: "100%", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="flex flex-col sm:flex-row gap-4" >
             <Button variant="hero" size="xl" className="group">
               <span>Ko`proq bilish</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -50,10 +75,15 @@ const HeroSection = () => {
               <Shield className="w-5 h-5" />
               <span>Xizmatlarimiz</span>
             </Button>
-          </div>
+          </motion.div>
 
           {/* Stats */}
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <motion.div
+              viewport={{ once: true, amount: 0.5 }}
+              initial={{ y: "100%", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="mt-16 grid grid-cols-3 gap-8 max-w-lg" style={{ animationDelay: "0.6s" }}>
             {[
               { value: "500+", label: "Mamnun mijozlar" },
               { value: "10+", label: "Yillik tajriba" },
@@ -64,19 +94,10 @@ const HeroSection = () => {
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: "1s" }}>
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs text-muted-foreground uppercase tracking-widest">Scroll</span>
-          <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center pt-2">
-            <div className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" />
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

@@ -1,5 +1,7 @@
 
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/rsz_2logo.png"
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,10 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#home" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">T</span>
-              </div>
-              <span className="text-2xl font-bold text-foreground">Thompson</span>
+              <Image  src={logo} alt={"thompson window film"}  width={300} height={300} />
             </a>
             <p className="text-muted-foreground max-w-md leading-relaxed">
               Premium avtomobil himoya plyonkalari. Avtomobilingizni professional darajada himoya qiling.

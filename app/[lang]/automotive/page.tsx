@@ -152,20 +152,15 @@ const AutomotiveFilm = () => {
             <main className="pt-24 lg:pt-32">
                 {/* Hero Section */}
                 <section className="relative py-20 overflow-hidden">
-                    <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: `url(${automotiveFilm})` }}
-                    />
-                    <div className="absolute inset-0 bg-background/85" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"/>
                     <div className="container mx-auto px-4 lg:px-8 relative z-10">
-                        <div className="max-w-2xl">
+                        <div className="text-center max-w-3xl mx-auto">
                             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
                                 Automotive Film
                             </h1>
-                            <p className="text-lg text-muted-foreground mb-8">
+                            <p className="text-lg text-muted-foreground mb-5">
                                 Premium Automotive Tint Solutions.
-                                Professional Grade Window Films.
-                            </p>
+                                Professional Grade Window Films.</p>
                             <Button variant="hero" size="lg">
                                 Get a free sample
                             </Button>
