@@ -8,14 +8,13 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/layout/Footer";
 
-
 interface HomeProps {
-    params: Promise<{ lang: Locale }>;
+    params: Promise<{ lang: string }>;
 }
 
 export default async function Home({params}: HomeProps) {
     const {lang} = await params;
-    const dict = await getDictionary(lang, 'home');
+    const dict = await getDictionary(lang as Locale, 'home');
 
     return (
         <>

@@ -7,20 +7,23 @@ export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({lang: locale}));
 }
 
+interface LangLayoutProps {
+    children: React.ReactNode;
+    params: Promise<{ lang: string }>;
+}
+
 export default async function LangLayout({
                                              children,
                                              params
-                                         }: {
-    children: React.ReactNode,
-    params: Promise<{ lang: Locale }>
-}) {
+                                         }: LangLayoutProps) {
     const {lang} = await params;
 
-    if (!i18n.locales.includes(lang)) {
+    // Type guard
+    if (!i18n.locales.includes(lang as Locale)) {
         notFound();
     }
 
-    const dict = await getCommonDictionary(lang);
+    const dict = await getCommonDictionary(lang as Locale);
 
     return (
         <>
