@@ -1,6 +1,9 @@
 import type {Metadata} from "next";
 import {Instrument_Sans, Inter_Tight} from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 
 
@@ -26,8 +29,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             className={`${instrumentSans.variable} ${interTight.variable}  `}
             suppressHydrationWarning
         >
+        <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            {children}
+        </TooltipProvider>
 
-                {children}
 
         </body>
         </html>
