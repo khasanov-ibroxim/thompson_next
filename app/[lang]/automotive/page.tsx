@@ -2,9 +2,10 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import automotiveFilm from "@/assets/automotive-film.jpg";
-import heroCar from "@/assets/hero-car.jpg";
-import protectionFilm from "@/assets/protection-film.jpg";
+import automotiveFilm from "@/assets/images/automotive-film.jpg";
+import heroCar from "@/assets/images/hero-car.jpg";
+import protectionFilm from "@/assets/images/protection-film.jpg";
+import Image, {StaticImageData} from "next/image";
 
 interface ProductSpec {
     name: string;
@@ -21,7 +22,7 @@ interface ProductCategory {
     id: string;
     title: string;
     description: string;
-    image: string;
+    image: StaticImageData;
     features: string[];
     specs: ProductSpec[];
 }
@@ -202,7 +203,7 @@ const AutomotiveFilm = () => {
                                     {/* Image */}
                                     <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                                         <div className="relative rounded-2xl overflow-hidden">
-                                            <img
+                                            <Image
                                                 src={category.image}
                                                 alt={category.title}
                                                 className="w-full h-64 lg:h-80 object-cover"

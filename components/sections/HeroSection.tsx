@@ -1,13 +1,14 @@
 import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-car.jpg";
+import heroImage from "@/assets/images/hero-car.jpg";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src={heroImage}
           alt="Premium sports car"
           className="w-full h-full object-cover object-center"
@@ -36,13 +37,13 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            Himoya plyonkalari avtomobilingizni tashqi ta'sirlardan, 
+            Himoya plyonkalari avtomobilingizni tashqi ta`sirlardan,
             chang, ifloslanish, tosh va boshqa narsalardan himoya qiladi.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button variant="hero" size="xl" className="group">
-              <span>Ko'proq bilish</span>
+              <span>Ko`proq bilish</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button variant="heroOutline" size="xl">

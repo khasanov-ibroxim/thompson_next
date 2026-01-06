@@ -1,9 +1,9 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
-import protectionFilm from "@/assets/protection-film.jpg";
-import heroCar from "@/assets/hero-car.jpg";
+import {Button} from "@/components/ui/button";
+import protectionFilm from "@/assets/images/protection-film.jpg";
+import heroCar from "@/assets/images/hero-car.jpg";
+import Image from "next/image";
 
 const products = [
     {
@@ -68,11 +68,11 @@ const products = [
 const ProtectionFilm = () => {
     return (
         <div className="min-h-screen bg-background">
-            <Header />
+            <Header/>
             <main className="pt-24 lg:pt-32">
                 {/* Hero Section */}
                 <section className="relative py-20 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"/>
                     <div className="container mx-auto px-4 lg:px-8 relative z-10">
                         <div className="text-center max-w-3xl mx-auto">
                             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
@@ -99,12 +99,13 @@ const ProtectionFilm = () => {
                                 {/* Product Image */}
                                 <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
                                     <div className="relative rounded-2xl overflow-hidden group">
-                                        <img
+                                        <Image
                                             src={product.image}
                                             alt={product.name}
                                             className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"/>
                                     </div>
                                 </div>
 
@@ -136,7 +137,7 @@ const ProtectionFilm = () => {
                                         <div className="space-y-3">
                                             {product.featuresLeft.map((feature, idx) => (
                                                 <div key={idx} className="flex items-center gap-3">
-                                                    <div className="w-2 h-2 rounded-full bg-primary" />
+                                                    <div className="w-2 h-2 rounded-full bg-primary"/>
                                                     <span className="text-foreground">{feature}</span>
                                                 </div>
                                             ))}
@@ -144,7 +145,7 @@ const ProtectionFilm = () => {
                                         <div className="space-y-3">
                                             {product.featuresRight.map((feature, idx) => (
                                                 <div key={idx} className="flex items-center gap-3">
-                                                    <div className="w-2 h-2 rounded-full bg-primary" />
+                                                    <div className="w-2 h-2 rounded-full bg-primary"/>
                                                     <span className="text-foreground font-medium">{feature}</span>
                                                 </div>
                                             ))}
@@ -161,7 +162,7 @@ const ProtectionFilm = () => {
                     </div>
                 </section>
             </main>
-            <Footer />
+            <Footer/>
         </div>
     );
 };

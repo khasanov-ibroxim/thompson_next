@@ -1,8 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import protectionFilm from "@/assets/protection-film.jpg";
-import automotiveFilm from "@/assets/automotive-film.jpg";
-import technology from "@/assets/technology.jpg";
+import protectionFilm from "@/assets/images/protection-film.jpg";
+import automotiveFilm from "@/assets/images/automotive-film.jpg";
+import technology from "@/assets/images/technology.jpg";
+import Image from "next/image";
 
 const services = [
   {
@@ -50,7 +51,7 @@ const ServicesSection = () => {
                 {/* Image */}
                 <div className={`relative overflow-hidden rounded-2xl ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="aspect-[4/3] relative group-hover:scale-105 transition-transform duration-500">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
