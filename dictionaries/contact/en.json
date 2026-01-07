@@ -1,1 +1,41 @@
-{}
+{
+  "title": "Contact",
+  "description": "Get in touch with us and ask your questions. We're ready to help you.",
+  "info": {
+    "title": "Contact Information",
+    "phone": {
+      "label": "Phone",
+      "value": "+998 90 123 45 67"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@thompson.uz"
+    },
+    "address": {
+      "label": "Address",
+      "value": "Tashkent city, Chilanzar district"
+    },
+    "workTime": {
+      "label": "Working hours",
+      "value": "10:00 - 20:00"
+    }
+  },
+  "form": {
+    "title": "Free Consultation",
+    "name": {
+      "label": "Your name",
+      "placeholder": "Your name"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Your phone"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Your message"
+    },
+    "submit": "Send",
+    "success": "Your request has been received! We will contact you shortly.",
+    "error": "An error occurred. Please try again."
+  }
+}

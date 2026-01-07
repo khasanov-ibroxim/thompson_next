@@ -1,1 +1,41 @@
-{}
+{
+  "title": "Bog'lanish",
+  "description": "Biz bilan bog'laning va savollaringizni bering. Biz sizga yordam berishga tayyormiz.",
+  "info": {
+    "title": "Aloqa ma'lumotlari",
+    "phone": {
+      "label": "Telefon",
+      "value": "+998 90 123 45 67"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@thompson.uz"
+    },
+    "address": {
+      "label": "Manzil",
+      "value": "Toshkent shahar, Chilonzor tumani"
+    },
+    "workTime": {
+      "label": "Ish vaqti",
+      "value": "10:00 - 20:00"
+    }
+  },
+  "form": {
+    "title": "Bepul konsultatsiya",
+    "name": {
+      "label": "Ismingiz",
+      "placeholder": "Ismingiz"
+    },
+    "phone": {
+      "label": "Telefon",
+      "placeholder": "Telefon raqamingiz"
+    },
+    "message": {
+      "label": "Xabar",
+      "placeholder": "Xabaringiz"
+    },
+    "submit": "Yuborish",
+    "success": "So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz.",
+    "error": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
+  }
+}

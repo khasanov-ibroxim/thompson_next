@@ -1,1 +1,88 @@
-{}
+{
+  "hero": {
+    "badge": "Premium protection solutions",
+    "title": "Thompson",
+    "subtitle": "Window film",
+    "description": "Protection films safeguard your car from external impacts, dust, dirt, stones, and other hazards.",
+    "cta": {
+      "primary": "Learn More",
+      "secondary": "Our Services"
+    },
+    "stats": {
+      "customers": "Satisfied customers",
+      "experience": "Years of experience",
+      "warranty": "Warranty"
+    }
+  },
+  "features": {
+    "badge": "Advantages",
+    "title": "Why Thompson?",
+    "description": "Protect your vehicle with professional protection films",
+    "items": [
+      {
+        "title": "Protection",
+        "description": "Protection films shield your car from external impacts, dust, dirt, harmful substances, stones, and other hazards."
+      },
+      {
+        "title": "Aesthetic Appearance",
+        "description": "Automotive films help improve your car's appearance, giving it a new, modern, and attractive look."
+      },
+      {
+        "title": "UV Protection",
+        "description": "Films protect your car's paint from ultraviolet (UV) rays, preventing paint fading."
+      },
+      {
+        "title": "Interior Protection",
+        "description": "When applied to windows, automotive films protect the interior from heat and UV rays, maintaining a comfortable cabin temperature."
+      },
+      {
+        "title": "Cost Savings",
+        "description": "Automotive and protection films help car owners reduce repair and painting costs."
+      },
+      {
+        "title": "Privacy",
+        "description": "Films used for window tinting reduce the visibility of the car's interior from outside."
+      }
+    ]
+  },
+  "services": {
+    "badge": "Services",
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Protection Film",
+        "description": "Nearly invisible urethane film. Protects your car's paint from unwanted damage and maximizes resale value. Features self-healing properties, stain resistance, and high optical clarity.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "Automotive Film",
+        "description": "Adds protection and style to your car! Provides sun protection, privacy, and attractive appearance. Keep your car looking new and give it a modern look.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "Technology",
+        "description": "Protect your car from scratches, dust, and UV rays with new protection film technology. Keep your car looking brand new!",
+        "cta": "Learn More"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Get in Touch",
+    "description": "Have questions? We're ready to help you",
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "workTime": "Working hours"
+    },
+    "form": {
+      "title": "Free Consultation",
+      "name": "Your name",
+      "phone": "Your phone",
+      "message": "Your message",
+      "submit": "Send",
+      "success": "Your request has been received! We will contact you shortly."
+    }
+  }
+}

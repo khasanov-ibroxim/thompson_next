@@ -1,1 +1,88 @@
-{}
+{
+  "hero": {
+    "title": "Automotive Film",
+    "description": "Premium Automotive Tint Solutions. Professional Grade Window Films.",
+    "cta": "Get a free sample"
+  },
+  "categories": [
+    {
+      "title": "HP CERAMIC",
+      "description": "Our HP series is the series with the 10 year warranty, to a 1.6 mil thickness, excellent solar heat rejection. This film has the characteristics of the ratio of GPS signal while providing total solar energy rejection: TSER of up to 59%.",
+      "features": [
+        "99.9% UV Block",
+        "Nano-Particle",
+        "Clear Metal Free",
+        "1.6 mil Alloy-Sputter",
+        "Non-Reflective",
+        "Dyed out 231 VLT rejection (99.999%)",
+        "Enhanced Privacy",
+        "Anti-Scratch Top Coat"
+      ]
+    },
+    {
+      "title": "NANO CERAMIC",
+      "description": "Our NANO Ceramic is the series with the 10 year warranty, to a 1.5 mil thickness, excellent solar heat rejection. This film has the characteristics of the ratio of GPS signal while providing total solar energy rejection: TSER of up to 56%.",
+      "features": [
+        "99.9% UV Block",
+        "Nano-Particle",
+        "Clear Metal Free",
+        "1.5 mil Alloy-Sputter",
+        "Non-Reflective",
+        "Enhanced Privacy",
+        "Anti-Scratch Top Coat"
+      ]
+    },
+    {
+      "title": "XR CERAMIC PLUS",
+      "description": "Our XR CERAMIC PLUS series with the priority warranty, to a 1.5 mil thickness, excellent solar heat rejection. This film has the characteristics of the ratio of GPS signal while providing total solar energy rejection: TSER of up to 70%.",
+      "features": [
+        "99.9% UV Block",
+        "Nano-Particle",
+        "Clear Metal Free",
+        "1.5 mil Alloy-Sputter",
+        "Non-Reflective",
+        "Enhanced Privacy",
+        "Anti-Scratch Top Coat"
+      ]
+    },
+    {
+      "title": "Classic exclusive",
+      "description": "Our Classic series is the series with the 4 year warranty, to a 1.5 mil thickness, excellent solar heat rejection. This film does not interfere with a radio or GPS signal while providing total solar energy rejection: TSER of up to 70%.",
+      "features": [
+        "99.9% UV Block",
+        "Nano-Particle",
+        "Clear Metal Free",
+        "1.5 mil Alloy-Sputter",
+        "Non-Reflective",
+        "Enhanced Privacy",
+        "Anti-Scratch Top Coat"
+      ]
+    },
+    {
+      "title": "CORE",
+      "description": "Our CORE Ceramic is the entry-level ceramic film with a 3 year warranty. This film does not interfere with a radio or GPS signal while providing excellent solar heat rejection: TSER of up to 50%.",
+      "features": [
+        "99.9% UV Block",
+        "Nano-Particle",
+        "Clear Metal Free",
+        "Standard Thickness",
+        "Non-Reflective",
+        "Anti-Scratch Top Coat"
+      ]
+    }
+  ],
+  "table": {
+    "product": "PRODUCT",
+    "vlt": "VLT(%)",
+    "uvIris": "UV IRIS (%)",
+    "tser": "TSER (%)",
+    "infrared": "INFRARED BLOCKING (%)",
+    "infraredShort": "IR (%)",
+    "solarEnergy": "SOLAR ENERGY BLOCKING (%)",
+    "solarEnergyShort": "SE (%)",
+    "thickness": "THICKNESS (MIL)",
+    "thicknessShort": "THICK",
+    "warranty": "WARRANTY (Years)",
+    "warrantyShort": "WTY"
+  }
+}

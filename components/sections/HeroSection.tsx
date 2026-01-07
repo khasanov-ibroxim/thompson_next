@@ -1,7 +1,7 @@
 "use client"
 import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import heroImage from "@/assets/images/hero-car.jpg";
 import Image from "next/image";

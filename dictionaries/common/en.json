@@ -1,1 +1,28 @@
-{}
+{
+  "header": {
+    "logo": "Thompson Window Film",
+    "nav": {
+      "home": "Home",
+      "protection": "Protection Film",
+      "automotive": "Automotive Film",
+      "technology": "Technology",
+      "contact": "Contact"
+    },
+    "workTime": "Working hours: 10:00 - 20:00",
+    "cta": "Free Consultation",
+    "language": "Language"
+  },
+  "footer": {
+    "description": "Premium automotive protection films. Protect your car professionally.",
+    "pages": "Pages",
+    "contact": "Contact",
+
+    "address": "Tashkent city, Chilanzar district"
+
+  },
+  "languages": {
+    "uz": "O'zbek",
+    "ru": "Русский",
+    "en": "English"
+  }
+}

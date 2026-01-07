@@ -1,1 +1,88 @@
-{}
+{
+  "hero": {
+    "title": "Avtomobil Plyonkasi",
+    "description": "Premium Avtomobil Tonirovka Yechimlari. Professional Darajadagi Oyna Plyonkalari.",
+    "cta": "Bepul namuna oling"
+  },
+  "categories": [
+    {
+      "title": "HP CERAMIC",
+      "description": "Bizning HP seriyasi 10 yillik kafolatga ega bo'lgan, 1.6 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 59% gacha.",
+      "features": [
+        "99.9% UV Bloklash",
+        "Nano-Zarracha",
+        "Tiniq Metalsiz",
+        "1.6 mil Aralashma-Sepirish",
+        "Aks ettirilmaydigan",
+        "Bo'yalgan 231 VLT rad etish (99.999%)",
+        "Kengaytirilgan Maxfiylik",
+        "Tirnalishga qarshi ustki qatlam"
+      ]
+    },
+    {
+      "title": "NANO CERAMIC",
+      "description": "Bizning NANO Ceramic 10 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 56% gacha.",
+      "features": [
+        "99.9% UV Bloklash",
+        "Nano-Zarracha",
+        "Tiniq Metalsiz",
+        "1.5 mil Aralashma-Sepirish",
+        "Aks ettirilmaydigan",
+        "Kengaytirilgan Maxfiylik",
+        "Tirnalishga qarshi ustki qatlam"
+      ]
+    },
+    {
+      "title": "XR CERAMIC PLUS",
+      "description": "Bizning XR CERAMIC PLUS seriyasi ustuvor kafolatga ega, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
+      "features": [
+        "99.9% UV Bloklash",
+        "Nano-Zarracha",
+        "Tiniq Metalsiz",
+        "1.5 mil Aralashma-Sepirish",
+        "Aks ettirilmaydigan",
+        "Kengaytirilgan Maxfiylik",
+        "Tirnalishga qarshi ustki qatlam"
+      ]
+    },
+    {
+      "title": "Classic exclusive",
+      "description": "Bizning Classic seriyasi 4 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
+      "features": [
+        "99.9% UV Bloklash",
+        "Nano-Zarracha",
+        "Tiniq Metalsiz",
+        "1.5 mil Aralashma-Sepirish",
+        "Aks ettirilmaydigan",
+        "Kengaytirilgan Maxfiylik",
+        "Tirnalishga qarshi ustki qatlam"
+      ]
+    },
+    {
+      "title": "CORE",
+      "description": "Bizning CORE Ceramic boshlang'ich darajadagi keramik plyonka bo'lib, 3 yillik kafolatga ega. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi va mukammal quyosh issiqligini rad etadi: TSER 50% gacha.",
+      "features": [
+        "99.9% UV Bloklash",
+        "Nano-Zarracha",
+        "Tiniq Metalsiz",
+        "Standart Qalinlik",
+        "Aks ettirilmaydigan",
+        "Tirnalishga qarshi ustki qatlam"
+      ]
+    }
+  ],
+  "table": {
+    "product": "MAHSULOT",
+    "vlt": "VLT(%)",
+    "uvIris": "UV IRIS (%)",
+    "tser": "TSER (%)",
+    "infrared": "INFRAQIZIL BLOKLASH (%)",
+    "infraredShort": "IQ (%)",
+    "solarEnergy": "QUYOSH ENERGIYASI BLOKLASH (%)",
+    "solarEnergyShort": "QE (%)",
+    "thickness": "QALINLIK (MIL)",
+    "thicknessShort": "QAL",
+    "warranty": "KAFOLAT (Yillar)",
+    "warrantyShort": "KAF"
+  }
+}

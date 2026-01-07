@@ -68,7 +68,7 @@ const products = [
 const ProtectionFilm = () => {
     return (
         <div className="min-h-screen bg-background">
-            <Header/>
+
             <main className="pt-24 lg:pt-32">
                 {/* Hero Section */}
                 <section className="relative py-20 overflow-hidden">
@@ -162,7 +162,7 @@ const ProtectionFilm = () => {
                     </div>
                 </section>
             </main>
-            <Footer/>
+
         </div>
     );
 };

@@ -6,12 +6,12 @@ import Header from '@/components/layout/Header';
 const Contact = () => {
     return (
         <>
-            <Header />
+
             <div className="py-10">
                 <ContactSection/>
             </div>
 
-            <Footer/>
+
         </>
     );
 };

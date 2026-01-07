@@ -1,1 +1,88 @@
-{}
+{
+  "hero": {
+    "badge": "Premium himoya yechimlari",
+    "title": "Thompson",
+    "subtitle": "Window film",
+    "description": "Himoya plyonkalari avtomobilingizni tashqi ta'sirlardan, chang, ifloslanish, tosh va boshqa narsalardan himoya qiladi.",
+    "cta": {
+      "primary": "Ko'proq bilish",
+      "secondary": "Xizmatlarimiz"
+    },
+    "stats": {
+      "customers": "Mamnun mijozlar",
+      "experience": "Yillik tajriba",
+      "warranty": "Kafolat"
+    }
+  },
+  "features": {
+    "badge": "Afzalliklar",
+    "title": "Nima uchun Thompson?",
+    "description": "Avtomobilingizni professional himoya plyonkalari bilan himoya qiling",
+    "items": [
+      {
+        "title": "Himoya",
+        "description": "Himoya plyonkalari avtomobilingizni tashqi ta'sirlardan, chang, ifloslanish, zararli moddalar, tosh va boshqa narsalardan himoya qiladi."
+      },
+      {
+        "title": "Estetik ko'rinish",
+        "description": "Avtomobil plyonkalari mashinangiz ko'rinishini yaxshilashga, unga yangi, zamonaviy va chiroyli ko'rinish berishga yordam beradi."
+      },
+      {
+        "title": "UV himoya",
+        "description": "Plyonkalar avtomobil bo'yog'ini ultrabinafsha (UV) nurlaridan himoya qiladi, bo'yoq rangining so'nishini oldini oladi."
+      },
+      {
+        "title": "Salon himoyasi",
+        "description": "Oynalarga qo'llanganda, avtomobil plyonkalari salonni issiq havodan va UV nurlaridan himoya qiladi, salonda qulay haroratni saqlaydi."
+      },
+      {
+        "title": "Tejamkorlik",
+        "description": "Avtomobil va himoya plyonkalari avtomobil egalariga ta'mirlash va bo'yash xarajatlarini kamaytirishga yordam beradi."
+      },
+      {
+        "title": "Maxfiylik",
+        "description": "Tonirovka qilingan oynalar uchun ishlatiladigan plyonkalar avtomobil ichkarisining tashqaridan ko'rinishini kamaytiradi."
+      }
+    ]
+  },
+  "services": {
+    "badge": "Xizmatlar",
+    "title": "Bizning xizmatlarimiz",
+    "items": [
+      {
+        "title": "Himoya Plyonkasi",
+        "description": "Deyarli ko'rinmas uretan plyonka. Avtomobilingiz bo'yog'ini yoqimsiz shikastlanishlardan himoya qiladi va qayta sotish qiymatini maksimal darajada oshiradi. O'z-o'zini davolash, dog'larga chidamlilik va yuqori optik tiniqlik xususiyatlariga ega.",
+        "cta": "Batafsil"
+      },
+      {
+        "title": "Avtomobil Plyonkasi",
+        "description": "Avtomobilingizga himoya va uslub qo'shadi! Quyoshdan himoya, maxfiylik va chiroyli ko'rinish ta'minlaydi. Avtomobilingizni yangiday saqlang va unga zamonaviy ko'rinish bering.",
+        "cta": "Batafsil"
+      },
+      {
+        "title": "Texnologiya",
+        "description": "Yangi himoya plyonka texnologiyasi bilan avtomobilingizni tirnalishlar, chang va UV nurlaridan himoya qiling. Avtomobilingiz har doim yangi ko'rinsin!",
+        "cta": "Batafsil"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Bog'lanish",
+    "title": "Biz bilan bog'laning",
+    "description": "Savollaringiz bormi? Biz sizga yordam berishga tayyormiz",
+    "info": {
+      "phone": "Telefon",
+      "email": "Email",
+      "address": "Manzil",
+      "workTime": "Ish vaqti"
+    },
+    "form": {
+      "title": "Bepul konsultatsiya",
+      "name": "Ismingiz",
+      "phone": "Telefon raqamingiz",
+      "message": "Xabaringiz",
+      "submit": "Yuborish",
+      "success": "So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz."
+    }
+  }
+}

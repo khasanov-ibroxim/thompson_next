@@ -148,7 +148,7 @@ const productCategories: ProductCategory[] = [
 const AutomotiveFilm = () => {
     return (
         <div className="min-h-screen bg-background">
-            <Header />
+
             <main className="pt-24 lg:pt-32">
                 {/* Hero Section */}
                 <section className="relative py-20 overflow-hidden">
@@ -261,7 +261,7 @@ const AutomotiveFilm = () => {
                     </div>
                 </section>
             </main>
-            <Footer />
+
         </div>
     );
 };

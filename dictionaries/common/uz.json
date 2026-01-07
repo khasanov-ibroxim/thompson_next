@@ -1,1 +1,27 @@
-{}
+{
+  "header": {
+    "logo": "Thompson Window Film",
+    "nav": {
+      "home": "Bosh sahifa",
+      "protection": "Himoya Plyonkasi",
+      "automotive": "Avtomobil Plyonkasi",
+      "technology": "Texnologiya",
+      "contact": "Bog'lanish"
+    },
+    "workTime": "Ish vaqti: 10:00 - 20:00",
+    "cta": "Bepul konsultatsiya",
+    "language": "Til"
+  },
+  "footer": {
+    "description": "Premium avtomobil himoya plyonkalari. Avtomobilingizni professional darajada himoya qiling.",
+    "pages": "Sahifalar",
+    "contact": "Aloqa",
+    "address": "Toshkent shahar, Chilonzor tumani"
+
+  },
+  "languages": {
+    "uz": "O'zbek",
+    "ru": "Русский",
+    "en": "English"
+  }
+}

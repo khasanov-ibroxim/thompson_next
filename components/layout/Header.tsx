@@ -7,26 +7,44 @@ import logo from "@/assets/rsz_2logo.png"
 import Link from "next/link";
 import Image from "next/image";
 
-const navLinks = [
-  { name: "Bosh sahifa", href: "/ru", isRoute: true },
-  { name: "Protection Film", href: "/ru/protection", isRoute: true },
-  { name: "Automotive Film", href: "/ru/automotive", isRoute: true },
-  { name: "Texnologiya", href: "/#technology", isRoute: false },
-  { name: "Bog'lanish", href: "/#contact", isRoute: false },
-];
 
-const languages = [
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-  { code: 'uz', name: "O'zbek", flag: '🇺🇿' },
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-];
-
-const Header = () => {
+interface NavbarProps {
+  dict: {
+    header: {
+      nav:{
+        home:string;
+        protection:string;
+        automotive:string;
+        technology:string;
+        contact:string
+      },
+      workTime:string;
+      cta:string;
+      language:string;
+    };
+  };
+  lang: string;
+}
+const Header = ({dict , lang}:NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Get current language from pathname
+  const navLinks = [
+    { name: dict.header.nav.home , href: `/${lang}`, isRoute: true },
+    { name: dict.header.nav.protection, href: `/${lang}/protection`, isRoute: true },
+    { name: dict.header.nav.automotive, href: `/${lang}/automotive`, isRoute: true },
+    { name: dict.header.nav.technology, href: `/${lang}/technology`, isRoute: false },
+    { name: dict.header.nav.contact, href: `/${lang}/contact`, isRoute: false },
+  ];
+
+  const languages = [
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'uz', name: "O'zbek", flag: '🇺🇿' },
+    { code: 'en', name: 'English', flag: '🇬🇧' },
+  ];
+
+
   const currentLang = pathname.split('/')[1] || 'ru';
   const currentLanguage = languages.find(lang => lang.code === currentLang) || languages[0];
 
@@ -44,7 +62,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center justify-end py-2 text-sm text-muted-foreground border-b border-border/30">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
-              <span>Ish vaqti: 10:00 - 20:00</span>
+              <span>{dict.header.workTime}</span>
             </div>
           </div>
 
@@ -129,7 +147,7 @@ const Header = () => {
 
               {/* CTA Button */}
               <Button variant="hero" size="lg">
-                Bepul konsultatsiya
+                {dict.header.cta}
               </Button>
             </div>
 
@@ -176,7 +194,7 @@ const Header = () => {
 
                 {/* Mobile Language Switcher */}
                 <div className="pt-4 border-t border-border/50">
-                  <div className="text-sm text-muted-foreground mb-3">Til / Language</div>
+                  <div className="text-sm text-muted-foreground mb-3">{dict.header.language}</div>
                   <div className="grid grid-cols-3 gap-2">
                     {languages.map((lang) => (
                         <Link
@@ -189,7 +207,7 @@ const Header = () => {
                                     : 'border-border/50 hover:border-primary/50'
                             }`}
                         >
-                          <span className="text-2xl">{lang.flag}</span>
+
                           <span className="text-xs font-medium">{lang.code.toUpperCase()}</span>
                         </Link>
                     ))}
@@ -197,7 +215,7 @@ const Header = () => {
                 </div>
 
                 <Button variant="hero" className="w-full mt-4">
-                  Bepul konsultatsiya
+                  {dict.header.cta}
                 </Button>
               </div>
             </div>

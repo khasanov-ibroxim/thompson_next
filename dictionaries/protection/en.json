@@ -1,1 +1,75 @@
-{}
+{
+  "hero": {
+    "title": "Protection Film",
+    "description": "Protect your vehicle with the highest quality protection films. Premium quality, long-term warranty."
+  },
+  "products": [
+    {
+      "name": "LUMI – HP",
+      "brand": "KDX",
+      "specs": [
+        "193 micron",
+        "Heat-Healing",
+        "10 year",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
+      ],
+      "featuresRight": [
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
+      ]
+    },
+    {
+      "name": "LUMI – MATTE",
+      "brand": "KDX",
+      "specs": [
+        "180 micron",
+        "Self-Healing",
+        "8 year",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Matte Finish Look",
+        "Anti-Fingerprint",
+        "Scratch Protection",
+        "UV Protection"
+      ],
+      "featuresRight": [
+        "Weather Resistant",
+        "Stain Resistant",
+        "Long Lasting",
+        "Premium Quality"
+      ]
+    },
+    {
+      "name": "LUMI – GLOSS",
+      "brand": "KDX",
+      "specs": [
+        "200 micron",
+        "Heat-Healing",
+        "12 year",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "High Gloss Finish",
+        "Crystal Clear",
+        "Self-Healing Technology",
+        "Ultimate Protection"
+      ],
+      "featuresRight": [
+        "Hydrophobic Surface",
+        "Chemical Resistant",
+        "Factory Paint Look",
+        "Premium Shield"
+      ]
+    }
+  ],
+  "cta": "Give me samples"
+}

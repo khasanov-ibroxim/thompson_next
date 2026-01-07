@@ -37,7 +37,6 @@ const technologies = [
 const Technology = () => {
     return (
         <div className="min-h-screen bg-background">
-            <Header />
 
             {/* Hero Section */}
             <section className="relative h-[400px] flex items-center">
@@ -79,7 +78,6 @@ const Technology = () => {
                 </div>
             </section>
 
-            <Footer />
         </div>
     );
 };
