@@ -1,75 +1,185 @@
 {
   "hero": {
-    "title": "Защитная Пленка",
-    "description": "Защитите свой автомобиль высококачественными защитными пленками. Премиум качество, долгосрочная гарантия."
+    "title": "Himoya Plyonkasi",
+    "description": "Avtomobilingizni eng yuqori sifatli himoya plyonkalari bilan himoyalang. Premium sifat, uzoq muddat kafolat."
   },
   "products": [
     {
       "name": "LUMI – HP",
       "brand": "KDX",
       "specs": [
-        "193 микрон",
-        "Термозаживление",
-        "10 лет",
+        "193 mikron",
+        "Issiqlikdan tuzalish",
+        "10 yil",
         "PPF"
       ],
       "featuresLeft": [
-        "Устойчивость к выцветанию и эрозии",
-        "Сохраняет краску автомобиля",
-        "Легко устанавливается и обслуживается",
-        "Защита от UV и кислотного дождя"
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
       ],
       "featuresRight": [
-        "Превосходная погодостойкость",
-        "Высокая устойчивость к пятнам",
-        "Прочная и невидимая",
-        "Ударопрочная"
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
       ]
     },
     {
-      "name": "LUMI – MATTE",
+      "name": "LUMI – S",
       "brand": "KDX",
       "specs": [
-        "180 микрон",
-        "Самовосстановление",
-        "8 лет",
+        "193 mikron",
+        "O'z-o'zini tuzatish",
+        "10 yil",
         "PPF"
       ],
       "featuresLeft": [
-        "Матовая отделка",
-        "Анти-отпечатки пальцев",
-        "Защита от царапин",
-        "UV защита"
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
       ],
       "featuresRight": [
-        "Погодостойкая",
-        "Устойчивость к пятнам",
-        "Долговечная",
-        "Премиум качество"
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
       ]
     },
     {
-      "name": "LUMI – GLOSS",
+      "name": "LUMI – S Premium",
       "brand": "KDX",
       "specs": [
-        "200 микрон",
-        "Термозаживление",
-        "12 лет",
+        "205 mikron",
+        "O'z-o'zini tuzatish",
+        "10 yil",
         "PPF"
       ],
       "featuresLeft": [
-        "Высокоглянцевая отделка",
-        "Кристально чистая",
-        "Технология самовосстановления",
-        "Максимальная защита"
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
       ],
       "featuresRight": [
-        "Гидрофобная поверхность",
-        "Химически стойкая",
-        "Вид заводской краски",
-        "Премиум защита"
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "LUMI – X Premium",
+      "brand": "KDX",
+      "specs": [
+        "205 mikron",
+        "Issiqlikdan tuzalish",
+        "10 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - I200",
+      "brand": "THOMPSON",
+      "specs": [
+        "193 mikron",
+        "O'z-o'zini tuzatish",
+        "7 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - XGLOSS",
+      "brand": "THOMPSON",
+      "specs": [
+        "185 mikron",
+        "O'z-o'zini tuzatish",
+        "5 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - HCLEAR",
+      "brand": "THOMPSON",
+      "specs": [
+        "185 mikron",
+        "Issiqlikdan tuzalish",
+        "5 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - X100",
+      "brand": "THOMPSON",
+      "specs": [
+        "170 mikron",
+        "Issiqlikdan tuzalish",
+        "5 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
       ]
     }
   ],
-  "cta": "Получить образцы"
+  "cta": "Namuna oling"
 }

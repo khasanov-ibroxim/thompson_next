@@ -7,80 +7,169 @@
   "categories": [
     {
       "title": "HP CERAMIC",
-      "description": "Bizning HP seriyasi 10 yillik kafolatga ega bo'lgan, 1.6 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 59% gacha.",
+      "description": "Bizning HP ceramic seriyamiz 10 yillik kafolatli 1,5 mil/2 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 68% gacha.",
       "features": [
-        "99.9% UV Bloklash",
-        "Nano-Zarracha",
-        "Tiniq Metalsiz",
-        "1.6 mil Aralashma-Sepirish",
-        "Aks ettirilmaydigan",
-        "Bo'yalgan 231 VLT rad etish (99.999%)",
-        "Kengaytirilgan Maxfiylik",
-        "Tirnalishga qarshi ustki qatlam"
+        "Ko'p yo'nalishli",
+        "Aks ettirmaydigan",
+        "Issiqlikdan 65% gacha himoya",
+        "UV nurlanishidan 99% gacha himoya",
+        "IR nurlanishidan (900-1000 nm) 81% gacha himoya",
+        "Maxfiylikni oshiradi",
+        "Qirilishga qarshi qoplama"
       ],
       "specs": [
         {
-          "name": "HP 5",
+          "name": "HP ceramic 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "68",
+          "irBlocking": "79",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 05",
           "vlt": "5",
-          "uvBlock": "99.9",
-          "tser": "59",
-          "irBlocking": "97",
-          "solarBlocking": "95",
-          "thickness": "1.6",
+          "uvBlock": "≥99",
+          "tser": "62",
+          "irBlocking": "76",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "HP 15",
+          "name": "HP ceramic 15",
           "vlt": "15",
-          "uvBlock": "99.9",
-          "tser": "56",
-          "irBlocking": "95",
-          "solarBlocking": "90",
-          "thickness": "1.6",
+          "uvBlock": "≥99",
+          "tser": "68",
+          "irBlocking": "60",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "HP 25",
-          "vlt": "25",
-          "uvBlock": "99.9",
+          "name": "HP ceramic 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "56",
+          "irBlocking": "50",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 35",
+          "vlt": "35",
+          "uvBlock": "≥99",
           "tser": "52",
-          "irBlocking": "93",
-          "solarBlocking": "85",
-          "thickness": "1.6",
+          "irBlocking": "40",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "42",
+          "irBlocking": "35",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "40",
+          "irBlocking": "30",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         }
       ]
     },
     {
       "title": "NANO CERAMIC",
-      "description": "Bizning NANO Ceramic 10 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 56% gacha.",
+      "description": "Bizning NANO Ceramic seriyamiz 10 yillik kafolatli 1,5 mil/2 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 78% gacha.",
       "features": [
-        "99.9% UV Bloklash",
-        "Nano-Zarracha",
-        "Tiniq Metalsiz",
-        "1.5 mil Aralashma-Sepirish",
-        "Aks ettirilmaydigan",
-        "Kengaytirilgan Maxfiylik",
-        "Tirnalishga qarshi ustki qatlam"
+        "Ko'p yo'nalishli",
+        "Aks ettirmaydigan",
+        "Issiqlikdan 90% gacha himoya",
+        "UV nurlanishidan 99% gacha himoya",
+        "IR nurlanishidan (900-1000 nm) 90% gacha himoya",
+        "Maxfiylikni oshiradi",
+        "Qirilishga qarshi qoplama"
       ],
       "specs": [
         {
-          "name": "NANO 20",
-          "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "50",
+          "name": "NANO CERAMIC 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "78",
           "irBlocking": "90",
           "solarBlocking": "80",
           "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "NANO 35",
+          "name": "NANO CERAMIC 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "45",
-          "irBlocking": "85",
-          "solarBlocking": "75",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
           "thickness": "1.5",
           "warranty": "10"
         }
@@ -88,34 +177,94 @@
     },
     {
       "title": "XR CERAMIC PLUS",
-      "description": "Bizning XR CERAMIC PLUS seriyasi ustuvor kafolatga ega, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
+      "description": "XR CERAMIC PLUS seriyamiz, umrbod kafolat bilan, qalinligi 1,5 mil bo'lgan ikki qatlamli rang-barqaror plyonkadir. Ushbu plyonka radio yoki GPS signallariga xalaqit bermasdan, quyosh energiyasining umumiy rad etilishi (TSER) 78% gacha ta'minlaydi.",
       "features": [
-        "99.9% UV Bloklash",
-        "Nano-Zarracha",
-        "Tiniq Metalsiz",
-        "1.5 mil Aralashma-Sepirish",
-        "Aks ettirilmaydigan",
-        "Kengaytirilgan Maxfiylik",
-        "Tirnalishga qarshi ustki qatlam"
+        "Ko'p yo'nalishli",
+        "Aks ettirmaydigan",
+        "Issiqlikdan 93% gacha himoya",
+        "UV nurlanishidan 99% gacha himoya",
+        "IR nurlanishidan (900-1000 nm) 90% gacha himoya",
+        "Maxfiylikni oshiradi",
+        "Qirilishga qarshi qoplama"
       ],
       "specs": [
         {
-          "name": "XR 15",
-          "vlt": "15",
-          "uvBlock": "99.9",
-          "tser": "70",
-          "irBlocking": "98",
-          "solarBlocking": "95",
+          "name": "XR CERAMIC PLUS 00",
+          "vlt": "0",
+          "uvBlock": "≥99",
+          "tser": "79",
+          "irBlocking": "95",
+          "solarBlocking": "89",
+          "thickness": "2",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 01",
+          "vlt": "1",
+          "uvBlock": "≥99",
+          "tser": "76",
+          "irBlocking": "95",
+          "solarBlocking": "88",
+          "thickness": "2",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "67",
+          "irBlocking": "91",
+          "solarBlocking": "86",
           "thickness": "1.5",
           "warranty": "Lifetime"
         },
         {
-          "name": "XR 25",
-          "vlt": "25",
-          "uvBlock": "99.9",
-          "tser": "65",
-          "irBlocking": "96",
-          "solarBlocking": "90",
+          "name": "XR CERAMIC PLUS 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "63",
+          "irBlocking": "93",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "61",
+          "irBlocking": "91",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 35",
+          "vlt": "35",
+          "uvBlock": "≥99",
+          "tser": "56",
+          "irBlocking": "94",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "50",
+          "irBlocking": "93",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "42",
+          "irBlocking": "93",
+          "solarBlocking": "85",
           "thickness": "1.5",
           "warranty": "Lifetime"
         }
@@ -123,34 +272,74 @@
     },
     {
       "title": "Classic exclusive",
-      "description": "Bizning Classic seriyasi 4 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
+      "description": "Bizning Classic exclusive seriyamiz 4 yillik kafolatli 1,5 mil/2 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 46% gacha.",
       "features": [
-        "99.9% UV Bloklash",
-        "Nano-Zarracha",
-        "Tiniq Metalsiz",
-        "1.5 mil Aralashma-Sepirish",
-        "Aks ettirilmaydigan",
-        "Kengaytirilgan Maxfiylik",
-        "Tirnalishga qarshi ustki qatlam"
+        "Ko'p yo'nalishli",
+        "Aks ettirmaydigan",
+        "Issiqlikdan 90% gacha himoya",
+        "UV nurlanishidan 99% gacha himoya",
+        "IR nurlanishidan (900-1000 nm) 12% gacha himoya",
+        "Maxfiylikni oshiradi",
+        "Qirilishga qarshi qoplama"
       ],
       "specs": [
         {
-          "name": "Classic 20",
-          "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "45",
-          "irBlocking": "80",
-          "solarBlocking": "70",
+          "name": "Classic exclusive 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
           "thickness": "1.5",
           "warranty": "4"
         },
         {
-          "name": "Classic 35",
+          "name": "Classic exclusive 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "40",
-          "irBlocking": "75",
-          "solarBlocking": "65",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
           "thickness": "1.5",
           "warranty": "4"
         }
@@ -158,34 +347,75 @@
     },
     {
       "title": "CORE",
-      "description": "Bizning CORE Ceramic boshlang'ich darajadagi keramik plyonka bo'lib, 3 yillik kafolatga ega. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi va mukammal quyosh issiqligini rad etadi: TSER 50% gacha.",
+      "description": "Bizning CORE seriyamiz 3 yillik kafolatli 1 mil/1 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 38% gacha.",
       "features": [
-        "99.9% UV Bloklash",
-        "Nano-Zarracha",
-        "Tiniq Metalsiz",
-        "Standart Qalinlik",
-        "Aks ettirilmaydigan",
-        "Tirnalishga qarshi ustki qatlam"
+        "Ko'p yo'nalishli",
+        "Aks ettirmaydigan",
+        "Issiqlikdan 90% gacha himoya",
+        "UV nurlanishidan 99% gacha himoya",
+        "IR nurlanishidan (900-1000 nm) 12% gacha himoya",
+        "Maxfiylikni oshiradi",
+        "Qirilishga qarshi qoplama"
       ],
       "specs": [
         {
+          "name": "CORE 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
           "name": "CORE 20",
           "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "35",
-          "irBlocking": "70",
-          "solarBlocking": "60",
-          "thickness": "1.2",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
           "warranty": "3"
         },
         {
           "name": "CORE 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "30",
-          "irBlocking": "65",
-          "solarBlocking": "55",
-          "thickness": "1.2",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
           "warranty": "3"
         }
       ]

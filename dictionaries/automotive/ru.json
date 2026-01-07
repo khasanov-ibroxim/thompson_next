@@ -7,80 +7,169 @@
   "categories": [
     {
       "title": "HP CERAMIC",
-      "description": "Наша серия HP имеет 10-летнюю гарантию, толщину 1.6 мил и отличное отражение солнечного тепла. Эта пленка обладает характеристиками сохранения GPS-сигнала при обеспечении полного отражения солнечной энергии: TSER до 59%.",
+      "description": "Наша серия керамической пленки HP с 10-летней гарантией представляет собой двухслойную цветоустойчивую пленку толщиной 1,5 мил. Эта пленка не мешает радиосигналам или GPS, обеспечивая при этом общее тепловое сопротивление (TSER) до 68%.",
       "features": [
-        "99.9% блокировка UV",
-        "Нано-частицы",
-        "Прозрачная без металла",
-        "1.6 мил сплав-напыление",
-        "Неотражающая",
-        "Окрашенное отражение 231 VLT (99.999%)",
+        "Многослойный",
+        "Ненарушающий отражение",
+        "До 65% защиты от тепла",
+        "До 99% защиты от УФ-излучения",
+        "До 81% защиты от ИК-излучения (900-1000нм)",
         "Улучшенная конфиденциальность",
-        "Антицарапинное верхнее покрытие"
+        "Антицарапающее покрытие"
       ],
       "specs": [
         {
-          "name": "HP 5",
+          "name": "HP ceramic 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "68",
+          "irBlocking": "79",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 05",
           "vlt": "5",
-          "uvBlock": "99.9",
-          "tser": "59",
-          "irBlocking": "97",
-          "solarBlocking": "95",
-          "thickness": "1.6",
+          "uvBlock": "≥99",
+          "tser": "62",
+          "irBlocking": "76",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "HP 15",
+          "name": "HP ceramic 15",
           "vlt": "15",
-          "uvBlock": "99.9",
-          "tser": "56",
-          "irBlocking": "95",
-          "solarBlocking": "90",
-          "thickness": "1.6",
+          "uvBlock": "≥99",
+          "tser": "68",
+          "irBlocking": "60",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "HP 25",
-          "vlt": "25",
-          "uvBlock": "99.9",
+          "name": "HP ceramic 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "56",
+          "irBlocking": "50",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 35",
+          "vlt": "35",
+          "uvBlock": "≥99",
           "tser": "52",
-          "irBlocking": "93",
-          "solarBlocking": "85",
-          "thickness": "1.6",
+          "irBlocking": "40",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "42",
+          "irBlocking": "35",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "40",
+          "irBlocking": "30",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         }
       ]
     },
     {
       "title": "NANO CERAMIC",
-      "description": "Наша NANO Ceramic - это серия с 10-летней гарантией, толщиной 1.5 мил и отличным отражением солнечного тепла. Эта пленка обладает характеристиками сохранения GPS-сигнала при обеспечении полного отражения солнечной энергии: TSER до 56%.",
+      "description": "Наша серия NANO Ceramic с 10-летней гарантией представляет собой двухслойную цветоустойчивую пленку толщиной 1,5 мил. Эта пленка не мешает радиосигналам или GPS, обеспечивая при этом общее тепловое сопротивление (TSER) до 78%.",
       "features": [
-        "99.9% блокировка UV",
-        "Нано-частицы",
-        "Прозрачная без металла",
-        "1.5 мил сплав-напыление",
-        "Неотражающая",
+        "Многослойный",
+        "Ненарушающий отражение",
+        "До 90% защиты от тепла",
+        "До 99% защиты от УФ-излучения",
+        "До 90% защиты от ИК-излучения (900-1000нм)",
         "Улучшенная конфиденциальность",
-        "Антицарапинное верхнее покрытие"
+        "Антицарапающее покрытие"
       ],
       "specs": [
         {
-          "name": "NANO 20",
-          "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "50",
+          "name": "NANO CERAMIC 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "78",
           "irBlocking": "90",
           "solarBlocking": "80",
           "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "NANO 35",
+          "name": "NANO CERAMIC 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "45",
-          "irBlocking": "85",
-          "solarBlocking": "75",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
           "thickness": "1.5",
           "warranty": "10"
         }
@@ -88,34 +177,94 @@
     },
     {
       "title": "XR CERAMIC PLUS",
-      "description": "Наша серия XR CERAMIC PLUS с приоритетной гарантией, толщиной 1.5 мил и отличным отражением солнечного тепла. Эта пленка обладает характеристиками сохранения GPS-сигнала при обеспечении полного отражения солнечной энергии: TSER до 70%.",
+      "description": "Наша серия XR CERAMIC PLUS с пожизненной гарантией представляет собой двухслойную пленку, устойчивую к выцветанию, толщиной 1,5 мил. Эта пленка не мешает радиосигналам или сигналам GPS, обеспечивая при этом общую степень отражения солнечной энергии (TSER) до 78%.",
       "features": [
-        "99.9% блокировка UV",
-        "Нано-частицы",
-        "Прозрачная без металла",
-        "1.5 мил сплав-напыление",
-        "Неотражающая",
+        "Многослойный",
+        "Ненарушающий отражение",
+        "До 93% защиты от тепла",
+        "До 99% защиты от УФ-излучения",
+        "До 90% защиты от ИК-излучения (900-1000нм)",
         "Улучшенная конфиденциальность",
-        "Антицарапинное верхнее покрытие"
+        "Антицарапающее покрытие"
       ],
       "specs": [
         {
-          "name": "XR 15",
-          "vlt": "15",
-          "uvBlock": "99.9",
-          "tser": "70",
-          "irBlocking": "98",
-          "solarBlocking": "95",
+          "name": "XR CERAMIC PLUS 00",
+          "vlt": "0",
+          "uvBlock": "≥99",
+          "tser": "79",
+          "irBlocking": "95",
+          "solarBlocking": "89",
+          "thickness": "2",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 01",
+          "vlt": "1",
+          "uvBlock": "≥99",
+          "tser": "76",
+          "irBlocking": "95",
+          "solarBlocking": "88",
+          "thickness": "2",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "67",
+          "irBlocking": "91",
+          "solarBlocking": "86",
           "thickness": "1.5",
           "warranty": "Lifetime"
         },
         {
-          "name": "XR 25",
-          "vlt": "25",
-          "uvBlock": "99.9",
-          "tser": "65",
-          "irBlocking": "96",
-          "solarBlocking": "90",
+          "name": "XR CERAMIC PLUS 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "63",
+          "irBlocking": "93",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "61",
+          "irBlocking": "91",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 35",
+          "vlt": "35",
+          "uvBlock": "≥99",
+          "tser": "56",
+          "irBlocking": "94",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "50",
+          "irBlocking": "93",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "42",
+          "irBlocking": "93",
+          "solarBlocking": "85",
           "thickness": "1.5",
           "warranty": "Lifetime"
         }
@@ -123,34 +272,74 @@
     },
     {
       "title": "Classic exclusive",
-      "description": "Наша серия Classic имеет 4-летнюю гарантию, толщину 1.5 мил и отличное отражение солнечного тепла. Эта пленка не мешает радио или GPS-сигналу, обеспечивая полное отражение солнечной энергии: TSER до 70%.",
+      "description": "Наша серия Classic exclusive с 4-летней гарантией представляет собой двухслойную цветоустойчивую пленку толщиной 1,5 мил. Эта пленка не мешает радиосигналам или GPS, обеспечивая при этом общее тепловое сопротивление (TSER) до 46%.",
       "features": [
-        "99.9% блокировка UV",
-        "Нано-частицы",
-        "Прозрачная без металла",
-        "1.5 мил сплав-напыление",
-        "Неотражающая",
+        "Многослойный",
+        "Ненарушающий отражение",
+        "До 90% защиты от тепла",
+        "До 99% защиты от УФ-излучения",
+        "До 12% защиты от ИК-излучения (900-1000нм)",
         "Улучшенная конфиденциальность",
-        "Антицарапинное верхнее покрытие"
+        "Антицарапающее покрытие"
       ],
       "specs": [
         {
-          "name": "Classic 20",
-          "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "45",
-          "irBlocking": "80",
-          "solarBlocking": "70",
+          "name": "Classic exclusive 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
           "thickness": "1.5",
           "warranty": "4"
         },
         {
-          "name": "Classic 35",
+          "name": "Classic exclusive 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "40",
-          "irBlocking": "75",
-          "solarBlocking": "65",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
           "thickness": "1.5",
           "warranty": "4"
         }
@@ -158,34 +347,75 @@
     },
     {
       "title": "CORE",
-      "description": "Наша CORE Ceramic - это керамическая пленка начального уровня с 3-летней гарантией. Эта пленка не мешает радио или GPS-сигналу, обеспечивая отличное отражение солнечного тепла: TSER до 50%.",
+      "description": "Наша серия CORE Ceramic - это керамическая пленка начального уровня с 3-летней гарантией. Эта пленка не мешает радио или GPS-сигналу, обеспечивая отличное отражение солнечного тепла: TSER до 38%.",
       "features": [
-        "99.9% блокировка UV",
-        "Нано-частицы",
-        "Прозрачная без металла",
-        "Стандартная толщина",
-        "Неотражающая",
-        "Антицарапинное верхнее покрытие"
+        "Многослойный",
+        "Ненарушающий отражение",
+        "До 90% защиты от тепла",
+        "До 99% защиты от УФ-излучения",
+        "До 12% защиты от ИК-излучения (900-1000нм)",
+        "Улучшенная конфиденциальность",
+        "Антицарапающее покрытие"
       ],
       "specs": [
         {
+          "name": "CORE 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
           "name": "CORE 20",
           "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "35",
-          "irBlocking": "70",
-          "solarBlocking": "60",
-          "thickness": "1.2",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
           "warranty": "3"
         },
         {
           "name": "CORE 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "30",
-          "irBlocking": "65",
-          "solarBlocking": "55",
-          "thickness": "1.2",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
           "warranty": "3"
         }
       ]

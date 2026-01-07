@@ -10,66 +10,176 @@
       "specs": [
         "193 micron",
         "Heat-Healing",
-        "10 year",
+        "10 years",
         "PPF"
       ],
       "featuresLeft": [
-        "Fade & Erosion Resistant",
-        "Preserve Vehicle Paint",
-        "Easy to Install & Maintain",
-        "UV & Acid Rain Protection"
-      ],
-      "featuresRight": [
         "Superior Weather Resistant",
         "Supreme Stain Resistant",
         "Durable & Invisible",
         "Impact Resistant"
+      ],
+      "featuresRight": [
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
       ]
     },
     {
-      "name": "LUMI – MATTE",
+      "name": "LUMI – S",
       "brand": "KDX",
       "specs": [
-        "180 micron",
+        "193 micron",
         "Self-Healing",
-        "8 year",
+        "10 years",
         "PPF"
       ],
       "featuresLeft": [
-        "Matte Finish Look",
-        "Anti-Fingerprint",
-        "Scratch Protection",
-        "UV Protection"
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
       ],
       "featuresRight": [
-        "Weather Resistant",
-        "Stain Resistant",
-        "Long Lasting",
-        "Premium Quality"
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
       ]
     },
     {
-      "name": "LUMI – GLOSS",
+      "name": "LUMI – S Premium",
       "brand": "KDX",
       "specs": [
-        "200 micron",
-        "Heat-Healing",
-        "12 year",
+        "205 micron",
+        "Self-Healing",
+        "10 years",
         "PPF"
       ],
       "featuresLeft": [
-        "High Gloss Finish",
-        "Crystal Clear",
-        "Self-Healing Technology",
-        "Ultimate Protection"
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
       ],
       "featuresRight": [
-        "Hydrophobic Surface",
-        "Chemical Resistant",
-        "Factory Paint Look",
-        "Premium Shield"
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
+      ]
+    },
+    {
+      "name": "LUMI – X Premium",
+      "brand": "KDX",
+      "specs": [
+        "205 micron",
+        "Heat-Healing",
+        "10 years",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
+      ],
+      "featuresRight": [
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
+      ]
+    },
+    {
+      "name": "PPF - I200",
+      "brand": "THOMPSON",
+      "specs": [
+        "193 micron",
+        "Self-Healing",
+        "7 years",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
+      ],
+      "featuresRight": [
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
+      ]
+    },
+    {
+      "name": "PPF - XGLOSS",
+      "brand": "THOMPSON",
+      "specs": [
+        "185 micron",
+        "Self-Healing",
+        "5 years",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
+      ],
+      "featuresRight": [
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
+      ]
+    },
+    {
+      "name": "PPF - HCLEAR",
+      "brand": "THOMPSON",
+      "specs": [
+        "185 micron",
+        "Heat-Healing",
+        "5 years",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
+      ],
+      "featuresRight": [
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
+      ]
+    },
+    {
+      "name": "PPF - X100",
+      "brand": "THOMPSON",
+      "specs": [
+        "170 micron",
+        "Heat-Healing",
+        "5 years",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Superior Weather Resistant",
+        "Supreme Stain Resistant",
+        "Durable & Invisible",
+        "Impact Resistant"
+      ],
+      "featuresRight": [
+        "Fade & Erosion Resistant",
+        "Preserve Vehicle Paint",
+        "Easy to Install & Maintain",
+        "UV & Acid Rain Protection"
       ]
     }
   ],
-  "cta": "Give me samples"
+  "cta": "Get Free Samples"
 }

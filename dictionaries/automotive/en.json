@@ -7,80 +7,169 @@
   "categories": [
     {
       "title": "HP CERAMIC",
-      "description": "Our HP series is the series with the 10 year warranty, to a 1.6 mil thickness, excellent solar heat rejection. This film has the characteristics of the ratio of GPS signal while providing total solar energy rejection: TSER of up to 59%.",
+      "description": "Our HP ceramic series, with a 10-year warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 68%.",
       "features": [
-        "99.9% UV Block",
-        "Nano-Particle",
-        "Clear Metal Free",
-        "1.6 mil Alloy-Sputter",
-        "Non-Reflective",
-        "Dyed out 231 VLT rejection (99.999%)",
+        "Multi-Directional",
+        "Non-reflective",
+        "Up to 65% of Heat Rejection",
+        "Up to 99% of UV Rejection",
+        "Up to 81% of IR Rejection (900-1000nm)",
         "Enhanced Privacy",
-        "Anti-Scratch Top Coat"
+        "Anti-scratch Top Coat"
       ],
       "specs": [
         {
-          "name": "HP 5",
+          "name": "HP ceramic 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "68",
+          "irBlocking": "79",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 05",
           "vlt": "5",
-          "uvBlock": "99.9",
-          "tser": "59",
-          "irBlocking": "97",
-          "solarBlocking": "95",
-          "thickness": "1.6",
+          "uvBlock": "≥99",
+          "tser": "62",
+          "irBlocking": "76",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "HP 15",
+          "name": "HP ceramic 15",
           "vlt": "15",
-          "uvBlock": "99.9",
-          "tser": "56",
-          "irBlocking": "95",
-          "solarBlocking": "90",
-          "thickness": "1.6",
+          "uvBlock": "≥99",
+          "tser": "68",
+          "irBlocking": "60",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "HP 25",
-          "vlt": "25",
-          "uvBlock": "99.9",
+          "name": "HP ceramic 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "56",
+          "irBlocking": "50",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 35",
+          "vlt": "35",
+          "uvBlock": "≥99",
           "tser": "52",
-          "irBlocking": "93",
-          "solarBlocking": "85",
-          "thickness": "1.6",
+          "irBlocking": "40",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "42",
+          "irBlocking": "35",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "HP ceramic 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "40",
+          "irBlocking": "30",
+          "solarBlocking": "80",
+          "thickness": "1.5",
           "warranty": "10"
         }
       ]
     },
     {
       "title": "NANO CERAMIC",
-      "description": "Our NANO Ceramic is the series with the 10 year warranty, to a 1.5 mil thickness, excellent solar heat rejection. This film has the characteristics of the ratio of GPS signal while providing total solar energy rejection: TSER of up to 56%.",
+      "description": "Our NANO Ceramic series, with a 10-year warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 78%.",
       "features": [
-        "99.9% UV Block",
-        "Nano-Particle",
-        "Clear Metal Free",
-        "1.5 mil Alloy-Sputter",
-        "Non-Reflective",
+        "Multi-Directional",
+        "Non-reflective",
+        "Up to 90% of Heat Rejection",
+        "Up to 99% of UV Rejection",
+        "Up to 90% of IR Rejection (900-1000nm)",
         "Enhanced Privacy",
-        "Anti-Scratch Top Coat"
+        "Anti-scratch Top Coat"
       ],
       "specs": [
         {
-          "name": "NANO 20",
-          "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "50",
+          "name": "NANO CERAMIC 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "78",
           "irBlocking": "90",
           "solarBlocking": "80",
           "thickness": "1.5",
           "warranty": "10"
         },
         {
-          "name": "NANO 35",
+          "name": "NANO CERAMIC 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "45",
-          "irBlocking": "85",
-          "solarBlocking": "75",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO CERAMIC 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "78",
+          "irBlocking": "90",
+          "solarBlocking": "80",
           "thickness": "1.5",
           "warranty": "10"
         }
@@ -88,34 +177,94 @@
     },
     {
       "title": "XR CERAMIC PLUS",
-      "description": "Our XR CERAMIC PLUS series with the priority warranty, to a 1.5 mil thickness, excellent solar heat rejection. This film has the characteristics of the ratio of GPS signal while providing total solar energy rejection: TSER of up to 70%.",
+      "description": "Our XR CERAMIC PLUS series, with a lifetime warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 78%.",
       "features": [
-        "99.9% UV Block",
-        "Nano-Particle",
-        "Clear Metal Free",
-        "1.5 mil Alloy-Sputter",
-        "Non-Reflective",
+        "Multi-Directional",
+        "Non-reflective",
+        "Up to 93% of Heat Rejection",
+        "Up to 99% of UV Rejection",
+        "Up to 90% of IR Rejection (900-1000nm)",
         "Enhanced Privacy",
-        "Anti-Scratch Top Coat"
+        "Anti-scratch Top Coat"
       ],
       "specs": [
         {
-          "name": "XR 15",
-          "vlt": "15",
-          "uvBlock": "99.9",
-          "tser": "70",
-          "irBlocking": "98",
-          "solarBlocking": "95",
+          "name": "XR CERAMIC PLUS 00",
+          "vlt": "0",
+          "uvBlock": "≥99",
+          "tser": "79",
+          "irBlocking": "95",
+          "solarBlocking": "89",
+          "thickness": "2",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 01",
+          "vlt": "1",
+          "uvBlock": "≥99",
+          "tser": "76",
+          "irBlocking": "95",
+          "solarBlocking": "88",
+          "thickness": "2",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "67",
+          "irBlocking": "91",
+          "solarBlocking": "86",
           "thickness": "1.5",
           "warranty": "Lifetime"
         },
         {
-          "name": "XR 25",
-          "vlt": "25",
-          "uvBlock": "99.9",
-          "tser": "65",
-          "irBlocking": "96",
-          "solarBlocking": "90",
+          "name": "XR CERAMIC PLUS 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "63",
+          "irBlocking": "93",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "61",
+          "irBlocking": "91",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 35",
+          "vlt": "35",
+          "uvBlock": "≥99",
+          "tser": "56",
+          "irBlocking": "94",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "50",
+          "irBlocking": "93",
+          "solarBlocking": "85",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR CERAMIC PLUS 70",
+          "vlt": "70",
+          "uvBlock": "≥99",
+          "tser": "42",
+          "irBlocking": "93",
+          "solarBlocking": "85",
           "thickness": "1.5",
           "warranty": "Lifetime"
         }
@@ -123,34 +272,74 @@
     },
     {
       "title": "Classic exclusive",
-      "description": "Our Classic series is the series with the 4 year warranty, to a 1.5 mil thickness, excellent solar heat rejection. This film does not interfere with a radio or GPS signal while providing total solar energy rejection: TSER of up to 70%.",
+      "description": "Our Classic exclusive series, with a 4-year warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 46%.",
       "features": [
-        "99.9% UV Block",
-        "Nano-Particle",
-        "Clear Metal Free",
-        "1.5 mil Alloy-Sputter",
-        "Non-Reflective",
+        "Multi-Directional",
+        "Non-reflective",
+        "Up to 90% of Heat Rejection",
+        "Up to 99% of UV Rejection",
+        "Up to 12% of IR Rejection (900-1000nm)",
         "Enhanced Privacy",
-        "Anti-Scratch Top Coat"
+        "Anti-scratch Top Coat"
       ],
       "specs": [
         {
-          "name": "Classic 20",
-          "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "45",
-          "irBlocking": "80",
-          "solarBlocking": "70",
+          "name": "Classic exclusive 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
           "thickness": "1.5",
           "warranty": "4"
         },
         {
-          "name": "Classic 35",
+          "name": "Classic exclusive 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 20",
+          "vlt": "20",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "40",
-          "irBlocking": "75",
-          "solarBlocking": "65",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic exclusive 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "46",
+          "irBlocking": "12",
+          "solarBlocking": "12",
           "thickness": "1.5",
           "warranty": "4"
         }
@@ -158,34 +347,75 @@
     },
     {
       "title": "CORE",
-      "description": "Our CORE Ceramic is the entry-level ceramic film with a 3 year warranty. This film does not interfere with a radio or GPS signal while providing excellent solar heat rejection: TSER of up to 50%.",
+      "description": "Our CORE series is a 1 mil/1-ply color stable film with a 3 year warranty. This film does not interfere radio or GPS signals while providing a TSER up to 38%.",
       "features": [
-        "99.9% UV Block",
-        "Nano-Particle",
-        "Clear Metal Free",
-        "Standard Thickness",
-        "Non-Reflective",
-        "Anti-Scratch Top Coat"
+        "Multi-Directional",
+        "Non-reflective",
+        "Up to 90% of Heat Rejection",
+        "Up to 99% of UV Rejection",
+        "Up to 12% of IR Rejection (900-1000nm)",
+        "Enhanced Privacy",
+        "Anti-scratch Top Coat"
       ],
       "specs": [
         {
+          "name": "CORE 03",
+          "vlt": "3",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 05",
+          "vlt": "5",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 15",
+          "vlt": "15",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
           "name": "CORE 20",
           "vlt": "20",
-          "uvBlock": "99.9",
-          "tser": "35",
-          "irBlocking": "70",
-          "solarBlocking": "60",
-          "thickness": "1.2",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
           "warranty": "3"
         },
         {
           "name": "CORE 35",
           "vlt": "35",
-          "uvBlock": "99.9",
-          "tser": "30",
-          "irBlocking": "65",
-          "solarBlocking": "55",
-          "thickness": "1.2",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 50",
+          "vlt": "50",
+          "uvBlock": "≥99",
+          "tser": "38",
+          "irBlocking": "11",
+          "solarBlocking": "11",
+          "thickness": "1",
           "warranty": "3"
         }
       ]

@@ -10,64 +10,174 @@
       "specs": [
         "193 mikron",
         "Issiqlikdan tuzalish",
-        "10 yillik",
+        "10 yil",
         "PPF"
       ],
       "featuresLeft": [
-        "So'nishga va eroziyaga chidamli",
-        "Avtomobil bo'yog'ini saqlaydi",
-        "O'rnatish va parvarish qilish oson",
-        "UV va kislotali yomg'irdan himoya"
-      ],
-      "featuresRight": [
-        "Ob-havo ta'siriga yuqori chidamlilik",
-        "Dog'larga mukammal chidamlilik",
-        "Chidamli va ko'rinmas",
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
         "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
       ]
     },
     {
-      "name": "LUMI – MATTE",
+      "name": "LUMI – S",
       "brand": "KDX",
       "specs": [
-        "180 mikron",
+        "193 mikron",
         "O'z-o'zini tuzatish",
-        "8 yillik",
+        "10 yil",
         "PPF"
       ],
       "featuresLeft": [
-        "Mat tugatish ko'rinishi",
-        "Barmoq izi qolmaydigan",
-        "Tirnalishdan himoya",
-        "UV himoya"
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
       ],
       "featuresRight": [
-        "Ob-havo ta'siriga chidamli",
-        "Dog'larga chidamli",
-        "Uzoq muddatli",
-        "Premium sifat"
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
       ]
     },
     {
-      "name": "LUMI – GLOSS",
+      "name": "LUMI – S Premium",
       "brand": "KDX",
       "specs": [
-        "200 mikron",
-        "Issiqlikdan tuzalish",
-        "12 yillik",
+        "205 mikron",
+        "O'z-o'zini tuzatish",
+        "10 yil",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori yaltiroq tugatish",
-        "Kristall tiniq",
-        "O'z-o'zini tuzatish texnologiyasi",
-        "Mukammal himoya"
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
       ],
       "featuresRight": [
-        "Gidrofob sirt",
-        "Kimyoviy moddalarga chidamli",
-        "Zavod bo'yog'i ko'rinishi",
-        "Premium qalqon"
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "LUMI – X Premium",
+      "brand": "KDX",
+      "specs": [
+        "205 mikron",
+        "Issiqlikdan tuzalish",
+        "10 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - I200",
+      "brand": "THOMPSON",
+      "specs": [
+        "193 mikron",
+        "O'z-o'zini tuzatish",
+        "7 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - XGLOSS",
+      "brand": "THOMPSON",
+      "specs": [
+        "185 mikron",
+        "O'z-o'zini tuzatish",
+        "5 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - HCLEAR",
+      "brand": "THOMPSON",
+      "specs": [
+        "185 mikron",
+        "Issiqlikdan tuzalish",
+        "5 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
+      ]
+    },
+    {
+      "name": "PPF - X100",
+      "brand": "THOMPSON",
+      "specs": [
+        "170 mikron",
+        "Issiqlikdan tuzalish",
+        "5 yil",
+        "PPF"
+      ],
+      "featuresLeft": [
+        "Yuqori ob-havoga chidamlilik",
+        "Yuqori darajada dog'ga chidamli",
+        "Mustahkam va ko'rinmas",
+        "Zarbalarga chidamli"
+      ],
+      "featuresRight": [
+        "Rang o'chishi va eroziyaga chidamli",
+        "Avtomobil bo'yoqlarini saqlash",
+        "Oson o'rnatish va texnik xizmat ko'rsatish",
+        "UV va kislota yomg'iridan himoya"
       ]
     }
   ],
