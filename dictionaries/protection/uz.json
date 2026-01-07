@@ -5,10 +5,14 @@
   },
   "products": [
     {
-      "name": "LUMI – HP",
-      "brand": "KDX",
+      "name": "PREMIUM",
+      "brand": "Thompson",
+      "images": [
+        "@/assets/images/hero-car.jpg",
+        "@/assets/images/thompson-life.jpg"
+      ],
       "specs": [
-        "193 mikron",
+        "214 mikron",
         "Issiqlikdan tuzalish",
         "10 yil",
         "PPF"
@@ -27,12 +31,12 @@
       ]
     },
     {
-      "name": "LUMI – S",
-      "brand": "KDX",
+      "name": "I - 300",
+      "brand": "Thompson",
       "specs": [
-        "193 mikron",
+        "214 mikron",
         "O'z-o'zini tuzatish",
-        "10 yil",
+        "8 yil",
         "PPF"
       ],
       "featuresLeft": [
@@ -49,12 +53,12 @@
       ]
     },
     {
-      "name": "LUMI – S Premium",
-      "brand": "KDX",
+      "name": "SPECIAL PLUS",
+      "brand": "Thompson",
       "specs": [
-        "205 mikron",
+        "210 mikron",
         "O'z-o'zini tuzatish",
-        "10 yil",
+        "8 yil",
         "PPF"
       ],
       "featuresLeft": [
@@ -71,12 +75,12 @@
       ]
     },
     {
-      "name": "LUMI – X Premium",
-      "brand": "KDX",
+      "name": "SPECIAL ",
+      "brand": "Thompson",
       "specs": [
-        "205 mikron",
+        "190 mikron",
         "Issiqlikdan tuzalish",
-        "10 yil",
+        "8 yil",
         "PPF"
       ],
       "featuresLeft": [
@@ -137,10 +141,10 @@
       ]
     },
     {
-      "name": "PPF - HCLEAR",
+      "name": "PPF - X99",
       "brand": "THOMPSON",
       "specs": [
-        "185 mikron",
+        "210 mikron",
         "Issiqlikdan tuzalish",
         "5 yil",
         "PPF"
@@ -159,7 +163,7 @@
       ]
     },
     {
-      "name": "PPF - X100",
+      "name": "PPF - ULTRA GLOSS",
       "brand": "THOMPSON",
       "specs": [
         "170 mikron",
