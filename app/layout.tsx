@@ -68,53 +68,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="icon" type="image/png" href="/logo.png" sizes="16x16"/>
             <link rel="apple-touch-icon" href="/logo.png"/>
 
-            {/* Google Analytics */}
-            <Script
-                strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID`}
-            />
-            <Script
-                id="google-analytics"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'YOUR_GA_ID');
-                    `,
-                }}
-            />
-
-            {/* Yandex Metrika */}
-            <Script
-                id="yandex-metrika"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-                        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                        m[i].l=1*new Date();
-                        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-                        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-                        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-                        ym(YOUR_YANDEX_ID, "init", {
-                            clickmap:true,
-                            trackLinks:true,
-                            accurateTrackBounce:true,
-                            webvisor:true
-                        });
-                    `,
-                }}
-            />
-            <noscript>
-                <div>
-                    <img
-                        src="https://mc.yandex.ru/watch/YOUR_YANDEX_ID"
-                        style={{position: 'absolute', left: '-9999px'}}
-                        alt=""
-                    />
-                </div>
-            </noscript>
 
             {/* Структурированные данные - Организация */}
             <Script

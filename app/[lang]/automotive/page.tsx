@@ -1,4 +1,4 @@
-// app/[lang]/automotive/page.tsx
+// app/[lang]/automotive/page.tsx - UPDATED
 import {Metadata} from "next";
 import {Check} from "lucide-react";
 import Image from "next/image";
@@ -6,6 +6,15 @@ import {getDictionary} from "@/lib/dictionary";
 import {i18n, Locale} from "@/i18n-config";
 import {notFound} from "next/navigation";
 import Link from "next/link";
+
+// Product slugs for URLs
+const productSlugs = [
+    'hp-ceramic',
+    'nano-ceramic',
+    'xr-ceramic-plus',
+    'classic-exclusive',
+    'core'
+];
 
 export async function generateMetadata({
                                            params,
@@ -92,7 +101,7 @@ const AutomotiveFilm = async ({
                             <p className="text-lg text-muted-foreground mb-5">
                                 {dict.hero.description}
                             </p>
-                            <Link href={`/${lang}/contact`} className="px-8 bg-[hsl(var(--thompson-red))] py-3 rounded-xl inline-block">
+                            <Link href={`/${lang}/contact`} className="px-8 bg-[hsl(var(--thompson-red))] text-white py-3 rounded-xl inline-block hover:opacity-90 transition">
                                 {dict.hero.cta}
                             </Link>
                         </div>
@@ -103,6 +112,8 @@ const AutomotiveFilm = async ({
                 <section className="py-16">
                     <div className="container mx-auto px-4 lg:px-8 space-y-24">
                         {dict.categories.map((category: any, index: number) => {
+                            const productSlug = productSlugs[index];
+
                             return (
                                 <article
                                     key={index}
@@ -110,14 +121,16 @@ const AutomotiveFilm = async ({
                                     itemScope
                                     itemType="https://schema.org/Product"
                                 >
-                                    <meta itemProp="name" content={`Thompson ${category.title}`} />
+                                    <meta itemProp="name" content={`${category.title}`} />
                                     <meta itemProp="brand" content="Thompson Window Film" />
                                     <meta itemProp="description" content={category.description} />
 
                                     {/* Category Header */}
-                                    <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8" itemProp="name">
-                                        Thompson {category.title}
-                                    </h2>
+                                    <Link href={`/${lang}/automotive/${productSlug}`}>
+                                        <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8 hover:text-primary/80 transition" itemProp="name">
+                                             {category.title}
+                                        </h2>
+                                    </Link>
 
                                     {/* Content Grid */}
                                     <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 mb-10`}>
@@ -126,36 +139,45 @@ const AutomotiveFilm = async ({
                                             <p className="text-muted-foreground mb-6 leading-relaxed" itemProp="description">
                                                 {category.description}
                                             </p>
-                                            <div className="grid sm:grid-cols-2 gap-3">
-                                                {category.features.map((feature: string, idx: number) => (
+                                            <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                                                {category.features.slice(0, 6).map((feature: string, idx: number) => (
                                                     <div key={idx} className="flex items-center gap-3">
                                                         <Check className="w-4 h-4 text-primary flex-shrink-0" />
                                                         <span className="text-foreground text-sm">{feature}</span>
                                                     </div>
                                                 ))}
                                             </div>
+
+                                            <Link
+                                                href={`/${lang}/automotive/${productSlug}`}
+                                                className="inline-block px-6 py-2 bg-card border border-border rounded-lg hover:bg-accent transition text-sm"
+                                            >
+                                                {lang === 'ru' ? 'Подробнее' : lang === 'en' ? 'Learn More' : 'Batafsil'}
+                                            </Link>
                                         </div>
 
                                         {/* Image */}
                                         <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                                            <div className="relative rounded-2xl overflow-hidden">
-                                                <Image
-                                                    src={category.auto_img}
-                                                    alt={`Thompson ${category.title} automotive window film`}
-                                                    width={800}
-                                                    height={600}
-                                                    className="w-full h-64 lg:h-80 object-cover"
-                                                    itemProp="image"
-                                                />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-                                            </div>
+                                            <Link href={`/${lang}/automotive/${productSlug}`}>
+                                                <div className="relative rounded-2xl overflow-hidden group cursor-pointer">
+                                                    <Image
+                                                        src={category.auto_img}
+                                                        alt={`Thompson ${category.title} automotive window film`}
+                                                        width={800}
+                                                        height={600}
+                                                        className="w-full h-64 lg:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                                                        itemProp="image"
+                                                    />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
 
-                                    {/* Specifications Table */}
+                                    {/* Specifications Table - показываем только первые 3 строки */}
                                     {category.specs && category.specs.length > 0 && (
                                         <div className="overflow-x-auto">
-                                            <table className="w-full border-collapse" itemProp="offers" itemScope itemType="https://schema.org/AggregateOffer">
+                                            <table className="w-full border-collapse">
                                                 <thead>
                                                 <tr className="bg-primary text-primary-foreground">
                                                     <th className="px-4 py-3 text-left text-sm font-semibold">
@@ -175,14 +197,6 @@ const AutomotiveFilm = async ({
                                                         <span className="sm:hidden">{dict.table?.infraredShort || "IR (%)"}</span>
                                                     </th>
                                                     <th className="px-4 py-3 text-center text-sm font-semibold">
-                                                        <span className="hidden sm:inline">{dict.table?.solarEnergy || "SOLAR ENERGY BLOCKING (%)"}</span>
-                                                        <span className="sm:hidden">{dict.table?.solarEnergyShort || "SE (%)"}</span>
-                                                    </th>
-                                                    <th className="px-4 py-3 text-center text-sm font-semibold">
-                                                        <span className="hidden sm:inline">{dict.table?.thickness || "THICKNESS (MIL)"}</span>
-                                                        <span className="sm:hidden">{dict.table?.thicknessShort || "THICK"}</span>
-                                                    </th>
-                                                    <th className="px-4 py-3 text-center text-sm font-semibold">
                                                         <span className="hidden sm:inline">{dict.table?.warranty || "WARRANTY (Years)"}</span>
                                                         <span className="sm:hidden">{dict.table?.warrantyShort || "WTY"}</span>
                                                     </th>
@@ -200,14 +214,12 @@ const AutomotiveFilm = async ({
                                                         itemType="https://schema.org/Product"
                                                     >
                                                         <td className="px-4 py-3 text-foreground font-medium text-sm" itemProp="name">
-                                                            Thompson {spec.name}
+                                                             {spec.name}
                                                         </td>
                                                         <td className="px-4 py-3 text-center text-muted-foreground text-sm">{spec.vlt}</td>
                                                         <td className="px-4 py-3 text-center text-muted-foreground text-sm">{spec.uvBlock}</td>
                                                         <td className="px-4 py-3 text-center text-muted-foreground text-sm">{spec.tser}</td>
                                                         <td className="px-4 py-3 text-center text-muted-foreground text-sm">{spec.irBlocking}</td>
-                                                        <td className="px-4 py-3 text-center text-muted-foreground text-sm">{spec.solarBlocking}</td>
-                                                        <td className="px-4 py-3 text-center text-muted-foreground text-sm">{spec.thickness}</td>
                                                         <td className="px-4 py-3 text-center text-muted-foreground text-sm">{spec.warranty}</td>
                                                     </tr>
                                                 ))}

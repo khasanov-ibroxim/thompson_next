@@ -1,6 +1,5 @@
-// app/[lang]/protection/page.tsx
+// app/[lang]/protection/page.tsx - UPDATED
 import {Metadata} from "next";
-import {Button} from "@/components/ui/button";
 import protectionFilm from "@/public/images/protection-film.jpg";
 import heroCar from "@/public/images/hero-car.jpg";
 import {getDictionary} from "@/lib/dictionary";
@@ -8,6 +7,18 @@ import {i18n, Locale} from "@/i18n-config";
 import {notFound} from "next/navigation";
 import ProductSwiper from "@/components/ui/ProductSwiper";
 import Link from "next/link";
+
+// Product slugs for URLs
+const productSlugs = [
+    'premium',
+    'i-300',
+    'special-plus',
+    'special',
+    'ppf-i200',
+    'ppf-xgloss',
+    'ppf-x99',
+    'ppf-ultra-gloss'
+];
 
 export async function generateMetadata({
                                            params,
@@ -103,6 +114,7 @@ const ProtectionFilm = async ({
                     <div className="container mx-auto px-4 lg:px-8 space-y-16">
                         {dict.products.map((product: any, index: number) => {
                             const productImage = index % 2 === 0 ? heroCar : protectionFilm;
+                            const productSlug = productSlugs[index];
 
                             return (
                                 <article
@@ -113,25 +125,29 @@ const ProtectionFilm = async ({
                                     itemScope
                                     itemType="https://schema.org/Product"
                                 >
-                                    <meta itemProp="name" content={`Thompson ${product.name}`} />
+                                    <meta itemProp="name" content={` ${product.name}`} />
                                     <meta itemProp="brand" content="Thompson Window Film" />
                                     <meta itemProp="description" content={product.featuresLeft.join(", ")} />
 
                                     {/* Product Image with Swiper */}
                                     <div className={`${index % 2 === 1 ? "lg:order-2" : ""} overflow-hidden`}>
-                                        <ProductSwiper
-                                            images={product.images}
-                                            productName={product.name}
-                                            defaultImage={productImage}
-                                        />
+                                        <Link href={`/${lang}/protection/${productSlug}`}>
+                                            <ProductSwiper
+                                                images={product.images}
+                                                productName={product.name}
+                                                defaultImage={productImage}
+                                            />
+                                        </Link>
                                     </div>
 
                                     {/* Product Info */}
                                     <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                                         <div className="flex items-start justify-between mb-6">
-                                            <h2 className="text-3xl lg:text-4xl font-bold text-foreground" itemProp="name">
-                                                Thompson {product.name}
-                                            </h2>
+                                            <Link href={`/${lang}/protection/${productSlug}`}>
+                                                <h2 className="text-3xl lg:text-4xl font-bold text-foreground hover:text-primary transition" itemProp="name">
+                                                     {product.name}
+                                                </h2>
+                                            </Link>
                                             <div className="bg-card border border-border rounded-lg px-4 py-2">
                                                 <span className="text-primary font-bold text-xl" itemProp="brand">
                                                     {product.brand}
@@ -154,18 +170,18 @@ const ProtectionFilm = async ({
                                         {/* Features */}
                                         <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
                                             <div className="space-y-3">
-                                                {product.featuresLeft.map((feature: string, idx: number) => (
+                                                {product.featuresLeft.slice(0, 4).map((feature: string, idx: number) => (
                                                     <div key={idx} className="flex items-center gap-3">
                                                         <div className="w-2 h-2 rounded-full bg-primary"/>
-                                                        <span className="text-foreground">{feature}</span>
+                                                        <span className="text-foreground text-sm">{feature}</span>
                                                     </div>
                                                 ))}
                                             </div>
                                             <div className="space-y-3">
-                                                {product.featuresRight.map((feature: string, idx: number) => (
+                                                {product.featuresRight.slice(0, 4).map((feature: string, idx: number) => (
                                                     <div key={idx} className="flex items-center gap-3">
                                                         <div className="w-2 h-2 rounded-full bg-primary"/>
-                                                        <span className="text-foreground font-medium">
+                                                        <span className="text-foreground font-medium text-sm">
                                                             {feature}
                                                         </span>
                                                     </div>
@@ -173,10 +189,21 @@ const ProtectionFilm = async ({
                                             </div>
                                         </div>
 
-                                        {/* CTA Button */}
-                                        <Link href={`/${lang}/contact`} className="px-8 bg-[hsl(var(--thompson-red))] py-3 rounded-xl inline-block">
-                                            {dict.cta}
-                                        </Link>
+                                        {/* CTA Buttons */}
+                                        <div className="flex gap-3">
+                                            <Link
+                                                href={`/${lang}/protection/${productSlug}`}
+                                                className="px-6 bg-card border border-border py-3 rounded-xl inline-block hover:bg-accent transition text-sm"
+                                            >
+                                                {lang === 'ru' ? 'Подробнее' : lang === 'en' ? 'Learn More' : 'Batafsil'}
+                                            </Link>
+                                            <Link
+                                                href={`/${lang}/contact`}
+                                                className="px-6 bg-[hsl(var(--thompson-red))] text-white py-3 rounded-xl inline-block hover:opacity-90 transition text-sm"
+                                            >
+                                                {dict.cta}
+                                            </Link>
+                                        </div>
                                     </div>
                                 </article>
                             );
