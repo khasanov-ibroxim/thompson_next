@@ -6,7 +6,27 @@ import { motion } from "framer-motion";
 import heroImage from "@/assets/images/hero-car.jpg";
 import Image from "next/image";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  dict:{
+    hero:{
+      badge:string,
+      title:string,
+      subtitle:string,
+      description:string,
+      cta: {
+        primary: string,
+        secondary: string
+      },
+      stats: {
+        customers: string,
+        experience: string,
+        warranty: string
+      }
+    }
+  }
+}
+
+const HeroSection = ({dict}:HeroSectionProps) => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 lg:pt-40 pb-10">
       {/* Background image with overlay */}
@@ -35,7 +55,7 @@ const HeroSection = () => {
                 className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-border/50 backdrop-blur-sm"
             >
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm text-muted-foreground">Premium himoya yechimlari</span>
+              <span className="text-sm text-muted-foreground">{dict.hero.badge}</span>
             </motion.div>
           </div>
 
@@ -46,9 +66,9 @@ const HeroSection = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 " >
-            <span className="text-gradient">Thompson</span>
+            <span className="text-gradient">{dict.hero.title}</span>
             <br />
-            <span className="text-gradient-red">Window film</span>
+            <span className="text-gradient-red">{dict.hero.subtitle}</span>
           </motion.h1>
 
           <motion.p
@@ -57,8 +77,7 @@ const HeroSection = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-10 leading-relaxed " >
-            Himoya plyonkalari avtomobilingizni tashqi ta`sirlardan,
-            chang, ifloslanish, tosh va boshqa narsalardan himoya qiladi.
+            {dict.hero.description}
           </motion.p>
 
           <motion.div
@@ -68,12 +87,12 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="flex flex-col sm:flex-row gap-4" >
             <Button variant="hero" size="xl" className="group">
-              <span>Ko`proq bilish</span>
+              <span>{dict.hero.cta.primary}</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button variant="heroOutline" size="xl">
               <Shield className="w-5 h-5" />
-              <span>Xizmatlarimiz</span>
+              <span>{dict.hero.cta.secondary}</span>
             </Button>
           </motion.div>
 
@@ -85,9 +104,9 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="mt-16 grid grid-cols-3 gap-8 max-w-lg" style={{ animationDelay: "0.6s" }}>
             {[
-              { value: "500+", label: "Mamnun mijozlar" },
-              { value: "10+", label: "Yillik tajriba" },
-              { value: "100%", label: "Kafolat" },
+              { value: "500+", label: dict.hero.stats.customers },
+              { value: "10+", label: dict.hero.stats.experience },
+              { value: "100%", label: dict.hero.stats.warranty },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
                 <div className="text-3xl md:text-4xl font-bold text-foreground">{stat.value}</div>

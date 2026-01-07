@@ -1,5 +1,5 @@
 // app/[lang]/page.tsx
-import {getCommonDictionary } from "@/lib/dictionary";
+import {getCommonDictionary, getDictionary} from "@/lib/dictionary";
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
@@ -25,16 +25,16 @@ export default async function Home({
     if (!i18n.locales.includes(lang)) {
         notFound();
     }
-    const dictCommon = await getCommonDictionary(lang);
+    const dict = await getDictionary(lang , "home" );
 
     return (
         <>
 
             <main>
-                <HeroSection/>
-                <FeaturesSection/>
-                <ServicesSection/>
-                <ContactSection/>
+                <HeroSection dict={dict}/>
+                <FeaturesSection dict={dict}/>
+                <ServicesSection dict={dict}/>
+                <ContactSection dict={dict}/>
             </main>
         </>
     );

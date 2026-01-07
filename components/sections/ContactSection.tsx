@@ -6,43 +6,66 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
 
-const contactInfo = [
-  {
-    icon: Phone,
-    title: "Telefon",
-    value: "+998 90 123 45 67",
-    href: "tel:+998901234567",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    value: "info@thompson.uz",
-    href: "mailto:info@thompson.uz",
-  },
-  {
-    icon: MapPin,
-    title: "Manzil",
-    value: "Toshkent shahar, Chilonzor tumani",
-    href: "#",
-  },
-  {
-    icon: Clock,
-    title: "Ish vaqti",
-    value: "10:00 - 20:00",
-    href: "#",
-  },
-];
+interface ContactSectionProps {
+  dict:{
+    "contact": {
+      "badge": "Bog'lanish",
+      "title": "Biz bilan bog'laning",
+      "description": "Savollaringiz bormi? Biz sizga yordam berishga tayyormiz",
+      "address_value": string,
+      "info": {
+        "phone": "Telefon",
+        "email": "Email",
+        "address": "Manzil",
+        "workTime": "Ish vaqti"
+      },
+      "form": {
+        "title": "Bepul konsultatsiya",
+        "name": "Ismingiz",
+        "phone": "Telefon raqamingiz",
+        "message": "Xabaringiz",
+        "submit": "Yuborish",
+        "success": "So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz."
+      }
+    }
+  };
+}
 
-const ContactSection = () => {
+const ContactSection = ({dict}:ContactSectionProps) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     message: "",
   });
-
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: dict.contact.info.phone,
+      value: "+998 90 123 45 67",
+      href: "tel:+998901234567",
+    },
+    {
+      icon: Mail,
+      title: dict.contact.info.email,
+      value: "info@thompson.uz",
+      href: "mailto:info@thompson.uz",
+    },
+    {
+      icon: MapPin,
+      title: dict.contact.info.address,
+      value: dict.contact.address_value,
+      href: "#",
+    },
+    {
+      icon: Clock,
+      title: dict.contact.info.workTime,
+      value: "10:00 - 20:00",
+      href: "#",
+    },
+  ];
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz.");
+    toast.success(dict.contact.form.success);
     setFormData({ name: "", phone: "", message: "" });
   };
 
@@ -53,21 +76,21 @@ const ContactSection = () => {
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-primary text-sm font-semibold uppercase tracking-widest">Bog'lanish</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gradient">
-              Biz bilan bog'laning
+            <span className="text-primary text-sm font-semibold uppercase tracking-widest">{dict.contact.badge}</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold py-5 text-gradient">
+              {dict.contact.title}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Savollaringiz bormi? Biz sizga yordam berishga tayyormiz
+              {dict.contact.description}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Info */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-foreground mb-8">
-                Aloqa ma'lumotlari
-              </h3>
+              {/*<h3 className="text-2xl font-semibold text-foreground mb-8">*/}
+              {/*  Aloqa ma'lumotlari*/}
+              {/*</h3>*/}
 
               <div className="grid sm:grid-cols-2 gap-6">
                 {contactInfo.map((item, index) => (
@@ -89,13 +112,13 @@ const ContactSection = () => {
             {/* Contact Form */}
             <div className="p-8 lg:p-10 rounded-2xl bg-gradient-card border border-border/50">
               <h3 className="text-2xl font-semibold text-foreground mb-8">
-                Bepul konsultatsiya
+                {dict.contact.form.title}
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Input
-                      placeholder="Ismingiz"
+                      placeholder={dict.contact.form.name}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
@@ -105,7 +128,7 @@ const ContactSection = () => {
                 <div>
                   <Input
                       type="tel"
-                      placeholder="Telefon raqamingiz"
+                      placeholder={dict.contact.form.phone}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
@@ -114,7 +137,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <Textarea
-                      placeholder="Xabaringiz"
+                      placeholder={dict.contact.form.message}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={4}
@@ -122,7 +145,7 @@ const ContactSection = () => {
                   />
                 </div>
                 <Button type="submit" variant="hero" size="lg" className="w-full group">
-                  <span>Yuborish</span>
+                  <span>{dict.contact.form.submit}</span>
                   <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </form>

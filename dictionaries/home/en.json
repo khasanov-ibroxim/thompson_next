@@ -48,21 +48,22 @@
   "services": {
     "badge": "Services",
     "title": "Our Services",
+    "cta": "Learn More",
     "items": [
       {
         "title": "Protection Film",
-        "description": "Nearly invisible urethane film. Protects your car's paint from unwanted damage and maximizes resale value. Features self-healing properties, stain resistance, and high optical clarity.",
-        "cta": "Learn More"
+        "description": "Nearly invisible urethane film. Protects your car's paint from unwanted damage and maximizes resale value. Features self-healing properties, stain resistance, and high optical clarity."
+
       },
       {
         "title": "Automotive Film",
-        "description": "Adds protection and style to your car! Provides sun protection, privacy, and attractive appearance. Keep your car looking new and give it a modern look.",
-        "cta": "Learn More"
+        "description": "Adds protection and style to your car! Provides sun protection, privacy, and attractive appearance. Keep your car looking new and give it a modern look."
+
       },
       {
         "title": "Technology",
-        "description": "Protect your car from scratches, dust, and UV rays with new protection film technology. Keep your car looking brand new!",
-        "cta": "Learn More"
+        "description": "Protect your car from scratches, dust, and UV rays with new protection film technology. Keep your car looking brand new!"
+
       }
     ]
   },
@@ -70,6 +71,7 @@
     "badge": "Contact",
     "title": "Get in Touch",
     "description": "Have questions? We're ready to help you",
+    "address_value": "Tashkent city, Chilanzar district",
     "info": {
       "phone": "Phone",
       "email": "Email",

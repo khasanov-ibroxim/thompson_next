@@ -2,40 +2,79 @@
 import { motion } from "framer-motion";
 import { Shield, Palette, Sun, Car, PiggyBank, Lock } from "lucide-react";
 
-const features = [
-  {
-    icon: Shield,
-    title: "Himoya",
-    description: "Himoya plyonkalari avtomobilingizni tashqi ta'sirlardan, chang, ifloslanish, zararli moddalar, tosh va boshqa narsalardan himoya qiladi.",
-  },
-  {
-    icon: Palette,
-    title: "Estetik ko'rinish",
-    description: "Avtomobil plyonkalari mashinangiz ko'rinishini yaxshilashga, unga yangi, zamonaviy va chiroyli ko'rinish berishga yordam beradi.",
-  },
-  {
-    icon: Sun,
-    title: "UV himoya",
-    description: "Plyonkalar avtomobil bo'yog'ini ultrabinafsha (UV) nurlaridan himoya qiladi, bo'yoq rangining so'nishini oldini oladi.",
-  },
-  {
-    icon: Car,
-    title: "Salon himoyasi",
-    description: "Oynalarga qo'llanganda, avtomobil plyonkalari salonni issiq havodan va UV nurlaridan himoya qiladi, salonda qulay haroratni saqlaydi.",
-  },
-  {
-    icon: PiggyBank,
-    title: "Tejamkorlik",
-    description: "Avtomobil va himoya plyonkalari avtomobil egalariga ta'mirlash va bo'yash xarajatlarini kamaytirishga yordam beradi.",
-  },
-  {
-    icon: Lock,
-    title: "Maxfiylik",
-    description: "Tonirovka qilingan oynalar uchun ishlatiladigan plyonkalar avtomobil ichkarisining tashqaridan ko'rinishini kamaytiradi.",
-  },
-];
+interface FeaturesSectionProps {
+  dict:{
+    "features": {
+      "badge": "Afzalliklar",
+      "title": "Nima uchun Thompson?",
+      "description": "Avtomobilingizni professional himoya plyonkalari bilan himoya qiling",
+      "items": [
+        {
+          "title": "Himoya",
+          "description": "Himoya plyonkalari avtomobilingizni tashqi ta'sirlardan, chang, ifloslanish, zararli moddalar, tosh va boshqa narsalardan himoya qiladi."
+        },
+        {
+          "title": "Estetik ko'rinish",
+          "description": "Avtomobil plyonkalari mashinangiz ko'rinishini yaxshilashga, unga yangi, zamonaviy va chiroyli ko'rinish berishga yordam beradi."
+        },
+        {
+          "title": "UV himoya",
+          "description": "Plyonkalar avtomobil bo'yog'ini ultrabinafsha (UV) nurlaridan himoya qiladi, bo'yoq rangining so'nishini oldini oladi."
+        },
+        {
+          "title": "Salon himoyasi",
+          "description": "Oynalarga qo'llanganda, avtomobil plyonkalari salonni issiq havodan va UV nurlaridan himoya qiladi, salonda qulay haroratni saqlaydi."
+        },
+        {
+          "title": "Tejamkorlik",
+          "description": "Avtomobil va himoya plyonkalari avtomobil egalariga ta'mirlash va bo'yash xarajatlarini kamaytirishga yordam beradi."
+        },
+        {
+          "title": "Maxfiylik",
+          "description": "Tonirovka qilingan oynalar uchun ishlatiladigan plyonkalar avtomobil ichkarisining tashqaridan ko'rinishini kamaytiradi."
+        }
+      ]
+    },
+  };
+}
 
-const FeaturesSection = () => {
+
+const FeaturesSection = ({dict}:FeaturesSectionProps) => {
+
+
+  const features = [
+    {
+      icon: Shield,
+      title: dict.features.items[0].title,
+      description: dict.features.items[0].description,
+    },
+    {
+      icon: Palette,
+      title: dict.features.items[1].title,
+      description: dict.features.items[1].description,
+    },
+    {
+      icon: Sun,
+      title: dict.features.items[2].title,
+      description: dict.features.items[2].description,
+      },
+    {
+      icon: Car,
+      title: dict.features.items[3].title,
+      description: dict.features.items[3].description,
+      },
+    {
+      icon: PiggyBank,
+      title: dict.features.items[4].title,
+      description: dict.features.items[4].description,
+    },
+    {
+      icon: Lock,
+      title: dict.features.items[5].title,
+      description: dict.features.items[5].description,
+    },
+  ];
+
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden">
       {/* Background decorations */}
@@ -51,12 +90,12 @@ const FeaturesSection = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Afzalliklar</span>
+          <span className="text-primary text-sm font-semibold uppercase tracking-widest">{dict.features.badge}</span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gradient">
-            Nima uchun Thompson?
+            {dict.features.title}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Avtomobilingizni professional himoya plyonkalari bilan himoya qiling
+            {dict.features.description}
           </p>
         </motion.div>
 

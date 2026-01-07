@@ -48,21 +48,22 @@
   "services": {
     "badge": "Xizmatlar",
     "title": "Bizning xizmatlarimiz",
+    "cta": "Batafsil",
     "items": [
       {
         "title": "Himoya Plyonkasi",
-        "description": "Deyarli ko'rinmas uretan plyonka. Avtomobilingiz bo'yog'ini yoqimsiz shikastlanishlardan himoya qiladi va qayta sotish qiymatini maksimal darajada oshiradi. O'z-o'zini davolash, dog'larga chidamlilik va yuqori optik tiniqlik xususiyatlariga ega.",
-        "cta": "Batafsil"
+        "description": "Deyarli ko'rinmas uretan plyonka. Avtomobilingiz bo'yog'ini yoqimsiz shikastlanishlardan himoya qiladi va qayta sotish qiymatini maksimal darajada oshiradi. O'z-o'zini davolash, dog'larga chidamlilik va yuqori optik tiniqlik xususiyatlariga ega."
+
       },
       {
         "title": "Avtomobil Plyonkasi",
-        "description": "Avtomobilingizga himoya va uslub qo'shadi! Quyoshdan himoya, maxfiylik va chiroyli ko'rinish ta'minlaydi. Avtomobilingizni yangiday saqlang va unga zamonaviy ko'rinish bering.",
-        "cta": "Batafsil"
+        "description": "Avtomobilingizga himoya va uslub qo'shadi! Quyoshdan himoya, maxfiylik va chiroyli ko'rinish ta'minlaydi. Avtomobilingizni yangiday saqlang va unga zamonaviy ko'rinish bering."
+
       },
       {
         "title": "Texnologiya",
-        "description": "Yangi himoya plyonka texnologiyasi bilan avtomobilingizni tirnalishlar, chang va UV nurlaridan himoya qiling. Avtomobilingiz har doim yangi ko'rinsin!",
-        "cta": "Batafsil"
+        "description": "Yangi himoya plyonka texnologiyasi bilan avtomobilingizni tirnalishlar, chang va UV nurlaridan himoya qiling. Avtomobilingiz har doim yangi ko'rinsin!"
+
       }
     ]
   },
@@ -70,6 +71,7 @@
     "badge": "Bog'lanish",
     "title": "Biz bilan bog'laning",
     "description": "Savollaringiz bormi? Biz sizga yordam berishga tayyormiz",
+    "address_value": "Toshkent shahar, Chilonzor tumani",
     "info": {
       "phone": "Telefon",
       "email": "Email",

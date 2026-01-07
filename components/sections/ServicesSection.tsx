@@ -5,38 +5,64 @@ import automotiveFilm from "@/assets/images/automotive-film.jpg";
 import technology from "@/assets/images/technology.jpg";
 import Image from "next/image";
 
-const services = [
-  {
-    id: "protection",
-    title: "Himoya Plyonkasi",
-    description: "Deyarli ko'rinmas uretan plyonka. Avtomobilingiz bo'yog'ini yoqimsiz shikastlanishlardan himoya qiladi va qayta sotish qiymatini maksimal darajada oshiradi. O'z-o'zini davolash, dog'larga chidamlilik va yuqori optik tiniqlik xususiyatlariga ega.",
-    image: protectionFilm,
-  },
-  {
-    id: "automotive",
-    title: "Avtomobil Plyonkasi",
-    description: "Avtomobilingizga himoya va uslub qo'shadi! Quyoshdan himoya, maxfiylik va chiroyli ko'rinish ta'minlaydi. Avtomobilingizni yangiday saqlang va unga zamonaviy ko'rinish bering.",
-    image: automotiveFilm,
-  },
-  {
-    id: "technology",
-    title: "Texnologiya",
-    description: "Yangi himoya plyonka texnologiyasi bilan avtomobilingizni tirnalishlar, chang va UV nurlaridan himoya qiling. Avtomobilingiz har doim yangi ko'rinsin!",
-    image: technology,
-  },
-];
+interface IProps {
+  dict:{
+    "services": {
+      "badge": string,
+      "title": string,
+      "cta": string,
+      "items": [
+        {
+          "title": string,
+          "description": string,
 
-const ServicesSection = () => {
+        },
+        {
+          "title": string,
+          "description": string,
+
+        },
+        {
+          "title": string,
+          "description": string,
+
+        }
+      ]
+    },
+  }
+}
+
+const ServicesSection = ({dict}:IProps) => {
+  const services = [
+    {
+      id: "protection",
+      title: dict.services.items[0].title,
+      description: dict.services.items[0].description,
+      image: protectionFilm,
+    },
+    {
+      id: "automotive",
+      title: dict.services.items[1].title,
+      description: dict.services.items[1].description,
+      image: automotiveFilm,
+    },
+    {
+      id: "technology",
+      title: dict.services.items[2].title,
+      description: dict.services.items[2].description,
+      image: technology,
+    },
+  ];
   return (
     <section id="protection" className="py-24 lg:py-32 bg-thompson-darker relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[200px]" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 ">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-widest">Xizmatlar</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gradient">
-            Bizning xizmatlarimiz
+          <span className="text-primary text-sm font-semibold uppercase tracking-widest">{dict.services.badge}</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold py-5 text-gradient">
+            {dict.services.title}
           </h2>
         </div>
 
@@ -69,7 +95,7 @@ const ServicesSection = () => {
                     {service.description}
                   </p>
                   <Button variant="heroOutline" size="lg" className="group/btn">
-                    <span>Batafsil</span>
+                    <span>{dict.services.cta}</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                   </Button>
                 </div>

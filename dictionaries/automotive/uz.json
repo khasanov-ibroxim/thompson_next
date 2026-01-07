@@ -6,6 +6,7 @@
   },
   "categories": [
     {
+      "img": "@/assets/images/automotive-film.jpg",
       "title": "HP CERAMIC",
       "description": "Bizning HP seriyasi 10 yillik kafolatga ega bo'lgan, 1.6 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 59% gacha.",
       "features": [
@@ -20,6 +21,7 @@
       ]
     },
     {
+      "img": "@/assets/images/hero-car.jpg",
       "title": "NANO CERAMIC",
       "description": "Bizning NANO Ceramic 10 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 56% gacha.",
       "features": [
@@ -33,6 +35,7 @@
       ]
     },
     {
+      "img": "@/assets/images/protection-film.jpg",
       "title": "XR CERAMIC PLUS",
       "description": "Bizning XR CERAMIC PLUS seriyasi ustuvor kafolatga ega, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
       "features": [
@@ -46,6 +49,7 @@
       ]
     },
     {
+      "img": "@/assets/images/hero-car.jpg",
       "title": "Classic exclusive",
       "description": "Bizning Classic seriyasi 4 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
       "features": [
@@ -59,6 +63,7 @@
       ]
     },
     {
+      "img": "@/assets/images/automotive-film.jpg",
       "title": "CORE",
       "description": "Bizning CORE Ceramic boshlang'ich darajadagi keramik plyonka bo'lib, 3 yillik kafolatga ega. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi va mukammal quyosh issiqligini rad etadi: TSER 50% gacha.",
       "features": [
