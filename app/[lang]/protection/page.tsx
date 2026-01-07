@@ -1,10 +1,11 @@
-import {Button} from "@/components/ui/button";
+// app/[lang]/protection/page.tsx
+import { Button } from "@/components/ui/button";
 import protectionFilm from "@/assets/images/protection-film.jpg";
 import heroCar from "@/assets/images/hero-car.jpg";
-import Image from "next/image";
-import {getDictionary} from "@/lib/dictionary";
-import {i18n, Locale} from "@/i18n-config";
-import {notFound} from "next/navigation";
+import { getDictionary } from "@/lib/dictionary";
+import { i18n, Locale } from "@/i18n-config";
+import { notFound } from "next/navigation";
+import ProductSwiper from "@/components/ui/ProductSwiper";
 
 const ProtectionFilm = async ({
                                   params
@@ -23,7 +24,7 @@ const ProtectionFilm = async ({
             <main className="pt-24 lg:pt-32">
                 {/* Hero Section */}
                 <section className="relative py-20 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"/>
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent" />
                     <div className="container mx-auto px-4 lg:px-8 relative z-10">
                         <div className="text-center max-w-3xl mx-auto">
                             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
@@ -49,17 +50,13 @@ const ProtectionFilm = async ({
                                         index % 2 === 1 ? "lg:flex-row-reverse" : ""
                                     }`}
                                 >
-                                    {/* Product Image */}
+                                    {/* Product Image with Swiper */}
                                     <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                                        <div className="relative rounded-2xl overflow-hidden group">
-                                            <Image
-                                                src={productImage}
-                                                alt={product.name}
-                                                className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
-                                            />
-                                            <div
-                                                className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"/>
-                                        </div>
+                                        <ProductSwiper
+                                            images={product.images}
+                                            productName={product.name}
+                                            defaultImage={productImage}
+                                        />
                                     </div>
 
                                     {/* Product Info */}
@@ -69,7 +66,9 @@ const ProtectionFilm = async ({
                                                 {product.name}
                                             </h2>
                                             <div className="bg-card border border-border rounded-lg px-4 py-2">
-                                                <span className="text-primary font-bold text-xl">{product.brand}</span>
+                        <span className="text-primary font-bold text-xl">
+                          {product.brand}
+                        </span>
                                             </div>
                                         </div>
 
@@ -80,8 +79,8 @@ const ProtectionFilm = async ({
                                                     key={idx}
                                                     className="px-4 py-2 bg-card border border-border rounded-full text-foreground text-sm font-medium"
                                                 >
-                                                    {spec}
-                                                </span>
+                          {spec}
+                        </span>
                                             ))}
                                         </div>
 
@@ -90,7 +89,7 @@ const ProtectionFilm = async ({
                                             <div className="space-y-3">
                                                 {product.featuresLeft.map((feature: string, idx: number) => (
                                                     <div key={idx} className="flex items-center gap-3">
-                                                        <div className="w-2 h-2 rounded-full bg-primary"/>
+                                                        <div className="w-2 h-2 rounded-full bg-primary" />
                                                         <span className="text-foreground">{feature}</span>
                                                     </div>
                                                 ))}
@@ -98,8 +97,10 @@ const ProtectionFilm = async ({
                                             <div className="space-y-3">
                                                 {product.featuresRight.map((feature: string, idx: number) => (
                                                     <div key={idx} className="flex items-center gap-3">
-                                                        <div className="w-2 h-2 rounded-full bg-primary"/>
-                                                        <span className="text-foreground font-medium">{feature}</span>
+                                                        <div className="w-2 h-2 rounded-full bg-primary" />
+                                                        <span className="text-foreground font-medium">
+                              {feature}
+                            </span>
                                                     </div>
                                                 ))}
                                             </div>

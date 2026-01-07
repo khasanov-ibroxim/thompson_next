@@ -93,3 +93,42 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(0 72% 51%);
 }
+
+/* Swiper custom styles - globals.css ga qo'shing */
+
+/* Swiper container */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Swiper slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+/* Swiper fade effect */
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+
+.swiper-fade .swiper-slide-active {
+  pointer-events: auto;
+}
+
+/* Custom pagination if needed */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: hsl(var(--primary));
+  width: 24px;
+  border-radius: 4px;
+}
