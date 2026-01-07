@@ -6,7 +6,6 @@
   },
   "categories": [
     {
-      "img": "@/assets/images/automotive-film.jpg",
       "title": "HP CERAMIC",
       "description": "Bizning HP seriyasi 10 yillik kafolatga ega bo'lgan, 1.6 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 59% gacha.",
       "features": [
@@ -18,10 +17,41 @@
         "Bo'yalgan 231 VLT rad etish (99.999%)",
         "Kengaytirilgan Maxfiylik",
         "Tirnalishga qarshi ustki qatlam"
+      ],
+      "specs": [
+        {
+          "name": "HP 5",
+          "vlt": "5",
+          "uvBlock": "99.9",
+          "tser": "59",
+          "irBlocking": "97",
+          "solarBlocking": "95",
+          "thickness": "1.6",
+          "warranty": "10"
+        },
+        {
+          "name": "HP 15",
+          "vlt": "15",
+          "uvBlock": "99.9",
+          "tser": "56",
+          "irBlocking": "95",
+          "solarBlocking": "90",
+          "thickness": "1.6",
+          "warranty": "10"
+        },
+        {
+          "name": "HP 25",
+          "vlt": "25",
+          "uvBlock": "99.9",
+          "tser": "52",
+          "irBlocking": "93",
+          "solarBlocking": "85",
+          "thickness": "1.6",
+          "warranty": "10"
+        }
       ]
     },
     {
-      "img": "@/assets/images/hero-car.jpg",
       "title": "NANO CERAMIC",
       "description": "Bizning NANO Ceramic 10 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 56% gacha.",
       "features": [
@@ -32,10 +62,31 @@
         "Aks ettirilmaydigan",
         "Kengaytirilgan Maxfiylik",
         "Tirnalishga qarshi ustki qatlam"
+      ],
+      "specs": [
+        {
+          "name": "NANO 20",
+          "vlt": "20",
+          "uvBlock": "99.9",
+          "tser": "50",
+          "irBlocking": "90",
+          "solarBlocking": "80",
+          "thickness": "1.5",
+          "warranty": "10"
+        },
+        {
+          "name": "NANO 35",
+          "vlt": "35",
+          "uvBlock": "99.9",
+          "tser": "45",
+          "irBlocking": "85",
+          "solarBlocking": "75",
+          "thickness": "1.5",
+          "warranty": "10"
+        }
       ]
     },
     {
-      "img": "@/assets/images/protection-film.jpg",
       "title": "XR CERAMIC PLUS",
       "description": "Bizning XR CERAMIC PLUS seriyasi ustuvor kafolatga ega, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega. Bu plyonka GPS signalining nisbati xususiyatiga ega bo'lib, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
       "features": [
@@ -46,10 +97,31 @@
         "Aks ettirilmaydigan",
         "Kengaytirilgan Maxfiylik",
         "Tirnalishga qarshi ustki qatlam"
+      ],
+      "specs": [
+        {
+          "name": "XR 15",
+          "vlt": "15",
+          "uvBlock": "99.9",
+          "tser": "70",
+          "irBlocking": "98",
+          "solarBlocking": "95",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        },
+        {
+          "name": "XR 25",
+          "vlt": "25",
+          "uvBlock": "99.9",
+          "tser": "65",
+          "irBlocking": "96",
+          "solarBlocking": "90",
+          "thickness": "1.5",
+          "warranty": "Lifetime"
+        }
       ]
     },
     {
-      "img": "@/assets/images/hero-car.jpg",
       "title": "Classic exclusive",
       "description": "Bizning Classic seriyasi 4 yillik kafolatga ega bo'lgan, 1.5 mil qalinlikda, mukammal quyosh issiqligini rad etish xususiyatiga ega seriya. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi, umumiy quyosh energiyasini rad etishni ta'minlaydi: TSER 70% gacha.",
       "features": [
@@ -60,10 +132,31 @@
         "Aks ettirilmaydigan",
         "Kengaytirilgan Maxfiylik",
         "Tirnalishga qarshi ustki qatlam"
+      ],
+      "specs": [
+        {
+          "name": "Classic 20",
+          "vlt": "20",
+          "uvBlock": "99.9",
+          "tser": "45",
+          "irBlocking": "80",
+          "solarBlocking": "70",
+          "thickness": "1.5",
+          "warranty": "4"
+        },
+        {
+          "name": "Classic 35",
+          "vlt": "35",
+          "uvBlock": "99.9",
+          "tser": "40",
+          "irBlocking": "75",
+          "solarBlocking": "65",
+          "thickness": "1.5",
+          "warranty": "4"
+        }
       ]
     },
     {
-      "img": "@/assets/images/automotive-film.jpg",
       "title": "CORE",
       "description": "Bizning CORE Ceramic boshlang'ich darajadagi keramik plyonka bo'lib, 3 yillik kafolatga ega. Bu plyonka radio yoki GPS signaliga xalaqit bermaydi va mukammal quyosh issiqligini rad etadi: TSER 50% gacha.",
       "features": [
@@ -73,6 +166,28 @@
         "Standart Qalinlik",
         "Aks ettirilmaydigan",
         "Tirnalishga qarshi ustki qatlam"
+      ],
+      "specs": [
+        {
+          "name": "CORE 20",
+          "vlt": "20",
+          "uvBlock": "99.9",
+          "tser": "35",
+          "irBlocking": "70",
+          "solarBlocking": "60",
+          "thickness": "1.2",
+          "warranty": "3"
+        },
+        {
+          "name": "CORE 35",
+          "vlt": "35",
+          "uvBlock": "99.9",
+          "tser": "30",
+          "irBlocking": "65",
+          "solarBlocking": "55",
+          "thickness": "1.2",
+          "warranty": "3"
+        }
       ]
     }
   ],
