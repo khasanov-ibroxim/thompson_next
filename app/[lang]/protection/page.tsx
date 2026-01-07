@@ -1,7 +1,7 @@
 // app/[lang]/protection/page.tsx
 import { Button } from "@/components/ui/button";
-import protectionFilm from "@/assets/images/protection-film.jpg";
-import heroCar from "@/assets/images/hero-car.jpg";
+import protectionFilm from "@/public/images/protection-film.jpg";
+import heroCar from "@/public/images/hero-car.jpg";
 import { getDictionary } from "@/lib/dictionary";
 import { i18n, Locale } from "@/i18n-config";
 import { notFound } from "next/navigation";

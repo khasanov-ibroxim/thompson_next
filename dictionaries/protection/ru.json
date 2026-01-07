@@ -5,10 +5,14 @@
   },
   "products": [
     {
-      "name": "LUMI – HP",
-      "brand": "KDX",
+      "name": "PREMIUM",
+      "brand": "Thompson",
+      "images": [
+        "/images/hero-car.jpg",
+        "/protection/thompson_premium_v2.png"
+      ],
       "specs": [
-        "193 микрон",
+        "214 микрон",
         "Самозаживление при нагреве",
         "10 лет",
         "PPF"
@@ -27,12 +31,16 @@
       ]
     },
     {
-      "name": "LUMI – S",
-      "brand": "KDX",
+      "name": "I - 300",
+      "brand": "Thompson",
+      "images": [
+        "/images/hero-car.jpg ",
+        "/protection/thompson_green_v2.png"
+      ],
       "specs": [
-        "193 микрон",
+        "214 микрон",
         "Самозаживление",
-        "10 лет",
+        "8 лет",
         "PPF"
       ],
       "featuresLeft": [
@@ -49,12 +57,16 @@
       ]
     },
     {
-      "name": "LUMI – S Premium",
-      "brand": "KDX",
+      "name": "SPECIAL PLUS",
+      "brand": "Thompson",
+      "images": [
+        "/images/hero-car.jpg",
+        "/protection/thompson_special_v2.png"
+      ],
       "specs": [
-        "205 микрон",
+        "210 микрон",
         "Самозаживление",
-        "10 лет",
+        "8 лет",
         "PPF"
       ],
       "featuresLeft": [
@@ -71,12 +83,16 @@
       ]
     },
     {
-      "name": "LUMI – X Premium",
-      "brand": "KDX",
+      "name": "SPECIAL",
+      "brand": "Thompson",
+      "images": [
+        "/images/protection-film.jpg",
+        "/protection/thompson_special_v2.png"
+      ],
       "specs": [
-        "205 микрон",
+        "190 микрон",
         "Самозаживление при нагреве",
-        "10 лет",
+        "8 лет",
         "PPF"
       ],
       "featuresLeft": [
@@ -95,6 +111,10 @@
     {
       "name": "PPF - I200",
       "brand": "THOMPSON",
+      "images": [
+        "/images/hero-car.jpg"
+
+      ],
       "specs": [
         "193 микрон",
         "Самозаживление",
@@ -117,6 +137,10 @@
     {
       "name": "PPF - XGLOSS",
       "brand": "THOMPSON",
+      "images": [
+        "/images/protection-film.jpg"
+
+      ],
       "specs": [
         "185 микрон",
         "Самозаживление",
@@ -137,10 +161,14 @@
       ]
     },
     {
-      "name": "PPF - HCLEAR",
+      "name": "PPF - X99",
       "brand": "THOMPSON",
+      "images": [
+        "/images/hero-car.jpg"
+
+      ],
       "specs": [
-        "185 микрон",
+        "210 микрон",
         "Самозаживление при нагреве",
         "5 лет",
         "PPF"
@@ -159,8 +187,12 @@
       ]
     },
     {
-      "name": "PPF - X100",
+      "name": "PPF - ULTRA GLOSS",
       "brand": "THOMPSON",
+      "images": [
+        "/images/protection-film.jpg"
+
+      ],
       "specs": [
         "170 микрон",
         "Самозаживление при нагреве",

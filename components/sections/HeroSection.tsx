@@ -3,7 +3,7 @@ import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-import heroImage from "@/assets/images/hero-car.jpg";
+import heroImage from "@/public/images/hero-car.jpg";
 import Image from "next/image";
 
 interface HeroSectionProps {

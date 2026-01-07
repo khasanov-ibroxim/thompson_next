@@ -8,8 +8,8 @@
       "name": "PREMIUM",
       "brand": "Thompson",
       "images": [
-        "@/assets/images/hero-car.jpg",
-        "@/assets/images/protection-film.jpg"
+        "/images/hero-car.jpg",
+        "/protection/thompson_premium_v2.png"
       ],
       "specs": [
         "214 mikron",
@@ -34,8 +34,8 @@
       "name": "I - 300",
       "brand": "Thompson",
       "images": [
-        "@/assets/images/protection-film.jpg",
-        "@/assets/images/hero-car.jpg"
+        "/images/hero-car.jpg ",
+        "/protection/thompson_green_v2.png"
       ],
       "specs": [
         "214 mikron",
@@ -60,8 +60,8 @@
       "name": "SPECIAL PLUS",
       "brand": "Thompson",
       "images": [
-        "@/assets/images/hero-car.jpg",
-        "@/assets/images/protection-film.jpg"
+        "/images/hero-car.jpg",
+        "/protection/thompson_special_v2.png"
       ],
       "specs": [
         "210 mikron",
@@ -86,8 +86,8 @@
       "name": "SPECIAL",
       "brand": "Thompson",
       "images": [
-        "@/assets/images/protection-film.jpg",
-        "@/assets/images/hero-car.jpg"
+        "/images/protection-film.jpg",
+        "/protection/thompson_special_v2.png"
       ],
       "specs": [
         "190 mikron",
@@ -112,8 +112,8 @@
       "name": "PPF - I200",
       "brand": "THOMPSON",
       "images": [
-        "@/assets/images/hero-car.jpg",
-        "@/assets/images/protection-film.jpg"
+        "/images/hero-car.jpg"
+
       ],
       "specs": [
         "193 mikron",
@@ -138,8 +138,8 @@
       "name": "PPF - XGLOSS",
       "brand": "THOMPSON",
       "images": [
-        "@/assets/images/protection-film.jpg",
-        "@/assets/images/hero-car.jpg"
+        "/images/protection-film.jpg"
+
       ],
       "specs": [
         "185 mikron",
@@ -164,8 +164,8 @@
       "name": "PPF - X99",
       "brand": "THOMPSON",
       "images": [
-        "@/assets/images/hero-car.jpg",
-        "@/assets/images/protection-film.jpg"
+        "/images/hero-car.jpg"
+
       ],
       "specs": [
         "210 mikron",
@@ -190,8 +190,8 @@
       "name": "PPF - ULTRA GLOSS",
       "brand": "THOMPSON",
       "images": [
-        "@/assets/images/protection-film.jpg",
-        "@/assets/images/hero-car.jpg"
+        "/images/protection-film.jpg"
+
       ],
       "specs": [
         "170 mikron",

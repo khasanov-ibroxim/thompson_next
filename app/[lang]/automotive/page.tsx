@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import automotiveFilm from "@/assets/images/automotive-film.jpg";
-import heroCar from "@/assets/images/hero-car.jpg";
-import protectionFilm from "@/assets/images/protection-film.jpg";
+import automotiveFilm from "@/public/images/automotive-film.jpg";
+import heroCar from "@/public/images/hero-car.jpg";
+import protectionFilm from "@/public/images/protection-film.jpg";
 import Image from "next/image";
 import {getDictionary} from "@/lib/dictionary";
 import {i18n, Locale} from "@/i18n-config";

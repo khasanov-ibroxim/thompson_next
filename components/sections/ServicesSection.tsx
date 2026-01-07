@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import protectionFilm from "@/assets/images/protection-film.jpg";
-import automotiveFilm from "@/assets/images/automotive-film.jpg";
-import technology from "@/assets/images/technology.jpg";
+import protectionFilm from "@/public/images/protection-film.jpg";
+import automotiveFilm from "@/public/images/automotive-film.jpg";
+import technology from "@/public/images/technology.jpg";
 import Image from "next/image";
 import type { HomeDictionary } from "@/lib/dictionary-types";
 

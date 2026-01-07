@@ -45,7 +45,7 @@ const ProductSwiper = ({
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
                 autoplay={{
-                    delay: 500,
+                    delay: 2000,
                     disableOnInteraction: false,
                 }}
                 loop={true}
@@ -56,10 +56,12 @@ const ProductSwiper = ({
                     <SwiperSlide key={idx}>
                         <div className="relative w-full h-full group">
                             <Image
-                                src={defaultImage}
+                                src={image}
                                 alt={`${productName} - ${idx + 1}`}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
+
                             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                         </div>
                     </SwiperSlide>
