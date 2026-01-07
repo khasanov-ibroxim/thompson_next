@@ -7,6 +7,7 @@ import Image from "next/image";
 import {getDictionary} from "@/lib/dictionary";
 import {i18n, Locale} from "@/i18n-config";
 import {notFound} from "next/navigation";
+import Link from "next/link";
 
 // Image mapping
 const imageMap: Record<string, any> = {
@@ -41,9 +42,9 @@ const AutomotiveFilm = async ({
                             <p className="text-lg text-muted-foreground mb-5">
                                 {dict.hero.description}
                             </p>
-                            <Button variant="hero" size="lg">
+                            <Link href={`/${lang}/contact`} className="px-8 bg-[hsl(var(--thompson-red))]  py-3 rounded-xl" >
                                 {dict.hero.cta}
-                            </Button>
+                            </Link>
                         </div>
                     </div>
                 </section>
@@ -52,10 +53,6 @@ const AutomotiveFilm = async ({
                 <section className="py-16">
                     <div className="container mx-auto px-4 lg:px-8 space-y-24">
                         {dict.categories.map((category: any, index: number) => {
-                            // Determine image based on index
-                            const categoryImage = index % 3 === 0 ? automotiveFilm :
-                                index % 3 === 1 ? heroCar :
-                                    protectionFilm;
 
                             return (
                                 <div key={index} className="scroll-mt-32">
@@ -85,7 +82,7 @@ const AutomotiveFilm = async ({
                                         <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                                             <div className="relative rounded-2xl overflow-hidden">
                                                 <Image
-                                                    src={categoryImage}
+                                                    src={category.auto_img}
                                                     alt={category.title}
                                                     className="w-full h-64 lg:h-80 object-cover"
                                                 />

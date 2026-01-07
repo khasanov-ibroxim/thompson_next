@@ -42,17 +42,14 @@ const FeaturesSection = ({dict}: FeaturesSectionProps) => {
   ];
 
   return (
-      <section className="py-24 lg:py-32 relative overflow-hidden">
+      <section id={"feature"} className="py-24 lg:py-32 relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-[120px]" />
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <motion.div
-              viewport={{ once: true, amount: 0.5 }}
-              initial={{ y: "100%", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+          <div
+
               className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary text-sm font-semibold uppercase tracking-widest">{dict.features.badge}</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gradient">
@@ -61,7 +58,7 @@ const FeaturesSection = ({dict}: FeaturesSectionProps) => {
             <p className="text-lg text-muted-foreground">
               {dict.features.description}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => (

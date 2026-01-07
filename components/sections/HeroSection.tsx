@@ -86,11 +86,11 @@ const HeroSection = ({dict}:HeroSectionProps) => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="flex flex-col sm:flex-row gap-4" >
-            <Button variant="hero" size="xl" className="group">
+            <Button onClick={()=>window.location.assign("/#feature")} variant="hero" size="xl" className="group">
               <span>{dict.hero.cta.primary}</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button onClick={()=>window.location.assign("/#Services")} variant="heroOutline" size="xl">
               <Shield className="w-5 h-5" />
               <span>{dict.hero.cta.secondary}</span>
             </Button>

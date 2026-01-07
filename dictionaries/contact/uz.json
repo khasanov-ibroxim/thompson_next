@@ -5,7 +5,7 @@
     "title": "Aloqa ma'lumotlari",
     "phone": {
       "label": "Telefon",
-      "value": "+998 90 123 45 67"
+      "value": "+998 99 800 24 25"
     },
     "email": {
       "label": "Email",
@@ -13,7 +13,7 @@
     },
     "address": {
       "label": "Manzil",
-      "value": "Toshkent shahar, Chilonzor tumani"
+      "value": "Toshkent, Faziltepa ko‘chasi, 35-uy"
     },
     "workTime": {
       "label": "Ish vaqti",
@@ -36,6 +36,11 @@
     },
     "submit": "Yuborish",
     "success": "So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz.",
-    "error": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
+    "errors": {
+      "nameMin": "Ism kamida 3 ta harfdan iborat bo'lishi kerak",
+      "nameNoNumbers": "Ismda raqam bo'lishi mumkin emas",
+      "phoneInvalid": "Telefon raqam kamida 8 ta raqamdan iborat bo'lishi kerak",
+      "sendFailed": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
+    }
   }
 }

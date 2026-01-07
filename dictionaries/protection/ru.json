@@ -34,7 +34,7 @@
       "name": "I - 300",
       "brand": "Thompson",
       "images": [
-        "/images/hero-car.jpg ",
+        "/images/i_300.png",
         "/protection/thompson_green_v2.png"
       ],
       "specs": [
@@ -60,7 +60,7 @@
       "name": "SPECIAL PLUS",
       "brand": "Thompson",
       "images": [
-        "/images/hero-car.jpg",
+        "/images/sp_plus.png",
         "/protection/thompson_special_v2.png"
       ],
       "specs": [
@@ -86,7 +86,7 @@
       "name": "SPECIAL",
       "brand": "Thompson",
       "images": [
-        "/images/protection-film.jpg",
+        "/images/sp.png",
         "/protection/thompson_special_v2.png"
       ],
       "specs": [
@@ -109,11 +109,10 @@
       ]
     },
     {
-      "name": "PPF - I200",
+      "name": "PPF - I200 ",
       "brand": "THOMPSON",
       "images": [
-        "/images/hero-car.jpg"
-
+        "/images/ppf_i200.png"
       ],
       "specs": [
         "193 микрон",
@@ -138,8 +137,7 @@
       "name": "PPF - XGLOSS",
       "brand": "THOMPSON",
       "images": [
-        "/images/protection-film.jpg"
-
+        "/images/ppf_xg.png"
       ],
       "specs": [
         "185 микрон",
@@ -164,8 +162,7 @@
       "name": "PPF - X99",
       "brand": "THOMPSON",
       "images": [
-        "/images/hero-car.jpg"
-
+        "/images/ppf_x99.png"
       ],
       "specs": [
         "210 микрон",
@@ -191,7 +188,6 @@
       "brand": "THOMPSON",
       "images": [
         "/images/protection-film.jpg"
-
       ],
       "specs": [
         "170 микрон",

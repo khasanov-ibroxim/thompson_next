@@ -68,10 +68,10 @@ const Footer = ({dict , lang}: Props) => {
                         <h4 className="text-foreground font-semibold mb-4">{dict.footer.contact}</h4>
                         <ul className="space-y-3">
                             <li>
-                                <a href="tel:+998901234567"
+                                <a href="tel:+998998002425"
                                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                                     <Phone className="w-4 h-4"/>
-                                    <span>+998 90 123 45 67</span>
+                                    <span>+998 99 800 24 25</span>
                                 </a>
                             </li>
                             <li>

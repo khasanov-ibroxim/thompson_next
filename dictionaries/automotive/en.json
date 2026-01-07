@@ -8,6 +8,7 @@
     {
       "title": "HP CERAMIC",
       "description": "Our HP ceramic series, with a 10-year warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 68%.",
+      "auto_img": "/images/automotive-film.jpg",
       "features": [
         "Multi-Directional",
         "Non-reflective",
@@ -93,6 +94,7 @@
     {
       "title": "NANO CERAMIC",
       "description": "Our NANO Ceramic series, with a 10-year warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 78%.",
+      "auto_img": "/images/sp.png",
       "features": [
         "Multi-Directional",
         "Non-reflective",
@@ -178,6 +180,7 @@
     {
       "title": "XR CERAMIC PLUS",
       "description": "Our XR CERAMIC PLUS series, with a lifetime warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 78%.",
+      "auto_img": "/images/i_300.png",
       "features": [
         "Multi-Directional",
         "Non-reflective",
@@ -273,6 +276,7 @@
     {
       "title": "Classic exclusive",
       "description": "Our Classic exclusive series, with a 4-year warranty, is a 1.5 mil thick, dual-layer color-stable film. This film does not interfere with radio or GPS signals while providing total solar energy rejection (TSER) of up to 46%.",
+      "auto_img": "/images/ppf_xg.png",
       "features": [
         "Multi-Directional",
         "Non-reflective",
@@ -348,6 +352,7 @@
     {
       "title": "CORE",
       "description": "Our CORE series is a 1 mil/1-ply color stable film with a 3 year warranty. This film does not interfere radio or GPS signals while providing a TSER up to 38%.",
+      "auto_img": "/images/ppf_x99.png",
       "features": [
         "Multi-Directional",
         "Non-reflective",

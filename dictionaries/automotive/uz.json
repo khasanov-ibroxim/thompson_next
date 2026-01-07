@@ -8,6 +8,7 @@
     {
       "title": "HP CERAMIC",
       "description": "Bizning HP ceramic seriyamiz 10 yillik kafolatli 1,5 mil/2 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 68% gacha.",
+      "auto_img": "/images/automotive-film.jpg",
       "features": [
         "Ko'p yo'nalishli",
         "Aks ettirmaydigan",
@@ -93,6 +94,7 @@
     {
       "title": "NANO CERAMIC",
       "description": "Bizning NANO Ceramic seriyamiz 10 yillik kafolatli 1,5 mil/2 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 78% gacha.",
+      "auto_img": "/images/sp.png",
       "features": [
         "Ko'p yo'nalishli",
         "Aks ettirmaydigan",
@@ -178,6 +180,7 @@
     {
       "title": "XR CERAMIC PLUS",
       "description": "XR CERAMIC PLUS seriyamiz, umrbod kafolat bilan, qalinligi 1,5 mil bo'lgan ikki qatlamli rang-barqaror plyonkadir. Ushbu plyonka radio yoki GPS signallariga xalaqit bermasdan, quyosh energiyasining umumiy rad etilishi (TSER) 78% gacha ta'minlaydi.",
+      "auto_img": "/images/i_300.png",
       "features": [
         "Ko'p yo'nalishli",
         "Aks ettirmaydigan",
@@ -273,6 +276,7 @@
     {
       "title": "Classic exclusive",
       "description": "Bizning Classic exclusive seriyamiz 4 yillik kafolatli 1,5 mil/2 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 46% gacha.",
+      "auto_img": "/images/ppf_xg.png",
       "features": [
         "Ko'p yo'nalishli",
         "Aks ettirmaydigan",
@@ -348,6 +352,7 @@
     {
       "title": "CORE",
       "description": "Bizning CORE seriyamiz 3 yillik kafolatli 1 mil/1 qatlamli rangli barqaror plyonkadir. Ushbu film radio yoki GPS signallariga xalaqit bermaydi, shu bilan birga TSER 38% gacha.",
+      "auto_img": "/images/ppf_x99.png",
       "features": [
         "Ko'p yo'nalishli",
         "Aks ettirmaydigan",

@@ -33,7 +33,7 @@ const ServicesSection = ({dict}: ServicesSectionProps) => {
   ];
 
   return (
-      <section id="protection" className="py-24 lg:py-32 bg-thompson-darker relative overflow-hidden">
+      <section id="Services" className="py-24 lg:py-32 bg-thompson-darker relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[200px]" />
 
