@@ -84,6 +84,8 @@ const AutomotiveFilm = async ({
                                                 <Image
                                                     src={category.auto_img}
                                                     alt={category.title}
+                                                    width={800}
+                                                    height={600}
                                                     className="w-full h-64 lg:h-80 object-cover"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
