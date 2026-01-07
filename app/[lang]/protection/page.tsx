@@ -1,4 +1,5 @@
 // app/[lang]/protection/page.tsx
+import {Metadata} from "next";
 import {Button} from "@/components/ui/button";
 import protectionFilm from "@/public/images/protection-film.jpg";
 import heroCar from "@/public/images/hero-car.jpg";
@@ -7,6 +8,65 @@ import {i18n, Locale} from "@/i18n-config";
 import {notFound} from "next/navigation";
 import ProductSwiper from "@/components/ui/ProductSwiper";
 import Link from "next/link";
+
+export async function generateMetadata({
+                                           params,
+                                       }: {
+    params: Promise<{ lang: Locale }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang, "protection");
+
+    const langMap = {
+        ru: {
+            title: "Защитная Пленка Thompson - PPF для Авто | Premium, I-300, Special Plus",
+            description: "Профессиональная защитная пленка Thompson PPF в Ташкенте. Premium (214 мкм), I-300, Special Plus с самовосстановлением. Гарантия до 10 лет. Защита от царапин, УФ, камней."
+        },
+        en: {
+            title: "Thompson Paint Protection Film - Premium PPF | I-300, Special Plus",
+            description: "Professional Thompson PPF in Tashkent. Premium (214 micron), I-300, Special Plus with self-healing technology. Up to 10 years warranty. Protection from scratches, UV, stone chips."
+        },
+        uz: {
+            title: "Thompson Himoya Plyonkasi - PPF Avtomobil Uchun | Premium, I-300",
+            description: "Professional Thompson PPF Toshkentda. Premium (214 mikron), I-300, Special Plus o'z-o'zini tuzatish texnologiyasi. 10 yilgacha kafolat. Tirnalish, UV, toshlardan himoya."
+        }
+    };
+
+    const meta = langMap[lang] || langMap.en;
+
+    return {
+        title: meta.title,
+        description: meta.description,
+        keywords: "Thompson PPF, paint protection film, Thompson Premium, Thompson I-300, Thompson Special Plus, самовосстановление, self-healing, защитная пленка, PPF Tashkent, PPF Uzbekistan, Thompson XGLOSS, Thompson X99, автомобильная защита, car protection film",
+        openGraph: {
+            title: meta.title,
+            description: meta.description,
+            url: `https://thompsonwindowfilm.com/${lang}/protection`,
+            type: "website",
+            images: [
+                {
+                    url: "https://thompsonwindowfilm.com/images/hero-car.jpg",
+                    width: 1200,
+                    height: 630,
+                    alt: "Thompson Paint Protection Film"
+                }
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: meta.title,
+            description: meta.description,
+        },
+        alternates: {
+            canonical: `https://thompsonwindowfilm.com/${lang}/protection`,
+            languages: {
+                'ru': 'https://thompsonwindowfilm.com/ru/protection',
+                'en': 'https://thompsonwindowfilm.com/en/protection',
+                'uz': 'https://thompsonwindowfilm.com/uz/protection',
+            },
+        },
+    };
+}
 
 const ProtectionFilm = async ({
                                   params
@@ -19,10 +79,6 @@ const ProtectionFilm = async ({
         notFound();
     }
     const dict = await getDictionary(lang, "protection");
-
-    const handleAssignContact = ()=>{
-        return window.location.assign("/contact");
-    }
 
     return (
         <div className="min-h-screen bg-background">
@@ -49,12 +105,18 @@ const ProtectionFilm = async ({
                             const productImage = index % 2 === 0 ? heroCar : protectionFilm;
 
                             return (
-                                <div
+                                <article
                                     key={product.name}
                                     className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
                                         index % 2 === 1 ? "lg:flex-row-reverse" : ""
                                     }`}
+                                    itemScope
+                                    itemType="https://schema.org/Product"
                                 >
+                                    <meta itemProp="name" content={`Thompson ${product.name}`} />
+                                    <meta itemProp="brand" content="Thompson Window Film" />
+                                    <meta itemProp="description" content={product.featuresLeft.join(", ")} />
+
                                     {/* Product Image with Swiper */}
                                     <div className={`${index % 2 === 1 ? "lg:order-2" : ""} overflow-hidden`}>
                                         <ProductSwiper
@@ -67,13 +129,13 @@ const ProtectionFilm = async ({
                                     {/* Product Info */}
                                     <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                                         <div className="flex items-start justify-between mb-6">
-                                            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                                                {product.name}
+                                            <h2 className="text-3xl lg:text-4xl font-bold text-foreground" itemProp="name">
+                                                Thompson {product.name}
                                             </h2>
                                             <div className="bg-card border border-border rounded-lg px-4 py-2">
-                        <span className="text-primary font-bold text-xl">
-                          {product.brand}
-                        </span>
+                                                <span className="text-primary font-bold text-xl" itemProp="brand">
+                                                    {product.brand}
+                                                </span>
                                             </div>
                                         </div>
 
@@ -84,8 +146,8 @@ const ProtectionFilm = async ({
                                                     key={idx}
                                                     className="px-4 py-2 bg-card border border-border rounded-full text-foreground text-sm font-medium"
                                                 >
-                          {spec}
-                        </span>
+                                                    {spec}
+                                                </span>
                                             ))}
                                         </div>
 
@@ -104,19 +166,19 @@ const ProtectionFilm = async ({
                                                     <div key={idx} className="flex items-center gap-3">
                                                         <div className="w-2 h-2 rounded-full bg-primary"/>
                                                         <span className="text-foreground font-medium">
-                              {feature}
-                            </span>
+                                                            {feature}
+                                                        </span>
                                                     </div>
                                                 ))}
                                             </div>
                                         </div>
 
                                         {/* CTA Button */}
-                                        <Link href={`/${lang}/contact`}  className="px-8 bg-[hsl(var(--thompson-red))]  py-3 rounded-xl">
+                                        <Link href={`/${lang}/contact`} className="px-8 bg-[hsl(var(--thompson-red))] py-3 rounded-xl inline-block">
                                             {dict.cta}
                                         </Link>
                                     </div>
-                                </div>
+                                </article>
                             );
                         })}
                     </div>
