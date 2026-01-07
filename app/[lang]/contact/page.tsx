@@ -1,14 +1,12 @@
 import React from 'react';
-import Footer from "@/components/layout/Footer";
 import ContactSection from "@/components/sections/ContactSection";
-import Header from '@/components/layout/Header';
 import {i18n, Locale} from "@/i18n-config";
 import {notFound} from "next/navigation";
 import {getDictionary} from "@/lib/dictionary";
 
 const Contact = async ({
-                     params
-                 }: {
+                           params
+                       }: {
     children: React.ReactNode,
     params: Promise<{ lang: Locale }>
 }) => {
@@ -17,15 +15,15 @@ const Contact = async ({
     if (!i18n.locales.includes(lang)) {
         notFound();
     }
-    const dict = await getDictionary(lang , "home" );
+
+    // ✅ FIX: Load 'contact' dictionary instead of 'home'
+    const dict = await getDictionary(lang, "contact");
 
     return (
         <>
-
             <div className="py-10">
                 <ContactSection dict={dict}/>
             </div>
-
         </>
     );
 };
