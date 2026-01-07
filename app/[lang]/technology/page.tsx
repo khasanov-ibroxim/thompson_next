@@ -1,43 +1,48 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import {getDictionary} from "@/lib/dictionary";
+import {i18n, Locale} from "@/i18n-config";
+import {notFound} from "next/navigation";
 
-const technologies = [
-    {
-        generation: "First Generation",
-        title: "1 Ply Dyed Film",
-        description: "It is the product in early stage, and only has hiding function and hardly any thermal insulation and ultraviolet ray insulation functions. The color shall be fully faded after one-year use, the cost is low, and there are such hazardous substances as formaldehyde and benzene in adhesive layer."
-    },
-    {
-        generation: "Second Generation",
-        title: "2 Ply Chip-Dyed Film",
-        description: "There is no metal coating, dyeing is given on adhesive layer directly, the service life is two years, effects of thermal insulation and ultraviolet ray insulation are limited, definition is not high, and there are plenty of such hazardous substances as formaldehyde and benzene in adhesive layer."
-    },
-    {
-        generation: "Third Generation",
-        title: "Vacuum Aluminum Plating Film",
-        description: "It adopts vacuum thermal evaporation principle and adds metal coating to the base material of film. Moreover, the metal is aluminum as ordinary, and the color is lasting and stable. It can be used for about 5 years, the definition is relative high, and thermal insulation is moderate."
-    },
-    {
-        generation: "Fourth Generation",
-        title: "Nano Ceramic Film",
-        description: "It adopts coating or magnetron sputtering technology to spray nano ceramic particles on base material of film uniformly, and it has reached thermal insulation effect by absorbing heat. The product shall never show colorfastness, quality guarantee period is over 7 years as ordinary, and it has no interference to wireless signal."
-    },
-    {
-        generation: "Fifth Generation",
-        title: "Magnetron Sputtering Metal Film",
-        description: "It adopts electromagnetic induction principle and sprays such precious metal alloy materials as gold, silver, titanium and nickel to high-quality base material uniformly, the definition is better than the vacuum aluminum plating film, thermal insulation is above the average, and it shall show no colorfastness for over 7 years' use."
-    },
-    {
-        generation: "Sixth Generation",
-        title: "Multi-layer Magnetron Sputtering Metal Film",
-        description: "It adopts electromagnetic induction principle and sprays such precious metal alloy materials as gold, silver, titanium and nickel to high-quality base material for several layers uniformly, the definition is better than the vacuum aluminum plating film, it shall never show colorfastness, and it represents the highest level of thermal insulation film. It possesses features of high definition, high thermal insulation, low light reflection, scratch tolerance and good anti-bursting performance. Those with the most metal sputtering layers are representatives of S70 and SS70 series of KDX, and 11 metal layers shall be sprayed in one time."
+const Technology = async ({
+                              params
+                          }: {
+    params: Promise<{ lang: Locale }>
+}) => {
+    const { lang } = await params;
+
+    if (!i18n.locales.includes(lang)) {
+        notFound();
     }
-];
+    const dict = await getDictionary(lang, "technology");
 
-const Technology = () => {
+    const technologies = [
+        {
+            title: dict.technology.one_title,
+            description: dict.technology.one
+        },
+        {
+            title: dict.technology.two_title,
+            description: dict.technology.two
+        },
+        {
+            title: dict.technology.three_title,
+            description: dict.technology.three
+        },
+        {
+            title: dict.technology.four_title,
+            description: dict.technology.four
+        },
+        {
+            title: dict.technology.five_title,
+            description: dict.technology.five
+        },
+        {
+            title: dict.technology.six_title,
+            description: dict.technology.six
+        }
+    ];
+
     return (
         <div className="min-h-screen bg-background">
-
             {/* Hero Section */}
             <section className="relative h-[400px] flex items-center">
                 <div
@@ -48,7 +53,7 @@ const Technology = () => {
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                     <h1 className="text-5xl md:text-6xl font-bold text-white animate-fade-in">
-                        Technology
+                        {dict.hero.title}
                     </h1>
                 </div>
             </section>
@@ -63,8 +68,8 @@ const Technology = () => {
                                 className="animate-fade-in"
                                 style={{ animationDelay: `${index * 100}ms` }}
                             >
-                                <h2 className="text-2xl md:text-3xl font-bold text-thompson-red mb-4">
-                                    {tech.generation} - {tech.title}
+                                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+                                    {tech.title}
                                 </h2>
                                 <p className="text-muted-foreground text-lg leading-relaxed max-w-5xl">
                                     {tech.description}
@@ -77,7 +82,6 @@ const Technology = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     );
 };

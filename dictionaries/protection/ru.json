@@ -1,185 +1,185 @@
 {
   "hero": {
-    "title": "Himoya Plyonkasi",
-    "description": "Avtomobilingizni eng yuqori sifatli himoya plyonkalari bilan himoyalang. Premium sifat, uzoq muddat kafolat."
+    "title": "Защитная Пленка",
+    "description": "Защитите свой автомобиль пленками высочайшего качества. Премиальное качество, долгосрочная гарантия."
   },
   "products": [
     {
       "name": "LUMI – HP",
       "brand": "KDX",
       "specs": [
-        "193 mikron",
-        "Issiqlikdan tuzalish",
-        "10 yil",
+        "193 микрон",
+        "Самозаживление при нагреве",
+        "10 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     },
     {
       "name": "LUMI – S",
       "brand": "KDX",
       "specs": [
-        "193 mikron",
-        "O'z-o'zini tuzatish",
-        "10 yil",
+        "193 микрон",
+        "Самозаживление",
+        "10 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     },
     {
       "name": "LUMI – S Premium",
       "brand": "KDX",
       "specs": [
-        "205 mikron",
-        "O'z-o'zini tuzatish",
-        "10 yil",
+        "205 микрон",
+        "Самозаживление",
+        "10 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     },
     {
       "name": "LUMI – X Premium",
       "brand": "KDX",
       "specs": [
-        "205 mikron",
-        "Issiqlikdan tuzalish",
-        "10 yil",
+        "205 микрон",
+        "Самозаживление при нагреве",
+        "10 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     },
     {
       "name": "PPF - I200",
       "brand": "THOMPSON",
       "specs": [
-        "193 mikron",
-        "O'z-o'zini tuzatish",
-        "7 yil",
+        "193 микрон",
+        "Самозаживление",
+        "7 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     },
     {
       "name": "PPF - XGLOSS",
       "brand": "THOMPSON",
       "specs": [
-        "185 mikron",
-        "O'z-o'zini tuzatish",
-        "5 yil",
+        "185 микрон",
+        "Самозаживление",
+        "5 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     },
     {
       "name": "PPF - HCLEAR",
       "brand": "THOMPSON",
       "specs": [
-        "185 mikron",
-        "Issiqlikdan tuzalish",
-        "5 yil",
+        "185 микрон",
+        "Самозаживление при нагреве",
+        "5 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     },
     {
       "name": "PPF - X100",
       "brand": "THOMPSON",
       "specs": [
-        "170 mikron",
-        "Issiqlikdan tuzalish",
-        "5 yil",
+        "170 микрон",
+        "Самозаживление при нагреве",
+        "5 лет",
         "PPF"
       ],
       "featuresLeft": [
-        "Yuqori ob-havoga chidamlilik",
-        "Yuqori darajada dog'ga chidamli",
-        "Mustahkam va ko'rinmas",
-        "Zarbalarga chidamli"
+        "Превосходная устойчивость к погодным условиям",
+        "Высокая устойчивость к пятнам",
+        "Прочная и невидимая",
+        "Устойчивость к ударам"
       ],
       "featuresRight": [
-        "Rang o'chishi va eroziyaga chidamli",
-        "Avtomobil bo'yoqlarini saqlash",
-        "Oson o'rnatish va texnik xizmat ko'rsatish",
-        "UV va kislota yomg'iridan himoya"
+        "Устойчивость к выцветанию и эрозии",
+        "Сохраняет краску автомобиля",
+        "Легкая установка и обслуживание",
+        "Защита от УФ-лучей и кислотного дождя"
       ]
     }
   ],
-  "cta": "Namuna oling"
+  "cta": "Получить бесплатные образцы"
 }

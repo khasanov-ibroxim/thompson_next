@@ -2,36 +2,19 @@
   "hero": {
     "title": "Texnologiya"
   },
-  "generations": [
-    {
-      "generation": "Birinchi Avlod",
-      "title": "1 Qatlamli Bo'yalgan Plyonka",
-      "description": "Bu erta bosqichdagi mahsulot bo'lib, faqat yashirish funksiyasiga ega va issiqlik izolyatsiyasi va ultrabinafsha nurlarini izolyatsiyalash funksiyalari deyarli yo'q. Bir yillik foydalanishdan keyin rang to'liq so'nadi, narxi past va yopishtiruvchi qatlamda formaldegid va benzol kabi zararli moddalar mavjud."
-    },
-    {
-      "generation": "Ikkinchi Avlod",
-      "title": "2 Qatlamli Chip-Bo'yalgan Plyonka",
-      "description": "Metall qoplama yo'q, bo'yash to'g'ridan-to'g'ri yopishtiruvchi qatlamga qo'llaniladi, xizmat muddati ikki yil, issiqlik izolyatsiyasi va ultrabinafsha nurlarini izolyatsiyalash ta'siri cheklangan, aniqlik yuqori emas va yopishtiruvchi qatlamda formaldegid va benzol kabi zararli moddalar ko'p."
-    },
-    {
-      "generation": "Uchinchi Avlod",
-      "title": "Vakuum Alyuminiy Qoplama Plyonkasi",
-      "description": "Bu vakuum issiqlik bug'lanish printsipini qo'llaydi va plyonka asosiy materialiga metall qoplama qo'shadi. Bundan tashqari, metall odatda alyuminiy bo'lib, rang uzoq muddatli va barqaror. Taxminan 5 yil ishlatilishi mumkin, aniqlik nisbatan yuqori va issiqlik izolyatsiyasi o'rtacha."
-    },
-    {
-      "generation": "To'rtinchi Avlod",
-      "title": "Nano Keramik Plyonka",
-      "description": "Bu qoplama yoki magnetron sepirish texnologiyasini qo'llab, nano keramik zarralarini plyonka asosiy materialiga bir tekis purkaydi va issiqlikni shimib olish orqali issiqlik izolyatsiyasi ta'siriga erishadi. Mahsulot hech qachon rang o'zgarmaydi, sifat kafolati muddati odatda 7 yildan ortiq va simsiz signalga xalaqit bermaydi."
-    },
-    {
-      "generation": "Beshinchi Avlod",
-      "title": "Magnetron Sepirish Metall Plyonka",
-      "description": "Bu elektromagnit induksiya printsipini qo'llab, oltin, kumush, titan va nikel kabi qimmatbaho metall qotishma materiallarini yuqori sifatli asosiy materialga bir tekis purkaydi, aniqlik vakuum alyuminiy qoplama plyonkasidan yaxshiroq, issiqlik izolyatsiyasi o'rtachadan yuqori va 7 yildan ortiq foydalanish uchun rang o'zgarmaydi."
-    },
-    {
-      "generation": "Oltinchi Avlod",
-      "title": "Ko'p Qatlamli Magnetron Sepirish Metall Plyonka",
-      "description": "Bu elektromagnit induksiya printsipini qo'llab, oltin, kumush, titan va nikel kabi qimmatbaho metall qotishma materiallarini yuqori sifatli asosiy materialga bir necha qatlam uchun bir tekis purkaydi, aniqlik vakuum alyuminiy qoplama plyonkasidan yaxshiroq, rang hech qachon o'zgarmaydi va issiqlik izolyatsiyasi plyonkasining eng yuqori darajasini ifodalaydi. U yuqori aniqlik, yuqori issiqlik izolyatsiyasi, past yorug'lik aks ettirish, tirnalishga chidamlilik va yaxshi portlashga qarshi ishlash xususiyatlariga ega. Eng ko'p metall sepirish qatlamlariga ega bo'lganlar KDX ning S70 va SS70 seriyalari vakillari bo'lib, bir vaqtning o'zida 11 metall qatlam purkashiladi."
-    }
-  ]
+  "technology": {
+    "title": "Texnologiya",
+    "one": "Bu dastlabki mahsulot bo'lib, faqat yashirish funksiyasiga ega va issiqlik va ultrabinafsha nurlardan izolyatsiya qilish funksiyalari deyarli yo'q. Rang bir yillik foydalanishdan so'ng to'liq o'chadi, narxi past, va yopishtiruvchi qatlamda formaldegid va benzol kabi zararli moddalar mavjud.",
+    "one_title": "Birinchi avlod - 1 qatlamli bo'yalgan plyonka",
+    "two": "Metall qoplamasiz, bo'yoq to'g'ridan-to'g'ri yopishtiruvchi qavatga beriladi, xizmat muddati ikki yil, issiqlik va ultrabinafsha nurlardan izolyatsiya qilish ta'siri cheklangan, aniqlik past, va yopishtiruvchi qavatda formaldegid va benzol kabi ko'plab zararli moddalar mavjud.",
+    "two_title": "Ikkinchi avlod - 2 qatlamli chip-bo'yalgan plyonka",
+    "three": "Vakuum termal bug'lanish printsipini qo'llaydi va plyonka asosiy materialiga metall qoplama qo'shiladi. Bundan tashqari, metall odatda alyuminiy bo'lib, rangi barqaror va uzoq muddatli. U taxminan 5 yil davomida ishlatilishi mumkin, aniqligi nisbatan yuqori, va issiqlik izolyatsiyasi o'rtacha.",
+    "three_title": "Uchinchi avlod - vakuumli alyuminiy qoplama plyonkasi",
+    "four": "Nano keramika zarralarini bir tekisda plyonka asosiy materialiga purkash uchun qoplama yoki magnetron sputtering texnologiyasini qo'llaydi va issiqlikni yutish orqali issiqlik izolyatsiyasi effektiga erishadi. Mahsulot hech qachon rangini yo'qotmaydi, sifat kafolati odatda 7 yildan ortiq, va u simsiz signalga hech qanday xalaqit bermaydi.",
+    "four_title": "To'rtinchi avlod - nano keramika plyonka",
+    "five": "Elektromagnit induksiya printsipini qo'llaydi va oltin, kumush, titan va nikel kabi qimmatbaho metall qotishma materiallarini yuqori sifatli asosiy materialga bir tekisda purkaydi, aniqligi vakuumli alyuminiy qoplama plyonkasidan yaxshiroq, issiqlik izolyatsiyasi o'rtachadan yuqori, va 7 yildan ortiq foydalanishda rangini yo'qotmaydi.",
+    "five_title": "Beshinchi avlod - magnetron sputtering metall plyonka",
+    "six": "Elektromagnit induksiya printsipini qo'llaydi va oltin, kumush, titan va nikel kabi qimmatbaho metall qotishma materiallarini yuqori sifatli asosiy materialga bir necha qatlamlarda bir tekisda purkaydi. Aniqligi vakuumli alyuminiy qoplama plyonkasidan yaxshiroq, hech qachon rangini yo'qotmaydi va eng yuqori darajadagi issiqlik izolyatsiyasi plyonkasini ifodalaydi. Yuqori aniqlik, yuqori issiqlik izolyatsiyasi, past nur aks ettirish, chizish qarshiligi va yaxshi portlashga qarshi xususiyatlarga ega. Eng ko'p metall purkash qatlamlariga ega bo'lgan plyonkalar KDX S70 va SS70 seriyalari vakillaridir, va bir marta purkashda 11 metall qatlamlar qo'llaniladi.",
+    "six_title": "Oltinchi avlod - ko'p qatlamli magnetron sputtering metall plyonka"
+  }
 }
