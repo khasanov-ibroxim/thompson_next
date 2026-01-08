@@ -9,10 +9,6 @@ const nextConfig = {
     experimental: {
         optimizeCss: true,
     },
-    // Generate 404.html that will redirect
-    async generateBuildId() {
-        return 'build-' + Date.now();
-    },
 };
 
 export default nextConfig;
