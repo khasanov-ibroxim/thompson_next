@@ -1,8 +1,7 @@
 {
-  "title": "Contact",
-  "description": "Get in touch with us and ask your questions. We're ready to help you.",
+  "title": "Contact Us",
+  "description": "Get in touch with us for consultation and premium protection film installation",
   "info": {
-    "title": "Contact Information",
     "phone": {
       "label": "Phone",
       "value": "+998 99 800 24 25"
@@ -13,34 +12,34 @@
     },
     "address": {
       "label": "Address",
-      "value": "35 Faziltepa Street, Tashkent, Uzbekistan"
+      "value": "Faziltepa St., 35, Tashkent, Uzbekistan"
     },
     "workTime": {
-      "label": "Working hours",
-      "value": "10:00 - 20:00"
+      "label": "Working Hours",
+      "value": "10:00 AM - 8:00 PM (Every day)"
     }
   },
   "form": {
-    "title": "Free Consultation",
+    "title": "Send us a message",
     "name": {
-      "label": "Your name",
-      "placeholder": "Your name"
+      "label": "Your Name",
+      "placeholder": "Enter your name"
     },
     "phone": {
       "label": "Phone",
-      "placeholder": "Your phone"
+      "placeholder": "+998 (__) ___ __ __"
     },
     "message": {
       "label": "Message",
-      "placeholder": "Your message"
+      "placeholder": "Write your message (optional)"
     },
-    "submit": "Send",
-    "success": "Your request has been received! We will contact you shortly.",
+    "submit": "Send Message",
+    "success": "Message sent successfully! We will contact you soon.",
     "errors": {
-      "nameMin": "Name must be at least 3 characters long",
+      "nameMin": "Name must be at least 3 characters",
       "nameNoNumbers": "Name cannot contain numbers",
-      "phoneInvalid": "Phone number must be at least 8 digits",
-      "sendFailed": "An error occurred. Please try again."
+      "phoneInvalid": "Invalid phone format (minimum 8 digits)",
+      "sendFailed": "Sending error. Please try later or call us."
     }
   }
 }

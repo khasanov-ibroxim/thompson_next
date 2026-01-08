@@ -143,13 +143,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             className={`${instrumentSans.variable} ${interTight.variable}`}
             suppressHydrationWarning
         >
-        <PageTransition>
+        {/*<PageTransition>*/}
             <TooltipProvider>
                 <Toaster />
                 <Sonner />
                 {children}
             </TooltipProvider>
-        </PageTransition>
+        {/*</PageTransition>*/}
 
         </body>
         </html>

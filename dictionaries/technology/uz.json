@@ -1,20 +1,24 @@
 {
   "hero": {
-    "title": "Texnologiya"
+    "title": "Thompson Texnologiyasi"
   },
   "technology": {
-    "title": "Texnologiya",
-    "one": "Bu dastlabki mahsulot bo'lib, faqat yashirish funksiyasiga ega va issiqlik va ultrabinafsha nurlardan izolyatsiya qilish funksiyalari deyarli yo'q. Rang bir yillik foydalanishdan so'ng to'liq o'chadi, narxi past, va yopishtiruvchi qatlamda formaldegid va benzol kabi zararli moddalar mavjud.",
-    "one_title": "Birinchi avlod - 1 qatlamli bo'yalgan plyonka",
-    "two": "Metall qoplamasiz, bo'yoq to'g'ridan-to'g'ri yopishtiruvchi qavatga beriladi, xizmat muddati ikki yil, issiqlik va ultrabinafsha nurlardan izolyatsiya qilish ta'siri cheklangan, aniqlik past, va yopishtiruvchi qavatda formaldegid va benzol kabi ko'plab zararli moddalar mavjud.",
-    "two_title": "Ikkinchi avlod - 2 qatlamli chip-bo'yalgan plyonka",
-    "three": "Vakuum termal bug'lanish printsipini qo'llaydi va plyonka asosiy materialiga metall qoplama qo'shiladi. Bundan tashqari, metall odatda alyuminiy bo'lib, rangi barqaror va uzoq muddatli. U taxminan 5 yil davomida ishlatilishi mumkin, aniqligi nisbatan yuqori, va issiqlik izolyatsiyasi o'rtacha.",
-    "three_title": "Uchinchi avlod - vakuumli alyuminiy qoplama plyonkasi",
-    "four": "Nano keramika zarralarini bir tekisda plyonka asosiy materialiga purkash uchun qoplama yoki magnetron sputtering texnologiyasini qo'llaydi va issiqlikni yutish orqali issiqlik izolyatsiyasi effektiga erishadi. Mahsulot hech qachon rangini yo'qotmaydi, sifat kafolati odatda 7 yildan ortiq, va u simsiz signalga hech qanday xalaqit bermaydi.",
-    "four_title": "To'rtinchi avlod - nano keramika plyonka",
-    "five": "Elektromagnit induksiya printsipini qo'llaydi va oltin, kumush, titan va nikel kabi qimmatbaho metall qotishma materiallarini yuqori sifatli asosiy materialga bir tekisda purkaydi, aniqligi vakuumli alyuminiy qoplama plyonkasidan yaxshiroq, issiqlik izolyatsiyasi o'rtachadan yuqori, va 7 yildan ortiq foydalanishda rangini yo'qotmaydi.",
-    "five_title": "Beshinchi avlod - magnetron sputtering metall plyonka",
-    "six": "Elektromagnit induksiya printsipini qo'llaydi va oltin, kumush, titan va nikel kabi qimmatbaho metall qotishma materiallarini yuqori sifatli asosiy materialga bir necha qatlamlarda bir tekisda purkaydi. Aniqligi vakuumli alyuminiy qoplama plyonkasidan yaxshiroq, hech qachon rangini yo'qotmaydi va eng yuqori darajadagi issiqlik izolyatsiyasi plyonkasini ifodalaydi. Yuqori aniqlik, yuqori issiqlik izolyatsiyasi, past nur aks ettirish, chizish qarshiligi va yaxshi portlashga qarshi xususiyatlarga ega. Eng ko'p metall purkash qatlamlariga ega bo'lgan plyonkalar KDX S70 va SS70 seriyalari vakillaridir, va bir marta purkashda 11 metall qatlamlar qo'llaniladi.",
-    "six_title": "Oltinchi avlod - ko'p qatlamli magnetron sputtering metall plyonka"
+    "one_title": "Birinchi avlod: Bo'yalgan plyonka",
+    "one": "Tonirovka plyonkalarining birinchi avlodi bo'yalgan poliefir plyonkadan iborat edi. Bo'yoq ishlab chiqarish jarayonida qo'shilgan va plyonkaga quyuq rang bergan. Biroq, bu texnologiya muhim kamchiliklarga ega edi: bo'yoq ultrabinafsha nurlanishi ta'sirida vaqt o'tishi bilan oqarib ketgan va plyonka rangini o'zgartirgan.",
+
+    "two_title": "Ikkinchi avlod: Metallashtirilgan plyonka",
+    "two": "Ikkinchi avlod poliefir asosiga metall qatlamini yupqa qoplash texnologiyasi orqali paydo bo'ldi. Bu plyonkaning himoya xususiyatlarini sezilarli darajada yaxshiladi: u quyosh nurlarini va issiqlikni yaxshiroq aks ettirdi. Metallashtirilgan plyonkalar bo'yalgan plyonkalarga qaraganda bardoshli edi, lekin o'z kamchiliklariga ega edi - ular radio signallariga to'sqinlik qilishi mumkin edi.",
+
+    "three_title": "Uchinchi avlod: Keramika plyonka",
+    "three": "Uchinchi avlod haqiqiy yutuq bo'ldi. Keramika plyonkalar metall o'rniga keramika nanozarrachalarini ishlatadi. Bu ultrabinafsha nurlanishidan (99% gacha) va infraqizil issiqlikdan (90% gacha) mukammal himoya beradi, elektron qurilmalarga to'sqinlik qilmasdan. Keramika plyonkalar oqarmaydi, rangini o'zgartirmaydi va yuqori mustahkamlikka ega.",
+
+    "four_title": "To'rtinchi avlod: Nano-keramika",
+    "four": "To'rtinchi avlod yanada kichikroq nanozarralar ishlatadigan takomillashtirilgan keramika texnologiyasini ifodalaydi. Bu barcha himoya xususiyatlarini saqlab, maksimal shaffoflikni ta'minlaydigan yaxshilangan optik xususiyatlarga ega plyonkalar yaratish imkonini beradi. Thompson nano-keramika plyonkalari 99% gacha UV nurlarini va 95% gacha infraqizil issiqlikni bloklaydi.",
+
+    "five_title": "Beshinchi avlod: Aqlli plyonkalar",
+    "five": "Beshinchi avlod bir nechta texnologiyalarni birlashtiruvchi intellektual ko'p qatlamli tizimlardan iborat. Ular sinergik ishlaydigan nano-keramika qatlamlari, maxsus yorug'likni aks ettiruvchi qoplamalar va himoya qatlamlarini o'z ichiga oladi. Bu plyonkalar maksimal himoya, qulaylik va bardoshlilikni ta'minlaydi, shuningdek turli xil yoritish sharoitlariga moslashish qobiliyatiga ega.",
+
+    "six_title": "Kelajak: Moslashuvchan smart-plyonkalar",
+    "six": "Oltinchi avlod ishlab chiqilmoqda va tashqi sharoitlarga qarab avtomatik ravishda o'z xususiyatlarini o'zgartirishga qodir moslashuvchan smart-plyonkalarni ifodalaydi. Bunday plyonkalar yorug'lik va issiqlik o'tkazish darajasini tartibga solishi mumkin bo'lib, kunning istalgan vaqtida va har qanday ob-havoda optimal qulaylikni ta'minlaydi. Thompson allaqachon bu innovatsion yechimlar ustida ishlamoqda."
   }
 }

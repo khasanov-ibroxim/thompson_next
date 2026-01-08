@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "cmd /c \"rmdir /s /q out & pnpm build & del /q out\\_next\\static\\media\\*.jpg out\\_next\\static\\media\\*.png 2>nul & rmdir /s /q out\\_next\\static\\chunks\\images\\img 2>nul & rmdir /s /q out\\img 2>nul & C:\\rclone\\rclone.exe sync -P --transfers 3 out :ftp:/ --ftp-host=ftp.thompsonwindowfilm.com --ftp-user=thompson_ftp@thompsonwindowfilm.com --ftp-pass=qYd1UJ5ptBxKI8KXa9WRkjANPrOtJeDS57U\""
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",

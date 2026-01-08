@@ -1,20 +1,24 @@
 {
   "hero": {
-    "title": "Technology"
+    "title": "Thompson Technology"
   },
   "technology": {
-    "title": "Technology",
-    "one": "It is the product in early stage, and only has hiding function and hardly any thermal insulation and ultraviolet ray insulation functions. The color shall be fully faded after one-year use, the cost is low, and there are such hazardous substances as formaldehyde and benzene in adhesive layer.",
-    "one_title": "First Generation - 1 Ply Dyed Film",
-    "two": "There is no metal coating, dyeing is given on adhesive layer directly, the service life is two years, effects of thermal insulation and ultraviolet ray insulation are limited, definition is not high, and there are plenty of such hazardous substances as formaldehyde and benzene in adhesive layer.",
-    "two_title": "Second Generation - 2 Ply Chip-Dyed Film",
-    "three": "It adopts vacuum thermal evaporation principle and adds metal coating to the base material of film. Moreover, the metal is aluminum as ordinary, and the color is lasting and stable. It can be used for about 5 years, the definition is relative high, and thermal insulation is moderate.",
-    "three_title": "Third Generation - Vacuum Aluminum Plating Film",
-    "four": "It adopts coating or magnetron sputtering technology to spray nano ceramic particles on base material of film uniformly, and it has reached thermal insulation effect by absorbing heat. The product shall never show colorfastness, quality guarantee period is over 7 years as ordinary, and it has no interference to wireless signal.",
-    "four_title": "Fourth Generation - Nano Ceramic Film",
-    "five": "It adopts electromagnetic induction principle and sprays such precious metal alloy materials as gold, silver, titanium and nickel to high-quality base material uniformly, the definition is better than the vacuum aluminum plating film, thermal insulation is above the average, and it shall show no colorfastness for over 7 years' use.",
-    "five_title": "Fifth Generation - Magnetron Sputtering Metal Film",
-    "six": "It adopts electromagnetic induction principle and sprays such precious metal alloy materials as gold, silver, titanium and nickel to high-quality base material for several layers uniformly, the definition is better than the vacuum aluminum plating film, it shall never show colorfastness, and it represents the highest level of thermal insulation film. It possesses features of high definition, high thermal insulation, low light reflection, scratch tolerance and good anti-bursting performance. Those with the most metal sputtering layers are representatives of S70 and SS70 series of KDX, and 11 metal layers shall be sprayed in one time.",
-    "six_title": "Sixth Generation - Multi-layer Magnetron Sputtering Metal Film"
+    "one_title": "First Generation: Dyed Film",
+    "one": "The first generation of window tint films consisted of dyed polyester film. Dye was added during the manufacturing process, giving the film a dark tint. However, this technology had significant drawbacks: the dye would fade over time when exposed to ultraviolet radiation, leading to color changes in the film.",
+
+    "two_title": "Second Generation: Metallized Film",
+    "two": "The second generation emerged through the technology of depositing a thin layer of metal onto a polyester base. This significantly improved the protective properties of the film: it better reflected sunlight and heat. Metallized films were more durable compared to dyed films, but had their drawbacks - they could create interference with radio signals.",
+
+    "three_title": "Third Generation: Ceramic Film",
+    "three": "The third generation was a real breakthrough. Ceramic films use ceramic nanoparticles instead of metal. This provides superior protection against ultraviolet radiation (up to 99%) and infrared heat (up to 90%) without creating interference with electronic devices. Ceramic films don't fade, don't change color, and have high durability.",
+
+    "four_title": "Fourth Generation: Nano-Ceramic",
+    "four": "The fourth generation represents an advanced ceramic technology using even smaller nanoparticles. This allows creating films with improved optical properties, providing maximum transparency while maintaining all protective characteristics. Thompson nano-ceramic films block up to 99% of UV rays and up to 95% of infrared heat.",
+
+    "five_title": "Fifth Generation: Smart Films",
+    "five": "The fifth generation consists of intelligent multilayer systems combining multiple technologies. They include nano-ceramic layers, special light-reflecting coatings, and protective layers working synergistically. These films provide maximum protection, comfort, and durability, while also having the ability to adapt to various lighting conditions.",
+
+    "six_title": "Future: Adaptive Smart Films",
+    "six": "The sixth generation is under development and represents adaptive smart films capable of automatically changing their properties depending on external conditions. Such films will be able to regulate light and heat transmission levels, providing optimal comfort at any time of day and in any weather. Thompson is already working on these innovative solutions."
   }
 }

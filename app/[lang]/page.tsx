@@ -31,7 +31,7 @@ export default async function Home({
             <main>
                 <HeroSection dict={dict}/>
                 <FeaturesSection dict={dict}/>
-                <ServicesSection dict={dict}/>
+                <ServicesSection dict={dict} lang={lang}/>
                 {/* Pass the contact part of home dictionary */}
                 <ContactSection dict={dictContact}/>
             </main>

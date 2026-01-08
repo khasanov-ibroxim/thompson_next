@@ -1,5 +1,5 @@
 "use client"
-import {Phone, Mail, MapPin, Clock, Send} from "lucide-react";
+import {Phone, Mail, MapPin, Clock, Send, Loader2} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
@@ -17,6 +17,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         phone: "",
         message: "",
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const contactInfo = [
         {
@@ -45,18 +46,15 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         },
     ];
 
-    // Validation functions
+    // ✅ Validatsiya funksiyalari
     const validateName = (name: string): boolean => {
-        // Remove spaces and new lines for length check
         const trimmedName = name.trim().replace(/\s+/g, '');
-        // Check if name contains any numbers
         if (/\d/.test(name)) return false;
         return trimmedName.length >= 3;
     };
 
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        // Allow only letters, spaces, and common name characters
         const regex = /^[a-zA-Zа-яА-ЯёЁўғҳқўҚҒҲЎ\s'-]*$/;
         if (regex.test(value) || value === '') {
             setFormData({...formData, name: value});
@@ -64,20 +62,15 @@ const ContactSection = ({dict}: ContactSectionProps) => {
     };
 
     const validatePhone = (phone: string): boolean => {
-        // Remove spaces for length check, allow +
         const cleanPhone = phone.replace(/\s+/g, '');
-        // Check if it contains only numbers and optional +
         const phoneRegex = /^\+?\d+$/;
         if (!phoneRegex.test(cleanPhone)) return false;
-
-        // Count only digits (exclude +)
         const digitsOnly = cleanPhone.replace(/\+/g, '');
         return digitsOnly.length >= 8;
     };
 
     const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        // Allow only numbers, spaces, and + at the beginning
         const regex = /^[\+]?[\d\s]*$/;
         if (regex.test(value) || value === '') {
             setFormData({...formData, phone: value});
@@ -87,7 +80,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Validate name
+        // ✅ Client-side validatsiya
         if (!validateName(formData.name)) {
             if (/\d/.test(formData.name)) {
                 toast.error(dict.form.errors.nameNoNumbers);
@@ -97,16 +90,25 @@ const ContactSection = ({dict}: ContactSectionProps) => {
             return;
         }
 
-        // Validate phone
         if (!validatePhone(formData.phone)) {
             toast.error(dict.form.errors.phoneInvalid);
             return;
         }
 
+        setIsSubmitting(true);
+
         try {
-            const response = await fetch('/api/telegram', {
+            // ✅ API URL ni to'g'ri aniqlash
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
+            const url = apiUrl ? `${apiUrl}/api/telegram` : '/api/telegram';
+
+            console.log('Sending to:', url); // Debug uchun
+
+            const response = await fetch(url, {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify({
                     name: formData.name.trim(),
                     phone: formData.phone.replace(/\s+/g, ''),
@@ -114,24 +116,29 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                 }),
             });
 
-            if (response.ok) {
+            const data = await response.json();
+            console.log('Response:', data); // Debug uchun
+
+            if (response.ok && data.success) {
                 toast.success(dict.form.success);
                 setFormData({name: "", phone: "", message: ""});
             } else {
+                console.error('API Error:', data);
                 toast.error(dict.form.errors.sendFailed);
             }
 
         } catch (error) {
+            console.error('Fetch Error:', error);
             toast.error(dict.form.errors.sendFailed);
-            console.log(error);
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
     return (
         <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
             {/* Background decorations */}
-            <div
-                className="absolute top-1/2 -translate-y-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px]"/>
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px]"/>
 
             <div className="container mx-auto px-4 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
@@ -156,8 +163,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                                     href={item.href}
                                     className="group p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-300"
                                 >
-                                    <div
-                                        className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                                         <item.icon className="w-6 h-6 text-primary"/>
                                     </div>
                                     <div className="text-sm text-muted-foreground mb-1">{item.title}</div>
@@ -180,6 +186,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                                     value={formData.name}
                                     onChange={handleNameChange}
                                     required
+                                    disabled={isSubmitting}
                                     className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
                                 />
                             </div>
@@ -190,6 +197,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                                     value={formData.phone}
                                     onChange={handlePhoneChange}
                                     required
+                                    disabled={isSubmitting}
                                     className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
                                 />
                             </div>
@@ -199,12 +207,28 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                                     value={formData.message}
                                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                                     rows={4}
+                                    disabled={isSubmitting}
                                     className="bg-secondary/50 border-border/50 focus:border-primary resize-none"
                                 />
                             </div>
-                            <Button type="submit" variant="hero" size="lg" className="w-full group">
-                                <span>{dict.form.submit}</span>
-                                <Send className="w-4 h-4 transition-transform group-hover:translate-x-1"/>
+                            <Button
+                                type="submit"
+                                variant="hero"
+                                size="lg"
+                                className="w-full group"
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? (
+                                    <>
+                                        <Loader2 className="w-4 h-4 animate-spin"/>
+                                        <span>Yuborilmoqda...</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <span>{dict.form.submit}</span>
+                                        <Send className="w-4 h-4 transition-transform group-hover:translate-x-1"/>
+                                    </>
+                                )}
                             </Button>
                         </form>
                     </div>

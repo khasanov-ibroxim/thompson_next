@@ -124,7 +124,7 @@ export default async function ProductPage({
                             {lang === 'ru' ? 'Защитная пленка' : lang === 'en' ? 'Protection Film' : 'Himoya plyonka'}
                         </Link>
                         <span>/</span>
-                        <span className="text-foreground">Thompson {productData.name}</span>
+                        <span className="text-foreground"> {productData.name}</span>
                     </nav>
                 </section>
 
@@ -156,7 +156,7 @@ export default async function ProductPage({
                             ) : (
                                 <div className="bg-card rounded-2xl aspect-video flex items-center justify-center">
                                     <span className="text-muted-foreground">
-                                        Thompson {productData.name}
+                                         {productData.name}
                                     </span>
                                 </div>
                             )}
@@ -169,7 +169,7 @@ export default async function ProductPage({
                                     className="text-4xl lg:text-5xl font-bold text-foreground"
                                     itemProp="name"
                                 >
-                                    Thompson {productData.name}
+                                     {productData.name}
                                 </h1>
                                 <div className="bg-card border border-border rounded-lg px-4 py-2">
                                     <span className="text-primary font-bold text-xl" itemProp="brand">

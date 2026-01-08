@@ -1,5 +1,5 @@
 import {Phone, Mail, MapPin} from "lucide-react";
-import logo from "@/assets/rsz_2logo.png"
+import logo from "@/public/rsz_2logo.png"
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,8 +40,8 @@ const Footer = ({dict , lang}: Props) => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     {/* Brand */}
                     <div className="lg:col-span-2">
-                        <a href="#home" className="flex items-center gap-3 mb-4">
-                            <Image src={logo} alt={"thompson window film"} width={300} height={300}/>
+                        <a href={`/${lang}`} className="flex items-center gap-3 mb-4">
+                            <Image src={'/rsz_2logo.png'} alt={"thompson window film"} width={300} height={300}/>
                         </a>
                         <p className="text-muted-foreground max-w-md leading-relaxed">
                             {dict.footer.description}

@@ -18,6 +18,7 @@ export default async function LangLayout({
                                              children,
                                              params
                                          }: LangLayoutProps) {
+    // ✅ MUHIM: params ni await qiling
     const {lang} = await params;
 
     // Type guard
@@ -31,7 +32,7 @@ export default async function LangLayout({
         <>
             <Header dict={dict} lang={lang}/>
             {children}
-            <Footer dict={dict}  lang={lang}/>
+            <Footer dict={dict} lang={lang}/>
         </>
     );
 }

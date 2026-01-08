@@ -1,8 +1,7 @@
 {
-  "title": "Bog'lanish",
-  "description": "Biz bilan bog'laning va savollaringizni bering. Biz sizga yordam berishga tayyormiz.",
+  "title": "Aloqa",
+  "description": "Maslahat va premium himoya plyonkasini o'rnatish uchun biz bilan bog'laning",
   "info": {
-    "title": "Aloqa ma'lumotlari",
     "phone": {
       "label": "Telefon",
       "value": "+998 99 800 24 25"
@@ -13,34 +12,34 @@
     },
     "address": {
       "label": "Manzil",
-      "value": "Toshkent, Faziltepa ko‘chasi, 35-uy"
+      "value": "Faziltepa ko'chasi, 35, Toshkent, O'zbekiston"
     },
     "workTime": {
       "label": "Ish vaqti",
-      "value": "10:00 - 20:00"
+      "value": "10:00 - 20:00 (Har kuni)"
     }
   },
   "form": {
-    "title": "Bepul konsultatsiya",
+    "title": "Bizga xabar yuboring",
     "name": {
       "label": "Ismingiz",
-      "placeholder": "Ismingiz"
+      "placeholder": "Ismingizni kiriting"
     },
     "phone": {
       "label": "Telefon",
-      "placeholder": "Telefon raqamingiz"
+      "placeholder": "+998 (__) ___ __ __"
     },
     "message": {
       "label": "Xabar",
-      "placeholder": "Xabaringiz"
+      "placeholder": "Xabaringizni yozing (ixtiyoriy)"
     },
     "submit": "Yuborish",
-    "success": "So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz.",
+    "success": "Xabar muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.",
     "errors": {
-      "nameMin": "Ism kamida 3 ta harfdan iborat bo'lishi kerak",
-      "nameNoNumbers": "Ismda raqam bo'lishi mumkin emas",
-      "phoneInvalid": "Telefon raqam kamida 8 ta raqamdan iborat bo'lishi kerak",
-      "sendFailed": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
+      "nameMin": "Ism kamida 3 belgidan iborat bo'lishi kerak",
+      "nameNoNumbers": "Ismda raqamlar bo'lishi mumkin emas",
+      "phoneInvalid": "Telefon raqam noto'g'ri (kamida 8 raqam)",
+      "sendFailed": "Yuborishda xatolik. Keyinroq urinib ko'ring yoki qo'ng'iroq qiling."
     }
   }
 }

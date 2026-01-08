@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X, Clock, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from 'next/navigation';
-import logo from "@/assets/rsz_2logo.png"
+import logo from "@/public/rsz_2logo.png"
 import Link from "next/link";
 import Image from "next/image";
 
@@ -70,7 +70,7 @@ const Header = ({dict , lang}:NavbarProps) => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href={`/${currentLang}`} className="flex items-center gap-3 group">
-              <Image src={logo} alt={"thompson window film"} width={250} height={150} />
+              <Image src={'/rsz_2logo.png'} alt={"thompson window film"} width={250} height={150} />
             </Link>
 
             {/* Desktop nav */}
