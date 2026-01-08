@@ -1,15 +1,26 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    output: 'export',
+    // ❌ Remove static export for dynamic routes on Vercel
+    // output: 'export',
+
     images: {
         unoptimized: true,
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**',
+            },
+        ],
     },
+
+    // ✅ Keep trailing slash
     trailingSlash: true,
-    // ✅ Add this for proper static export with dynamic routes
-    distDir: 'out',
-    // ✅ Ensure proper asset handling
-    assetPrefix: undefined,
+
+
+
+    // ✅ Disable x-powered-by header
+    poweredByHeader: false,
 };
 
 export default nextConfig;
