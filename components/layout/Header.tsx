@@ -31,11 +31,11 @@ const Header = ({dict, lang}:NavbarProps) => {
   const router = useRouter();
 
   const navLinks = [
-    { name: dict.header.nav.home, href: `/${lang}`, isRoute: true },
-    { name: dict.header.nav.protection, href: `/${lang}/protection`, isRoute: true },
-    { name: dict.header.nav.automotive, href: `/${lang}/automotive`, isRoute: true },
-    { name: dict.header.nav.technology, href: `/${lang}/technology`, isRoute: true },
-    { name: dict.header.nav.contact, href: `/${lang}/contact`, isRoute: true },
+    { name: dict.header.nav.home, href: `/${lang}/`, isRoute: true },
+    { name: dict.header.nav.protection, href: `/${lang}/protection/`, isRoute: true },
+    { name: dict.header.nav.automotive, href: `/${lang}/automotive/`, isRoute: true },
+    { name: dict.header.nav.technology, href: `/${lang}/technology/`, isRoute: true },
+    { name: dict.header.nav.contact, href: `/${lang}/contact/`, isRoute: true },
   ];
 
   const languages = [
@@ -44,25 +44,29 @@ const Header = ({dict, lang}:NavbarProps) => {
     { code: 'en', name: 'English', flag: '🇬🇧' },
   ];
 
-  const currentLang = pathname.split('/')[1] || 'ru';
+  const currentLang = pathname?.split('/')[1] || 'ru';
   const currentLanguage = languages.find(l => l.code === currentLang) || languages[0];
 
-  // Function to change language in URL
+  // ✅ Get localized path for language switching
   const getLocalizedPath = (langCode: string) => {
-    const pathParts = pathname.split('/');
+    const pathParts = pathname?.split('/') || [];
     pathParts[1] = langCode;
-    return pathParts.join('/') || `/${langCode}`;
+    return pathParts.join('/') || `/${langCode}/`;
   };
 
-  // ✅ Fixed navigation handler
+  // ✅ Fixed navigation - use window.location for static export
   const handleNavigation = (href: string) => {
     setIsMenuOpen(false);
-    router.push(href);
+    if (typeof window !== 'undefined') {
+      window.location.href = href;
+    }
   };
 
   // ✅ Fixed CTA handler
   const handleCTA = () => {
-    router.push(`/${lang}/contact`);
+    if (typeof window !== 'undefined') {
+      window.location.href = `/${lang}/contact/`;
+    }
   };
 
   return (
@@ -79,7 +83,7 @@ const Header = ({dict, lang}:NavbarProps) => {
           {/* Main nav */}
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href={`/${currentLang}`} className="flex items-center gap-3 group">
+            <Link href={`/${currentLang}/`} className="flex items-center gap-3 group">
               <Image src={'/rsz_2logo.png'} alt={"thompson window film"} width={250} height={150} />
             </Link>
 
@@ -118,16 +122,13 @@ const Header = ({dict, lang}:NavbarProps) => {
                 {/* Language Dropdown */}
                 {isLangMenuOpen && (
                     <>
-                      {/* Backdrop */}
                       <div
                           className="fixed inset-0 z-40"
                           onClick={() => setIsLangMenuOpen(false)}
                       />
-
-                      {/* Dropdown Menu */}
                       <div className="absolute right-0 mt-2 w-48 bg-card border border-border/50 rounded-lg shadow-lg overflow-hidden z-50 animate-fade-in">
                         {languages.map((l) => (
-                            <Link
+                            <a
                                 key={l.code}
                                 href={getLocalizedPath(l.code)}
                                 onClick={() => setIsLangMenuOpen(false)}
@@ -136,7 +137,7 @@ const Header = ({dict, lang}:NavbarProps) => {
                                 }`}
                             >
                               <span className="text-sm font-medium">{l.name}</span>
-                            </Link>
+                            </a>
                         ))}
                       </div>
                     </>
@@ -182,7 +183,7 @@ const Header = ({dict, lang}:NavbarProps) => {
                   <div className="text-sm text-muted-foreground mb-3">{dict.header.language}</div>
                   <div className="grid grid-cols-3 gap-2">
                     {languages.map((l) => (
-                        <Link
+                        <a
                             key={l.code}
                             href={getLocalizedPath(l.code)}
                             onClick={() => setIsMenuOpen(false)}
@@ -193,7 +194,7 @@ const Header = ({dict, lang}:NavbarProps) => {
                             }`}
                         >
                           <span className="text-xs font-medium">{l.code.toUpperCase()}</span>
-                        </Link>
+                        </a>
                     ))}
                   </div>
                 </div>

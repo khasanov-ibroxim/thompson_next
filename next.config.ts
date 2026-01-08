@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
         unoptimized: true,
     },
     trailingSlash: true,
+    // ✅ Skip trailing slash for root
+    skipTrailingSlashRedirect: false,
 };
 
 export default nextConfig;

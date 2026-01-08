@@ -19,7 +19,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // ✅ Telegram bot ma'lumotlari
+    // ✅ Client-side Telegram bot config
     const TELEGRAM_BOT_TOKEN = "7059423735:AAFgSJIt-KIxB7KB6hGwckuWfWOZ0tbbPYU";
     const TELEGRAM_CHAT_ID = "-4289057404";
 
@@ -50,7 +50,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         },
     ];
 
-    // ✅ Validatsiya funksiyalari
+    // ✅ Validation
     const validateName = (name: string): boolean => {
         const trimmedName = name.trim().replace(/\s+/g, '');
         if (/\d/.test(name)) return false;
@@ -81,7 +81,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         }
     };
 
-    // ✅ To'g'ridan-to'g'ri Telegram API ga yuborish
+    // ✅ Direct Telegram API call (client-side)
     const sendToTelegram = async (name: string, phone: string, message: string) => {
         const text = `
 📩 *Yangi murojaat*
@@ -95,25 +95,31 @@ const ContactSection = ({dict}: ContactSectionProps) => {
 
         const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
-        const response = await fetch(telegramUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: TELEGRAM_CHAT_ID,
-                text: text,
-                parse_mode: 'Markdown'
-            })
-        });
+        try {
+            const response = await fetch(telegramUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: text,
+                    parse_mode: 'Markdown'
+                })
+            });
 
-        return response.json();
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Telegram API Error:', error);
+            throw error;
+        }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // ✅ Client-side validatsiya
+        // Validation
         if (!validateName(formData.name)) {
             if (/\d/.test(formData.name)) {
                 toast.error(dict.form.errors.nameNoNumbers);
@@ -155,7 +161,6 @@ const ContactSection = ({dict}: ContactSectionProps) => {
 
     return (
         <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
-            {/* Background decorations */}
             <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px]"/>
 
             <div className="container mx-auto px-4 lg:px-8 relative z-10">
