@@ -19,6 +19,10 @@ const ContactSection = ({dict}: ContactSectionProps) => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
+    // ✅ Telegram bot ma'lumotlari
+    const TELEGRAM_BOT_TOKEN = "7059423735:AAFgSJIt-KIxB7KB6hGwckuWfWOZ0tbbPYU";
+    const TELEGRAM_CHAT_ID = "-4289057404";
+
     const contactInfo = [
         {
             icon: Phone,
@@ -77,6 +81,35 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         }
     };
 
+    // ✅ To'g'ridan-to'g'ri Telegram API ga yuborish
+    const sendToTelegram = async (name: string, phone: string, message: string) => {
+        const text = `
+📩 *Yangi murojaat*
+
+👤 *Ism:* ${name}
+📞 *Telefon:* ${phone}
+💬 *Xabar:* ${message || '-'}
+
+⏰ *Vaqt:* ${new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' })}
+        `.trim();
+
+        const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+        const response = await fetch(telegramUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: text,
+                parse_mode: 'Markdown'
+            })
+        });
+
+        return response.json();
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -98,37 +131,22 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         setIsSubmitting(true);
 
         try {
-            // ✅ API URL ni to'g'ri aniqlash
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
-            const url = apiUrl ? `${apiUrl}/api/telegram` : '/api/telegram';
+            const data = await sendToTelegram(
+                formData.name.trim(),
+                formData.phone.replace(/\s+/g, ''),
+                formData.message.trim()
+            );
 
-            console.log('Sending to:', url); // Debug uchun
-
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: formData.name.trim(),
-                    phone: formData.phone.replace(/\s+/g, ''),
-                    message: formData.message.trim(),
-                }),
-            });
-
-            const data = await response.json();
-            console.log('Response:', data); // Debug uchun
-
-            if (response.ok && data.success) {
+            if (data.ok) {
                 toast.success(dict.form.success);
                 setFormData({name: "", phone: "", message: ""});
             } else {
-                console.error('API Error:', data);
+                console.error('Telegram API Error:', data);
                 toast.error(dict.form.errors.sendFailed);
             }
 
         } catch (error) {
-            console.error('Fetch Error:', error);
+            console.error('Error:', error);
             toast.error(dict.form.errors.sendFailed);
         } finally {
             setIsSubmitting(false);
@@ -226,7 +244,7 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                                 ) : (
                                     <>
                                         <span>{dict.form.submit}</span>
-                                        <Send className="w-4 h-4 transition-transform group-hover:translate-x-1"/>
+                                        <Send className="w-4 h-5 transition-transform group-hover:translate-x-1"/>
                                     </>
                                 )}
                             </Button>
