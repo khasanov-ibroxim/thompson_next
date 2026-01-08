@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Script from "next/script";
+import PageTransition from "@/components/ui/PageTransition";
 
 const instrumentSans = Instrument_Sans({
     variable: "--font-instrument-sans",
@@ -142,11 +143,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             className={`${instrumentSans.variable} ${interTight.variable}`}
             suppressHydrationWarning
         >
-        <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            {children}
-        </TooltipProvider>
+        <PageTransition>
+            <TooltipProvider>
+                <Toaster />
+                <Sonner />
+                {children}
+            </TooltipProvider>
+        </PageTransition>
+
         </body>
         </html>
     );
