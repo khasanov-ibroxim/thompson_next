@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect root to /ru/
+RewriteRule ^$ /ru/ [R=302,L]
+
+# Handle all other routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /$1.html [L]
