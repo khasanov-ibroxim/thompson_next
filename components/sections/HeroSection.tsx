@@ -1,7 +1,6 @@
 "use client"
 import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 
 interface HeroSectionProps {
   dict:{
@@ -24,12 +23,11 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({dict}:HeroSectionProps) => {
-  const router = useRouter();
-
+  // ✅ Fixed scroll function
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 

@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
         unoptimized: true,
     },
     trailingSlash: true,
-
+    // ✅ Add this for proper static export with dynamic routes
+    distDir: 'out',
+    // ✅ Ensure proper asset handling
+    assetPrefix: undefined,
 };
 
 export default nextConfig;

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Menu, X, Clock, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,6 +28,7 @@ const Header = ({dict, lang}:NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   const navLinks = [
     { name: dict.header.nav.home, href: `/${lang}/`, isRoute: true },
@@ -59,12 +60,21 @@ const Header = ({dict, lang}:NavbarProps) => {
     return `/${pathParts.join('/')}/`;
   };
 
-
-
-
   // ✅ Check if current page matches link
   const isActivePage = (href: string) => {
     return cleanPathname === href || cleanPathname === href.slice(0, -1);
+  };
+
+  // ✅ Fixed navigation handlers
+  const handleNavigation = (href: string) => {
+    router.push(href);
+    setIsMenuOpen(false);
+  };
+
+  const handleLanguageChange = (langCode: string) => {
+    const newPath = getLocalizedPath(langCode);
+    router.push(newPath);
+    setIsLangMenuOpen(false);
   };
 
   return (
@@ -88,9 +98,9 @@ const Header = ({dict, lang}:NavbarProps) => {
             {/* Desktop nav */}
             <nav className="hidden xl:flex items-center gap-8">
               {navLinks.map((link) => (
-                  <Link
+                  <button
                       key={link.name}
-                      href={link.href}
+                      onClick={() => handleNavigation(link.href)}
                       className={`transition-colors duration-300 relative group ${
                           isActivePage(link.href)
                               ? "text-primary"
@@ -101,7 +111,7 @@ const Header = ({dict, lang}:NavbarProps) => {
                     <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
                         isActivePage(link.href) ? "w-full" : "w-0 group-hover:w-full"
                     }`} />
-                  </Link>
+                  </button>
               ))}
             </nav>
 
@@ -126,16 +136,15 @@ const Header = ({dict, lang}:NavbarProps) => {
                       />
                       <div className="absolute right-0 mt-2 w-48 bg-card border border-border/50 rounded-lg shadow-lg overflow-hidden z-50 animate-fade-in">
                         {languages.map((l) => (
-                            <a
+                            <button
                                 key={l.code}
-                                href={getLocalizedPath(l.code)}
-                                onClick={() => setIsLangMenuOpen(false)}
-                                className={`flex items-center gap-3 px-4 py-3 hover:bg-accent transition-colors ${
+                                onClick={() => handleLanguageChange(l.code)}
+                                className={`flex items-center gap-3 px-4 py-3 w-full text-left hover:bg-accent transition-colors ${
                                     currentLang === l.code ? 'bg-accent text-white' : ''
                                 }`}
                             >
                               <span className="text-sm font-medium">{l.name}</span>
-                            </a>
+                            </button>
                         ))}
                       </div>
                     </>
@@ -143,7 +152,11 @@ const Header = ({dict, lang}:NavbarProps) => {
               </div>
 
               {/* CTA Button */}
-              <Button onClick={()=>window.location.assign(`/${currentLang}/contact/`)} variant="hero" size="lg">
+              <Button
+                  onClick={() => handleNavigation(`/${currentLang}/contact/`)}
+                  variant="hero"
+                  size="lg"
+              >
                 {dict.header.cta}
               </Button>
             </div>
@@ -165,7 +178,7 @@ const Header = ({dict, lang}:NavbarProps) => {
                 {navLinks.map((link) => (
                     <button
                         key={link.name}
-                        onClick={() => window.location.assign(link.href)}
+                        onClick={() => handleNavigation(link.href)}
                         className={`block w-full text-left text-lg transition-colors py-2 ${
                             isActivePage(link.href)
                                 ? "text-primary"
@@ -181,10 +194,12 @@ const Header = ({dict, lang}:NavbarProps) => {
                   <div className="text-sm text-muted-foreground mb-3">{dict.header.language}</div>
                   <div className="grid grid-cols-3 gap-2">
                     {languages.map((l) => (
-                        <a
+                        <button
                             key={l.code}
-                            href={getLocalizedPath(l.code)}
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={() => {
+                              handleLanguageChange(l.code);
+                              setIsMenuOpen(false);
+                            }}
                             className={`flex flex-col items-center gap-2 p-3 rounded-lg border transition-colors ${
                                 currentLang === l.code
                                     ? 'border-primary bg-primary/10 text-primary'
@@ -192,12 +207,16 @@ const Header = ({dict, lang}:NavbarProps) => {
                             }`}
                         >
                           <span className="text-xs font-medium">{l.code.toUpperCase()}</span>
-                        </a>
+                        </button>
                     ))}
                   </div>
                 </div>
 
-                <Button onClick={()=>window.location.assign(`/${currentLang}/contact/`)} variant="hero" className="w-full mt-4">
+                <Button
+                    onClick={() => handleNavigation(`/${currentLang}/contact/`)}
+                    variant="hero"
+                    className="w-full mt-4"
+                >
                   {dict.header.cta}
                 </Button>
               </div>
