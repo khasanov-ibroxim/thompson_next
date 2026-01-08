@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Menu, X, Clock, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,7 +28,6 @@ const Header = ({dict, lang}:NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
 
   const navLinks = [
     { name: dict.header.nav.home, href: `/${lang}/`, isRoute: true },
@@ -44,29 +43,28 @@ const Header = ({dict, lang}:NavbarProps) => {
     { code: 'en', name: 'English', flag: '🇬🇧' },
   ];
 
-  const currentLang = pathname?.split('/')[1] || 'ru';
+  // ✅ Clean pathname from query params and hash
+  const cleanPathname = pathname?.split('?')[0].split('#')[0] || '/';
+  const currentLang = cleanPathname.split('/')[1] || 'ru';
   const currentLanguage = languages.find(l => l.code === currentLang) || languages[0];
 
-  // ✅ Get localized path for language switching
+  // ✅ Get clean localized path
   const getLocalizedPath = (langCode: string) => {
-    const pathParts = pathname?.split('/') || [];
-    pathParts[1] = langCode;
-    return pathParts.join('/') || `/${langCode}/`;
+    const pathParts = cleanPathname.split('/').filter(Boolean);
+    if (pathParts.length === 0 || pathParts[0] === currentLang) {
+      pathParts[0] = langCode;
+    } else {
+      pathParts.unshift(langCode);
+    }
+    return `/${pathParts.join('/')}/`;
   };
 
-  // ✅ Fixed navigation - use window.location for static export
-  const handleNavigation = (href: string) => {
-    setIsMenuOpen(false);
-    if (typeof window !== 'undefined') {
-      window.location.href = href;
-    }
-  };
 
-  // ✅ Fixed CTA handler
-  const handleCTA = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = `/${lang}/contact/`;
-    }
+
+
+  // ✅ Check if current page matches link
+  const isActivePage = (href: string) => {
+    return cleanPathname === href || cleanPathname === href.slice(0, -1);
   };
 
   return (
@@ -94,14 +92,14 @@ const Header = ({dict, lang}:NavbarProps) => {
                       key={link.name}
                       href={link.href}
                       className={`transition-colors duration-300 relative group ${
-                          pathname === link.href
+                          isActivePage(link.href)
                               ? "text-primary"
                               : "text-muted-foreground hover:text-foreground"
                       }`}
                   >
                     {link.name}
                     <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                        pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                        isActivePage(link.href) ? "w-full" : "w-0 group-hover:w-full"
                     }`} />
                   </Link>
               ))}
@@ -145,7 +143,7 @@ const Header = ({dict, lang}:NavbarProps) => {
               </div>
 
               {/* CTA Button */}
-              <Button onClick={handleCTA} variant="hero" size="lg">
+              <Button onClick={()=>window.location.assign(`/${currentLang}/contact/`)} variant="hero" size="lg">
                 {dict.header.cta}
               </Button>
             </div>
@@ -167,9 +165,9 @@ const Header = ({dict, lang}:NavbarProps) => {
                 {navLinks.map((link) => (
                     <button
                         key={link.name}
-                        onClick={() => handleNavigation(link.href)}
+                        onClick={() => window.location.assign(link.href)}
                         className={`block w-full text-left text-lg transition-colors py-2 ${
-                            pathname === link.href
+                            isActivePage(link.href)
                                 ? "text-primary"
                                 : "text-muted-foreground hover:text-foreground"
                         }`}
@@ -199,7 +197,7 @@ const Header = ({dict, lang}:NavbarProps) => {
                   </div>
                 </div>
 
-                <Button onClick={handleCTA} variant="hero" className="w-full mt-4">
+                <Button onClick={()=>window.location.assign(`/${currentLang}/contact/`)} variant="hero" className="w-full mt-4">
                   {dict.header.cta}
                 </Button>
               </div>

@@ -6,18 +6,23 @@ import {Textarea} from "@/components/ui/textarea";
 import {useState} from "react";
 import {toast} from "sonner";
 import type {ContactDictionary} from "@/lib/dictionary-types";
+import { usePathname } from "next/navigation";
 
 interface ContactSectionProps {
     dict: ContactDictionary;
 }
 
 const ContactSection = ({dict}: ContactSectionProps) => {
+    const pathname = usePathname();
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
         message: "",
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    // ✅ Get current language from pathname
+    const currentLang = pathname?.split('?')[0].split('/')[1] || 'ru';
 
     // ✅ Client-side Telegram bot config
     const TELEGRAM_BOT_TOKEN = "7059423735:AAFgSJIt-KIxB7KB6hGwckuWfWOZ0tbbPYU";
@@ -159,6 +164,13 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         }
     };
 
+    // ✅ Fixed navigation to contact page
+    const navigateToContact = () => {
+        if (typeof window !== 'undefined') {
+            window.location.href = `/${currentLang}/contact/`;
+        }
+    };
+
     return (
         <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
             <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px]"/>
@@ -184,6 +196,11 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                                 <a
                                     key={index}
                                     href={item.href}
+                                    onClick={(e) => {
+                                        if (item.href === "#") {
+                                            e.preventDefault();
+                                        }
+                                    }}
                                     className="group p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-300"
                                 >
                                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
