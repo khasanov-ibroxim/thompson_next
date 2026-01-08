@@ -1,7 +1,7 @@
 "use client"
 import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface HeroSectionProps {
   dict:{
@@ -24,9 +24,18 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({dict}:HeroSectionProps) => {
+  const router = useRouter();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 lg:pt-40 pb-10">
-        {/* Background image with overlay - Using public path directly */}
+        {/* Background image with overlay */}
         <div className="absolute inset-0">
           <img
               src="/images/hero-car.jpg"
@@ -43,46 +52,45 @@ const HeroSection = ({dict}:HeroSectionProps) => {
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-0 " >
-              <div
-
-                  className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-border/50 backdrop-blur-sm"
-              >
+            <div className="flex items-center gap-2 mb-0">
+              <div className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-border/50 backdrop-blur-sm">
                 <Sparkles className="w-4 h-4 text-primary" />
                 <span className="text-sm text-muted-foreground">{dict.hero.badge}</span>
               </div>
             </div>
 
-            <h1
-
-                className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 " >
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
               <span className="text-gradient">{dict.hero.title}</span>
               <br />
               <span className="text-gradient-red">{dict.hero.subtitle}</span>
             </h1>
 
-            <p
-
-                className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-10 leading-relaxed " >
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
               {dict.hero.description}
             </p>
 
-            <div
-
-                className="flex flex-col sm:flex-row gap-4" >
-              <Button onClick={()=>window.location.assign("/#feature")} variant="hero" size="xl" className="group">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                  onClick={() => scrollToSection('feature')}
+                  variant="hero"
+                  size="xl"
+                  className="group"
+              >
                 <span>{dict.hero.cta.primary}</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button onClick={()=>window.location.assign("/#Services")} variant="heroOutline" size="xl">
+              <Button
+                  onClick={() => scrollToSection('Services')}
+                  variant="heroOutline"
+                  size="xl"
+              >
                 <Shield className="w-5 h-5" />
                 <span>{dict.hero.cta.secondary}</span>
               </Button>
             </div>
 
             {/* Stats */}
-            <div
-                className="mt-16 grid grid-cols-3 gap-8 max-w-lg" style={{ animationDelay: "0.6s" }}>
+            <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg">
               {[
                 { value: "500+", label: dict.hero.stats.customers },
                 { value: "10+", label: dict.hero.stats.experience },

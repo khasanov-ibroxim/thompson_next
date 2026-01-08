@@ -1,6 +1,7 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 import type { HomeDictionary } from "@/lib/dictionary-types";
 
 interface ServicesSectionProps {
@@ -8,7 +9,9 @@ interface ServicesSectionProps {
   lang: string;
 }
 
-const ServicesSection = ({dict , lang}: ServicesSectionProps) => {
+const ServicesSection = ({dict, lang}: ServicesSectionProps) => {
+  const router = useRouter();
+
   const services = [
     {
       id: "protection",
@@ -37,7 +40,7 @@ const ServicesSection = ({dict , lang}: ServicesSectionProps) => {
       <section id="Services" className="py-24 lg:py-32 bg-thompson-darker relative overflow-hidden">
         <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[200px]" />
 
-        <div className="container mx-auto px-4 lg:px-8 relative z-10 ">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary text-sm font-semibold uppercase tracking-widest">{dict.services.badge}</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold py-5 text-gradient">
@@ -53,7 +56,7 @@ const ServicesSection = ({dict , lang}: ServicesSectionProps) => {
                     className="group"
                 >
                   <div className={`grid lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                    {/* Image - using img tag for static export */}
+                    {/* Image */}
                     <div className={`relative overflow-hidden rounded-2xl ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                       <div className="aspect-[4/3] relative group-hover:scale-105 transition-transform duration-500">
                         <img
@@ -73,7 +76,12 @@ const ServicesSection = ({dict , lang}: ServicesSectionProps) => {
                       <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                         {service.description}
                       </p>
-                      <Button onClick={()=>window.location.assign(service.href)} variant="heroOutline" size="lg" className="group/btn">
+                      <Button
+                          onClick={() => router.push(service.href)}
+                          variant="heroOutline"
+                          size="lg"
+                          className="group/btn"
+                      >
                         <span>{dict.services.cta}</span>
                         <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                       </Button>
