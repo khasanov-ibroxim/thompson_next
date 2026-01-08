@@ -137,7 +137,8 @@
       "name": "PPF - XGLOSS",
       "brand": "THOMPSON",
       "images": [
-        "/images/ppf_xg.png"
+        "/images/ppf_xg.png",
+        "/protection/thompson_ppf.png"
       ],
       "specs": [
         "185 micron",
@@ -162,7 +163,8 @@
       "name": "PPF - X99",
       "brand": "THOMPSON",
       "images": [
-        "/images/ppf_x99.png"
+        "/images/ppf_x99.png",
+        "/protection/thompson_ppf.png"
       ],
       "specs": [
         "210 micron",
@@ -187,7 +189,8 @@
       "name": "PPF - ULTRA GLOSS",
       "brand": "THOMPSON",
       "images": [
-        "/images/protection-film.jpg"
+        "/images/protection-film.jpg",
+        "/protection/thompson_ppf.png"
       ],
       "specs": [
         "170 micron",
