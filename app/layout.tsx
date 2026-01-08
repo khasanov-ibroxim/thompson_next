@@ -1,11 +1,12 @@
 import type {Metadata} from "next";
 import {Instrument_Sans, Inter_Tight} from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import {Toaster} from "@/components/ui/toaster";
+import {Toaster as Sonner} from "@/components/ui/sonner";
+import {TooltipProvider} from "@/components/ui/tooltip";
 import Script from "next/script";
 import PageTransition from "@/components/ui/PageTransition";
+import YandexMetrika from "@/components/YandexMetric";
 
 const instrumentSans = Instrument_Sans({
     variable: "--font-instrument-sans",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     title: "Thompson Window Film - Защитная и Автомобильная Пленка в Ташкенте",
     description: "Thompson Window Film - профессиональная автомобильная тонировка и защитная пленка (PPF) в Ташкенте, Узбекистан. Нано керамика, технология самовосстановления, УФ защита с пожизненной гарантией.",
     keywords: "Thompson Window Film, автомобильная пленка, защитная пленка, PPF, керамическая пленка, нано керамика, тонировка авто, УФ защита, Ташкент, Узбекистан, тонировка стекол, Thompson, automotive film, paint protection film, avtomobil plyonka, himoya plyonka",
-    authors: [{ name: "Thompson Window Film" }],
+    authors: [{name: "Thompson Window Film"}],
     openGraph: {
         title: "Thompson Window Film - Защитная и Автомобильная Пленка",
         description: "Профессиональная автомобильная тонировка и защитная пленка в Узбекистане. Нано керамическая технология с пожизненной гарантией.",
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html suppressHydrationWarning lang="ru">
         <head>
@@ -68,7 +69,53 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="icon" type="image/png" href="/logo.png" sizes="32x32"/>
             <link rel="icon" type="image/png" href="/logo.png" sizes="16x16"/>
             <link rel="apple-touch-icon" href="/logo.png"/>
+            {/* ✅ Yandex Metrika */}
+            <Script
+                id="yandex-metrika"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                      (function(m,e,t,r,i,k,a){
+                        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                        m[i].l=1*new Date();
+                        for (var j = 0; j < document.scripts.length; j++) {
+                          if (document.scripts[j].src === r) { return; }
+                        }
+                        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+                      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
 
+                      ym(106173768, 'init', {
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true,
+                        ecommerce: 'dataLayer'
+                      });
+                    `,
+                }}
+            />
+
+
+
+            {/* ✅ Google Analytics */}
+            <Script
+                strategy="afterInteractive"
+                src="https://www.googletagmanager.com/gtag/js?id=G-CCYL59P75M"
+            />
+            <Script
+                id="google-analytics"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', 'G-CCYL59P75M', {
+                        page_path: window.location.pathname,
+                      });
+                    `,
+                }}
+            />
 
             {/* Структурированные данные - Организация */}
             <Script
@@ -143,12 +190,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             className={`${instrumentSans.variable} ${interTight.variable}`}
             suppressHydrationWarning
         >
+        <YandexMetrika/>
+        <noscript>
+            <div>
+                <img
+                    src="https://mc.yandex.ru/watch/106173768"
+                    style={{ position: 'absolute', left: '-9999px' }}
+                    alt=""
+                />
+            </div>
+        </noscript>
+
         {/*<PageTransition>*/}
-            <TooltipProvider>
-                <Toaster />
-                <Sonner />
-                {children}
-            </TooltipProvider>
+        <TooltipProvider>
+            <Toaster/>
+            <Sonner/>
+            {children}
+        </TooltipProvider>
         {/*</PageTransition>*/}
 
         </body>
