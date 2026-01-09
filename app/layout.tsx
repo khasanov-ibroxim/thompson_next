@@ -63,7 +63,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             <link rel="icon" type="image/png" href="/logo.png" sizes="32x32"/>
             <link rel="icon" type="image/png" href="/logo.png" sizes="16x16"/>
             <link rel="apple-touch-icon" href="/logo.png"/>
-
+            <meta name="google-site-verification" content="3Y3EpUhukGBKHII_K05g0qtmZyz4jwaxECk9yJNiXlM" />
             {/* ✅ Yandex Metrika - Fixed version */}
             <Script
                 id="yandex-metrika"
@@ -88,11 +88,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
                     });
                 `}
             </Script>
-            <noscript>
-                <div>
-                    <img src="https://mc.yandex.ru/watch/106173768" style={{position:"absolute", left:"-9999px"}} alt="" />
-                </div>
-            </noscript>
+
 
             {/* ✅ Google Analytics */}
             <Script
@@ -184,6 +180,11 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             className={`${instrumentSans.variable} ${interTight.variable}`}
             suppressHydrationWarning
         >
+        <noscript>
+            <div>
+                <img src="https://mc.yandex.ru/watch/106173768" style={{position:"absolute", left:"-9999px"}} alt="" />
+            </div>
+        </noscript>
         <YandexMetrika/>
         <TooltipProvider>
             <Toaster/>

@@ -112,7 +112,8 @@
       "name": "PPF - I200 ",
       "brand": "THOMPSON",
       "images": [
-        "/images/ppf_i200.png"
+        "/images/ppf_i200.png",
+        "/protection/thompson_green_v2.png"
       ],
       "specs": [
         "193 микрон",
@@ -138,7 +139,7 @@
       "brand": "THOMPSON",
       "images": [
         "/images/ppf_xg.png",
-        "/protection/thompson_ppf.png"
+        "/protection/thompson_ppf.jpg"
       ],
       "specs": [
         "185 микрон",
@@ -164,7 +165,7 @@
       "brand": "THOMPSON",
       "images": [
         "/images/ppf_x99.png",
-        "/protection/thompson_ppf.png"
+        "/protection/thompson_ppf.jpg"
       ],
       "specs": [
         "210 микрон",
@@ -190,7 +191,7 @@
       "brand": "THOMPSON",
       "images": [
         "/images/protection-film.jpg",
-        "/protection/thompson_ppf.png"
+        "/protection/thompson_ppf.jpg"
       ],
       "specs": [
         "170 микрон",
