@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    // ✅ Dynamic routes uchun static export yoqilmagan
+    // ✅ Turbopack configuration (empty to silence warnings)
+    turbopack: {},
 
     images: {
         unoptimized: true,
@@ -19,31 +20,16 @@ const nextConfig: NextConfig = {
     // ✅ Disable x-powered-by header
     poweredByHeader: false,
 
-    // ✅ MUHIM: CSS optimizatsiyasi
-    experimental: {
-        optimizeCss: true,
+    // ✅ TypeScript settings
+    typescript: {
+        ignoreBuildErrors: false,
     },
 
-    // ✅ Webpack konfiguratsiyasi
-    webpack: (config, { isServer }) => {
-        if (!isServer) {
-            // ✅ CSS modules uchun
-            config.optimization.splitChunks = {
-                chunks: 'all',
-                cacheGroups: {
-                    default: false,
-                    vendors: false,
-                    // ✅ CSS ni alohida fayl sifatida ajratish
-                    styles: {
-                        name: 'styles',
-                        test: /\.(css|scss|sass)$/,
-                        chunks: 'all',
-                        enforce: true,
-                    },
-                },
-            };
-        }
-        return config;
+
+
+    // ✅ Experimental features
+    experimental: {
+        optimizeCss: true,
     },
 };
 

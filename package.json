@@ -2,6 +2,7 @@
   "name": "thompson_next",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,9 +10,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "clean": "npx rimraf .next out",
-    "vercel-build": "next build",
-    "postinstall": "npm run build:css",
-    "build:css": "tailwindcss -i ./app/globals.css -o ./public/styles.css --minify"
+    "vercel-build": "next build"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
@@ -43,5 +42,9 @@
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
   }
 }
