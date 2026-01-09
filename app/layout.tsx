@@ -10,11 +10,13 @@ import YandexMetrika from "@/components/YandexMetric";
 const instrumentSans = Instrument_Sans({
     variable: "--font-instrument-sans",
     subsets: ["latin"],
+    display: 'swap', // ✅ Font optimizatsiyasi
 });
 
 const interTight = Inter_Tight({
     variable: "--font-inter-tight",
     subsets: ["latin"],
+    display: 'swap', // ✅ Font optimizatsiyasi
 });
 
 export const metadata: Metadata = {
@@ -53,18 +55,29 @@ export const metadata: Metadata = {
             'uz': 'https://thompsonwindowfilm.com/uz/',
         },
     },
+    // ✅ Viewport metadata
+    viewport: {
+        width: 'device-width',
+        initialScale: 1,
+        maximumScale: 5,
+    },
 };
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html suppressHydrationWarning lang="ru">
         <head>
+            {/* ✅ Preconnect for faster loading */}
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
             <link rel="icon" href="/logo.png" sizes="any"/>
             <link rel="icon" type="image/png" href="/logo.png" sizes="32x32"/>
             <link rel="icon" type="image/png" href="/logo.png" sizes="16x16"/>
             <link rel="apple-touch-icon" href="/logo.png"/>
             <meta name="google-site-verification" content="3Y3EpUhukGBKHII_K05g0qtmZyz4jwaxECk9yJNiXlM" />
-            {/* ✅ Yandex Metrika - Fixed version */}
+
+            {/* ✅ Yandex Metrika */}
             <Script
                 id="yandex-metrika"
                 strategy="afterInteractive"
@@ -89,7 +102,6 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
                 `}
             </Script>
 
-
             {/* ✅ Google Analytics */}
             <Script
                 strategy="afterInteractive"
@@ -109,7 +121,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
                 `}
             </Script>
 
-            {/* Структурированные данные - Организация */}
+            {/* Structured Data - Organization */}
             <Script
                 id="structured-data-organization"
                 type="application/ld+json"
@@ -140,7 +152,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
                 })}
             </Script>
 
-            {/* Структурированные данные - Местный бизнес */}
+            {/* Structured Data - Local Business */}
             <Script
                 id="structured-data-local-business"
                 type="application/ld+json"
@@ -177,7 +189,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
             </Script>
         </head>
         <body
-            className={`${instrumentSans.variable} ${interTight.variable}`}
+            className={`${instrumentSans.variable} ${interTight.variable} antialiased`}
             suppressHydrationWarning
         >
         <noscript>

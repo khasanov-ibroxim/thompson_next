@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    // ❌ Remove static export for dynamic routes on Vercel
-    // output: 'export',
+    // ✅ Dynamic routes uchun static export yoqilmagan
 
     images: {
         unoptimized: true,
@@ -14,13 +13,38 @@ const nextConfig: NextConfig = {
         ],
     },
 
-    // ✅ Keep trailing slash
+    // ✅ Trailing slash
     trailingSlash: true,
-
-
 
     // ✅ Disable x-powered-by header
     poweredByHeader: false,
+
+    // ✅ MUHIM: CSS optimizatsiyasi
+    experimental: {
+        optimizeCss: true,
+    },
+
+    // ✅ Webpack konfiguratsiyasi
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            // ✅ CSS modules uchun
+            config.optimization.splitChunks = {
+                chunks: 'all',
+                cacheGroups: {
+                    default: false,
+                    vendors: false,
+                    // ✅ CSS ni alohida fayl sifatida ajratish
+                    styles: {
+                        name: 'styles',
+                        test: /\.(css|scss|sass)$/,
+                        chunks: 'all',
+                        enforce: true,
+                    },
+                },
+            };
+        }
+        return config;
+    },
 };
 
 export default nextConfig;
