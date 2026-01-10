@@ -90,7 +90,7 @@ const HeroSection = ({dict}:HeroSectionProps) => {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg">
               {[
-                { value: "500+", label: dict.hero.stats.customers },
+                { value: "10000+", label: dict.hero.stats.customers },
                 { value: "10+", label: dict.hero.stats.experience },
                 { value: "100%", label: dict.hero.stats.warranty },
               ].map((stat, index) => (

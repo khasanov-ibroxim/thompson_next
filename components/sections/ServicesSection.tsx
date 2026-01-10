@@ -17,14 +17,14 @@ const ServicesSection = ({dict, lang}: ServicesSectionProps) => {
       id: "protection",
       title: dict.services.items[0].title,
       description: dict.services.items[0].description,
-      image: "/images/protection-film.jpg",
+      image: "/images/protection_hom.jpg",
       href:`/${lang}/protection`
     },
     {
       id: "automotive",
       title: dict.services.items[1].title,
       description: dict.services.items[1].description,
-      image: "/images/automotive-film.jpg",
+      image: "/images/automotive_hom.jpg",
       href:`/${lang}/automotive`
     },
     {

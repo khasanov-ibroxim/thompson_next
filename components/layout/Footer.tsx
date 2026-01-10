@@ -71,7 +71,7 @@ const Footer = ({dict , lang}: Props) => {
                                 <a href="tel:+998998002425"
                                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                                     <Phone className="w-4 h-4"/>
-                                    <span>+998 99 800 24 25</span>
+                                    <span>+998 77 322 00 00</span>
                                 </a>
                             </li>
                             <li>

@@ -17,15 +17,15 @@ export async function generateMetadata({
     const langMap = {
         ru: {
             title: "Контакты - Thompson Window Film | Ташкент",
-            description: "Свяжитесь с нами для консультации по защитным и автомобильным пленкам. Адрес: Ташкент, ул. Фазылтепа, 35. Телефон: +998 99 800 24 25"
+            description: "Свяжитесь с нами для консультации по защитным и автомобильным пленкам. Адрес: Ташкент, ул. Фазылтепа, 35. Телефон: +998 77 322 00 00"
         },
         en: {
             title: "Contact - Thompson Window Film | Tashkent",
-            description: "Contact us for consultation on protection and automotive films. Address: 35 Faziltepa Street, Tashkent. Phone: +998 99 800 24 25"
+            description: "Contact us for consultation on protection and automotive films. Address: 35 Faziltepa Street, Tashkent. Phone: +998 77 322 00 00"
         },
         uz: {
             title: "Bog'lanish - Thompson Window Film | Toshkent",
-            description: "Himoya va avtomobil plyonkalari bo'yicha konsultatsiya uchun biz bilan bog'laning. Manzil: Toshkent, Faziltepa ko'chasi, 35-uy. Telefon: +998 99 800 24 25"
+            description: "Himoya va avtomobil plyonkalari bo'yicha konsultatsiya uchun biz bilan bog'laning. Manzil: Toshkent, Faziltepa ko'chasi, 35-uy. Telefon: +998 77 322 00 00"
         }
     };
 
