@@ -6,27 +6,27 @@ import {Textarea} from "@/components/ui/textarea";
 import {useState} from "react";
 import {toast} from "sonner";
 import type {ContactDictionary} from "@/lib/dictionary-types";
-import { usePathname } from "next/navigation";
+import {usePathname} from "next/navigation";
 
 interface ContactSectionProps {
     dict: ContactDictionary;
 }
+
+// 🔑 Google Apps Script Web App URL — o'zingiznikini qo'ying
+const GOOGLE_SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbzqIeEZQCV20D5TqcgFVHc-mlh0ldIj64v9EAOYiiLnGPKzVxR4vDxS9lCeN2fb5QZG/exec";
 
 const ContactSection = ({dict}: ContactSectionProps) => {
     const pathname = usePathname();
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
+        enterprise: "",
+        location: "",
         message: "",
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // ✅ Get current language from pathname
     const currentLang = pathname?.split('?')[0].split('/')[1] || 'ru';
-
-    // ✅ Client-side Telegram bot config
-    const TELEGRAM_BOT_TOKEN = "7059423735:AAFgSJIt-KIxB7KB6hGwckuWfWOZ0tbbPYU";
-    const TELEGRAM_CHAT_ID = "-4289057404";
 
     const contactInfo = [
         {
@@ -55,7 +55,6 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         },
     ];
 
-    // ✅ Validation
     const validateName = (name: string): boolean => {
         const trimmedName = name.trim().replace(/\s+/g, '');
         if (/\d/.test(name)) return false;
@@ -86,51 +85,61 @@ const ContactSection = ({dict}: ContactSectionProps) => {
         }
     };
 
-    // ✅ Direct Telegram API call (client-side)
-    const sendToTelegram = async (name: string, phone: string, message: string) => {
+    // ✅ Telegram ga yuborish
+    const sendToTelegram = async (
+        name: string, phone: string,
+        enterprise: string, location: string, message: string
+    ) => {
         const text = `
 📩 *Yangi murojaat*
 
 👤 *Ism:* ${name}
 📞 *Telefon:* ${phone}
+🏢 *Korxona:* ${enterprise}
+📍 *Joylashuv:* ${location}
 💬 *Xabar:* ${message || '-'}
 
-⏰ *Vaqt:* ${new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' })}
+⏰ *Vaqt:* ${new Date().toLocaleString('ru-RU', {timeZone: 'Asia/Tashkent'})}
         `.trim();
 
-        const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+        const telegramUrl = `https://api.telegram.org/bot7059423735:AAFgSJIt-KIxB7KB6hGwckuWfWOZ0tbbPYU/sendMessage`;
 
-        try {
-            const response = await fetch(telegramUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
-                    text: text,
-                    parse_mode: 'Markdown'
-                })
-            });
+        const response = await fetch(telegramUrl, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                chat_id: "-4289057404",
+                text,
+                parse_mode: 'Markdown'
+            })
+        });
+        return response.json();
+    };
 
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Telegram API Error:', error);
-            throw error;
-        }
+    // ✅ Google Sheets ga yuborish
+    const sendToGoogleSheets = async (
+        name: string, phone: string,
+        enterprise: string, location: string, message: string
+    ) => {
+        // no-cors — Apps Script CORS cheklovini chetlab o'tish uchun
+        await fetch(GOOGLE_SHEET_WEBHOOK, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({name, phone, enterprise, location, message}),
+        });
+        // no-cors bilan response body o'qib bo'lmaydi, shuning uchun void
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Validation
         if (!validateName(formData.name)) {
-            if (/\d/.test(formData.name)) {
-                toast.error(dict.form.errors.nameNoNumbers);
-            } else {
-                toast.error(dict.form.errors.nameMin);
-            }
+            toast.error(
+                /\d/.test(formData.name)
+                    ? dict.form.errors.nameNoNumbers
+                    : dict.form.errors.nameMin
+            );
             return;
         }
 
@@ -141,30 +150,40 @@ const ContactSection = ({dict}: ContactSectionProps) => {
 
         setIsSubmitting(true);
 
-        try {
-            const data = await sendToTelegram(
-                formData.name.trim(),
-                formData.phone.replace(/\s+/g, ''),
-                formData.message.trim()
-            );
+        const payload = {
+            name: formData.name.trim(),
+            phone: formData.phone.replace(/\s+/g, ''),
+            enterprise: formData.enterprise.trim(),
+            location: formData.location.trim(),
+            message: formData.message.trim(),
+        };
 
-            if (data.ok) {
+        try {
+            // ✅ Ikkalasiga parallel yuborish
+            const [telegramResult] = await Promise.allSettled([
+                sendToTelegram(payload.name, payload.phone, payload.enterprise, payload.location, payload.message),
+                sendToGoogleSheets(payload.name, payload.phone, payload.enterprise, payload.location, payload.message),
+            ]);
+
+            // Telegram javobini tekshirish
+            const telegramOk =
+                telegramResult.status === 'fulfilled' && telegramResult.value?.ok === true;
+
+            if (telegramOk) {
                 toast.success(dict.form.success);
-                setFormData({name: "", phone: "", message: ""});
+                setFormData({name: "", phone: "", enterprise: "", location: "", message: ""});
             } else {
-                console.error('Telegram API Error:', data);
                 toast.error(dict.form.errors.sendFailed);
             }
 
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Submit error:', error);
             toast.error(dict.form.errors.sendFailed);
         } finally {
             setIsSubmitting(false);
         }
     };
 
-    // ✅ Fixed navigation to contact page
     const navigateToContact = () => {
         if (typeof window !== 'undefined') {
             window.location.href = `/${currentLang}/contact/`;
@@ -173,7 +192,8 @@ const ContactSection = ({dict}: ContactSectionProps) => {
 
     return (
         <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px]"/>
+            <div
+                className="absolute top-1/2 -translate-y-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px]"/>
 
             <div className="container mx-auto px-4 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
@@ -197,13 +217,12 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                                     key={index}
                                     href={item.href}
                                     onClick={(e) => {
-                                        if (item.href === "#") {
-                                            e.preventDefault();
-                                        }
+                                        if (item.href === "#") e.preventDefault();
                                     }}
                                     className="group p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-300"
                                 >
-                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                                    <div
+                                        className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                                         <item.icon className="w-6 h-6 text-primary"/>
                                     </div>
                                     <div className="text-sm text-muted-foreground mb-1">{item.title}</div>
@@ -220,37 +239,49 @@ const ContactSection = ({dict}: ContactSectionProps) => {
                         </h3>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <div>
-                                <Input
-                                    placeholder={dict.form.name.placeholder}
-                                    value={formData.name}
-                                    onChange={handleNameChange}
-                                    required
-                                    disabled={isSubmitting}
-                                    className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
-                                />
-                            </div>
-                            <div>
-                                <Input
-                                    type="tel"
-                                    placeholder={dict.form.phone.placeholder}
-                                    value={formData.phone}
-                                    onChange={handlePhoneChange}
-                                    required
-                                    disabled={isSubmitting}
-                                    className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
-                                />
-                            </div>
-                            <div>
-                                <Textarea
-                                    placeholder={dict.form.message.placeholder}
-                                    value={formData.message}
-                                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                                    rows={4}
-                                    disabled={isSubmitting}
-                                    className="bg-secondary/50 border-border/50 focus:border-primary resize-none"
-                                />
-                            </div>
+                            <Input
+                                placeholder={dict.form.name.placeholder}
+                                value={formData.name}
+                                onChange={handleNameChange}
+                                required
+                                disabled={isSubmitting}
+                                className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
+                            />
+                            <Input
+                                type="tel"
+                                placeholder={dict.form.phone.placeholder}
+                                value={formData.phone}
+                                onChange={handlePhoneChange}
+                                required
+                                disabled={isSubmitting}
+                                className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
+                            />
+                            <Input
+                                type="text"
+                                placeholder={dict.form.enterprise.placeholder}
+                                value={formData.enterprise}
+                                onChange={(e) => setFormData({...formData, enterprise: e.target.value})}
+                                required
+                                disabled={isSubmitting}
+                                className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
+                            />
+                            <Input
+                                type="text"
+                                placeholder={dict.form.location.placeholder}
+                                value={formData.location}
+                                onChange={(e) => setFormData({...formData, location: e.target.value})}
+                                required
+                                disabled={isSubmitting}
+                                className="h-12 bg-secondary/50 border-border/50 focus:border-primary"
+                            />
+                            <Textarea
+                                placeholder={dict.form.message.placeholder}
+                                value={formData.message}
+                                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                                rows={4}
+                                disabled={isSubmitting}
+                                className="bg-secondary/50 border-border/50 focus:border-primary resize-none"
+                            />
                             <Button
                                 type="submit"
                                 variant="hero"

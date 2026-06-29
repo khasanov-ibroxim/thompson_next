@@ -29,6 +29,14 @@
       "label": "Phone",
       "placeholder": "+998 (__) ___ __ __"
     },
+    "enterprise": {
+      "label": "Company",
+      "placeholder": "Enter company name"
+    },
+    "location": {
+      "label": "Location",
+      "placeholder": "Enter address"
+    },
     "message": {
       "label": "Message",
       "placeholder": "Write your message (optional)"

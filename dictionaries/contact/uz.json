@@ -29,6 +29,14 @@
       "label": "Telefon",
       "placeholder": "+998 (__) ___ __ __"
     },
+    "enterprise": {
+      "label": "Korxona",
+      "placeholder": "Korxona nomini kiriting"
+    },
+    "location": {
+      "label": "Joylashuv",
+      "placeholder": "Manzilni kiriting"
+    },
     "message": {
       "label": "Xabar",
       "placeholder": "Xabaringizni yozing (ixtiyoriy)"
